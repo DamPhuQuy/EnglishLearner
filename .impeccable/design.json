@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T17:33:01.991228+00:00",
+  "title": "Design System: IELTS Notebook",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Xanh dịu"
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Nền trang"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Nền cell"
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Nền nổi"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Tiêu đề tài liệu",
+        "purpose": "Một tiêu đề gọn; không có display face riêng."
+      },
+      "editor": {
+        "displayName": "Soạn Markdown",
+        "purpose": "Monospace, line-height rộng hơn điều khiển; 14px ở viewport hẹp hoặc rất rộng."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "background .14s ease,color .14s ease",
+        "purpose": "Nút và summary; tắt khi prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "760px",
+        "purpose": "max-width; hai vùng xếp dọc, điều khiển chạm lớn hơn."
+      },
+      {
+        "name": "compact-max",
+        "value": "1100px",
+        "purpose": "max-width; gutter và padding cell gọn hơn."
+      },
+      {
+        "name": "wide-min",
+        "value": "1500px",
+        "purpose": "min-width; editor cao hơn và chữ lớn hơn."
+      }
+    ],
+    "focus": [
+      {
+        "name": "keyboard-focus",
+        "value": "outline:2px solid var(--accent);outline-offset:3px",
+        "purpose": "Focus-visible; textarea dùng offset 5px."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nút chính",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Biến thể nút hiện có; nhãn và icon tùy thao tác thật.",
+      "html": "<button class=\"ds-button-primary\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.65\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg>Thêm cell</button>",
+      "css": ".ds-button-primary{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;line-height:1.4;min-height:36px;border:1px solid transparent;border-radius:6px;padding:7px 10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;cursor:pointer;transition:background .14s ease,color .14s ease;background:var(--accent-bg,#283c5f);color:#dce8ff;}.ds-button-primary:hover{background:#354e76;}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}.ds-button-primary:disabled{opacity:.45;cursor:not-allowed;}.ds-button-primary:disabled:hover{background:transparent;}@media(max-width:760px){.ds-button-primary{min-height:44px;}}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none;}}"
+    },
+    {
+      "name": "Nút viền",
+      "kind": "button",
+      "refersTo": "button-outlined",
+      "description": "Biến thể nút hiện có; nhãn và icon tùy thao tác thật.",
+      "html": "<button class=\"ds-button-outlined\">Xuất notebook</button>",
+      "css": ".ds-button-outlined{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;line-height:1.4;min-height:36px;border:1px solid transparent;border-radius:6px;padding:7px 10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;cursor:pointer;transition:background .14s ease,color .14s ease;background:transparent;color:var(--text,#e3e7ed);border-color:var(--line,#343b45);}.ds-button-outlined:hover{background:var(--raised,#242a32);}.ds-button-outlined:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}.ds-button-outlined:disabled{opacity:.45;cursor:not-allowed;}.ds-button-outlined:disabled:hover{background:transparent;}@media(max-width:760px){.ds-button-outlined{min-height:44px;}}@media(prefers-reduced-motion:reduce){.ds-button-outlined{transition:none;}}"
+    },
+    {
+      "name": "Nút nhẹ",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Biến thể nút hiện có; nhãn và icon tùy thao tác thật.",
+      "html": "<button class=\"ds-button-quiet\">Mở tệp</button>",
+      "css": ".ds-button-quiet{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;line-height:1.4;min-height:36px;border:1px solid transparent;border-radius:6px;padding:7px 10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;cursor:pointer;transition:background .14s ease,color .14s ease;background:transparent;color:var(--muted,#a5afbc);}.ds-button-quiet:hover{background:var(--raised,#242a32);color:var(--text,#e3e7ed);}.ds-button-quiet:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}.ds-button-quiet:disabled{opacity:.45;cursor:not-allowed;}.ds-button-quiet:disabled:hover{background:transparent;}@media(max-width:760px){.ds-button-quiet{min-height:44px;}}@media(prefers-reduced-motion:reduce){.ds-button-quiet{transition:none;}}"
+    },
+    {
+      "name": "Trường URL",
+      "kind": "input",
+      "refersTo": "url-input",
+      "description": "Trường đường dẫn bài nghe trong vùng tài nguyên.",
+      "html": "<label class=\"ds-url-label\" for=\"ds-audio-url\">Hoặc dùng đường dẫn bài nghe</label><input class=\"ds-url-input\" id=\"ds-audio-url\" type=\"url\" placeholder=\"https://…/audio.mp3\" />",
+      "css": ".ds-url-label{display:block;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:12px;color:var(--muted,#a5afbc);margin-bottom:8px;}.ds-url-input{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:12px;min-height:36px;width:100%;min-width:0;border:1px solid var(--line,#343b45);border-radius:5px;background:var(--canvas,#14171c);padding:6px 9px;color:var(--text,#e3e7ed);caret-color:var(--accent,#a9c5ff);}.ds-url-input:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}"
+    },
+    {
+      "name": "Cell notebook",
+      "kind": "card",
+      "refersTo": "notebook-cell",
+      "description": "Khung cell đang chọn với hai vùng độc lập; snippet chỉ minh họa bố cục.",
+      "html": "<section class=\"ds-cell\" aria-label=\"Cell ghi chú\"><header class=\"ds-cell-header\">Ghi chú</header><div class=\"ds-panes\"><div class=\"ds-answer\"><label class=\"ds-pane-heading\" for=\"ds-editor\">Bài làm &amp; ghi chú</label><textarea class=\"ds-editor\" id=\"ds-editor\" placeholder=\"Viết bài làm, đáp án hoặc ghi chú ở đây…\"></textarea></div><div class=\"ds-resource\"><div class=\"ds-pane-heading\">Tài liệu đính kèm</div><p class=\"ds-reference\">Tài liệu độc lập với bài làm bên trái.</p></div></div></section>",
+      "css": ".ds-cell{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;color:var(--text,#e3e7ed);border:1px solid #6e8ab5;border-radius:8px;background:var(--surface,#1b1f25);min-width:0;}.ds-cell-header{padding:6px 12px;border-bottom:1px solid var(--line,#343b45);font-size:13px;font-weight:500;}.ds-panes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);}.ds-answer,.ds-resource{min-width:0;padding:0 20px 12px;}.ds-resource{border-left:1px solid var(--line,#343b45);background:#191d23;border-radius:0 0 8px 0;}.ds-pane-heading{display:flex;align-items:center;min-height:50px;font-size:12px;font-weight:500;}.ds-editor{width:100%;min-height:245px;resize:vertical;background:transparent;border:0;border-radius:3px;padding:4px 0;color:var(--text,#e3e7ed);font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;line-height:1.85;tab-size:2;caret-color:var(--accent,#a9c5ff);}.ds-editor::placeholder{color:var(--muted,#a5afbc);}.ds-editor:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;outline-offset:5px;}.ds-reference{font-size:14px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;max-height:320px;overflow:auto;max-width:72ch;}@media(max-width:1100px){.ds-answer,.ds-resource{padding-left:16px;padding-right:16px;}}@media(max-width:760px){.ds-panes{grid-template-columns:minmax(0,1fr);}.ds-resource{border-left:0;border-top:1px solid var(--line,#343b45);border-radius:0 0 8px 8px;}.ds-editor{min-height:210px;font-size:14px;}.ds-pane-heading{min-height:54px;}}@media(min-width:1500px){.ds-editor{min-height:270px;font-size:14px;}}"
+    },
+    {
+      "name": "Thanh thao tác notebook",
+      "kind": "nav",
+      "refersTo": "notebook-toolbar",
+      "description": "Thanh thao tác tài liệu; không phải điều hướng workspace.",
+      "html": "<div class=\"ds-toolbar\" role=\"group\" aria-label=\"Thêm cell\"><select class=\"ds-select\" aria-label=\"Loại cell mới\"><option>Ghi chú</option><option>Writing</option><option>Reading</option></select><button class=\"ds-add\">Thêm cell</button><span class=\"ds-hint\">Viết bên trái. Tài liệu bên phải.</span></div>",
+      "css": ".ds-toolbar{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;display:flex;align-items:center;gap:8px;background:var(--canvas,#14171c);border-bottom:1px solid var(--line,#343b45);max-width:1440px;margin:0 auto;padding:10px 32px;}.ds-select{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;min-height:36px;min-width:108px;padding:5px 24px 5px 8px;border:1px solid var(--line,#343b45);border-radius:5px;color:var(--text,#e3e7ed);background:transparent;cursor:pointer;}.ds-select option{background:var(--surface,#1b1f25);}.ds-select:hover{background:var(--raised,#242a32);}.ds-add{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;line-height:1.4;min-height:36px;border:1px solid transparent;border-radius:6px;padding:7px 10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;cursor:pointer;transition:background .14s ease,color .14s ease;background:var(--accent-bg,#283c5f);color:#dce8ff;}.ds-add:hover{background:#354e76;}.ds-add:focus-visible,.ds-select:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}.ds-hint{font-size:12px;color:var(--muted,#a5afbc);margin-left:8px;}@media(max-width:760px){.ds-toolbar{padding-left:16px;padding-right:16px;}.ds-hint{display:none;}.ds-select,.ds-add{min-height:44px;}}@media(prefers-reduced-motion:reduce){.ds-add{transition:none;}}"
+    },
+    {
+      "name": "Menu tùy chọn",
+      "kind": "custom",
+      "refersTo": "options-menu",
+      "description": "Menu native details/summary. Ví dụ HTML/CSS không triển khai thao tác React hoặc xử lý Escape.",
+      "html": "<div class=\"ds-menu-stage\"><details class=\"ds-menu\"><summary class=\"ds-menu-trigger\">Tùy chọn</summary><div class=\"ds-menu-panel\"><button>Di chuyển lên</button><button>Thêm cell phía dưới</button><button class=\"ds-menu-danger\">Xóa cell</button></div></details></div>",
+      "css": ".ds-menu-stage{min-height:200px;display:flex;justify-content:flex-end;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;color:var(--text,#e3e7ed);}.ds-menu{position:relative;align-self:flex-start;}.ds-menu-trigger{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif;font-size:13px;line-height:1.4;min-height:36px;border:1px solid transparent;border-radius:6px;padding:7px 10px;display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap;cursor:pointer;transition:background .14s ease,color .14s ease;background:transparent;color:var(--muted,#a5afbc);list-style:none;}.ds-menu-trigger::-webkit-details-marker{display:none;}.ds-menu-trigger:hover{background:var(--raised,#242a32);color:var(--text,#e3e7ed);}.ds-menu-trigger:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}.ds-menu-panel{position:absolute;right:0;top:calc(100% + 7px);z-index:20;background:var(--raised,#242a32);border:1px solid #4d5664;padding:8px;border-radius:8px;min-width:235px;font-size:13px;}.ds-menu-panel button{font:inherit;display:flex;align-items:center;gap:10px;width:100%;min-height:36px;border:0;border-radius:4px;background:transparent;padding:8px;text-align:left;color:var(--text,#e3e7ed);cursor:pointer;transition:background .14s ease,color .14s ease;}.ds-menu-panel button:hover{background:#343d49;}.ds-menu-panel button:focus-visible{outline:2px solid var(--accent,#a9c5ff);outline-offset:3px;}.ds-menu-panel .ds-menu-danger{color:var(--danger,#ffb4ae);}@media(max-width:760px){.ds-menu-trigger,.ds-menu-panel button{min-height:44px;}.ds-menu-panel{max-width:calc(100vw - 40px);}}@media(prefers-reduced-motion:reduce){.ds-menu-trigger,.ds-menu-panel button{transition:none;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Notebook gọn cho việc học",
+    "overview": "Giao diện notebook tối, gọn như Jupyter/Colab, dành phần lớn không gian cho bài làm và tài liệu. Mật độ vừa phải, chữ nhỏ ở điều khiển và thông tin phụ, vùng viết thoáng hơn nhờ chiều cao dòng. Điểm nhấn xanh dịu giúp nhận ra thao tác chính và vị trí đang chọn.\n\nĐây là bản ghi từ implementation hiện tại, không phải đề xuất thiết kế mới. Nguồn: `src/index.css`, `src/App.tsx`, `src/components/JupyterCell.tsx`; mục đích và giới hạn hành vi ở [PRODUCT.md](PRODUCT.md). Chưa có ảnh chụp hay kiểm tra computed style bằng trình duyệt trong phiên này; tài liệu không xác nhận chất lượng hiển thị hoặc khả năng tiếp cận đã được kiểm toán.\n\nDESIGN.md là hợp đồng visual chuẩn của baseline đã được chấp nhận: frontmatter quy định token, phần văn xuôi hướng dẫn áp dụng, sidecar là bản dẫn xuất để hiển thị ví dụ. Khi thay đổi visual được chấp thuận, cập nhật source, DESIGN.md và sidecar cùng nhau. Kế hoạch cũ trong `process/` hoặc token Tailwind còn sót không ghi đè hợp đồng này.",
+    "keyCharacteristics": [
+      "Nền tối nhiều lớp, phân vùng bằng đường viền mảnh.",
+      "Một điểm nhấn xanh dịu dùng cho thao tác và trạng thái chọn.",
+      "Điều khiển gọn, vùng viết monospace, tài liệu dễ đọc.",
+      "Cell lặp lại; hai vùng xếp dọc khi màn hình hẹp."
+    ],
+    "rules": [
+      {
+        "name": "The Shared Skill Palette Rule",
+        "body": "Các kỹ năng dùng cùng hệ màu; phân biệt bằng tên và icon, không gán một màu nhấn riêng cho từng kỹ năng.",
+        "section": "colors"
+      },
+      {
+        "name": "The Writing Rhythm Rule",
+        "body": "Giữ line-height (1.85) cho vùng soạn thảo; không nén bài làm theo mật độ của toolbar.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Depth Rule",
+        "body": "Giữ phân tầng bằng nền và viền như các container hiện có; không thêm shadow mặc định vào cell.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** dùng token YAML cho màu, font và bán kính đã có; dùng trạng thái cục bộ đúng component.",
+      "**Do** giữ focus-visible rõ, label truy cập và thông điệp trạng thái thật.",
+      "**Do** giữ bài làm và tài liệu đọc được khi hai vùng xếp dọc ở viewport hẹp.",
+      "**Do** giữ icon SVG nét và chữ thao tác mô tả đúng chức năng."
+    ],
+    "donts": [
+      "**Don't** dùng palette IELTS nhiều màu còn sót trong Tailwind để tạo màu phân loại kỹ năng.",
+      "**Don't** thêm nhãn kernel, trạng thái chạy mã hoặc khả năng chấm bài chưa tồn tại.",
+      "**Don't** coi Inter đã được tải hoặc giao diện đã qua kiểm toán browser/WCAG.",
+      "**Don't** biến màu trạng thái cục bộ hoặc giá trị chỉ dùng một lần thành primitive chung."
+    ]
+  }
+}
