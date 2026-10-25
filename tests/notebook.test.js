@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
-import { sampleNotebook } from '../src/data/initialSample.ts';
+import { sampleNotebook } from '../src/features/notebook/data/initialSampleNotebook.ts';
+import { isNotebook } from '../src/features/notebook/services/notebookValidator.ts';
 
 test('sample notebook contains 4 skill cells', () => {
   assert.strictEqual(sampleNotebook.cells.length, 4);
@@ -30,8 +31,6 @@ test('speaking cell contains voice recorder resource in Right Grid', () => {
   assert.ok(speaking);
   assert.strictEqual(speaking.resource?.type, 'voice_recorder');
 });
-
-const { isNotebook } = await import('../src/lib/notebook.ts');
 
 test('notebook import accepts an exported notebook with persistent attachment data', () => {
   const doc = structuredClone(sampleNotebook);
