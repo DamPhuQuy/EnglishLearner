@@ -100,7 +100,7 @@ components:
 
 Giao diện notebook tối, gọn như Jupyter/Colab, dành phần lớn không gian cho bài làm và tài liệu. Mật độ vừa phải, chữ nhỏ ở điều khiển và thông tin phụ, vùng viết thoáng hơn nhờ chiều cao dòng. Điểm nhấn xanh dịu giúp nhận ra thao tác chính và vị trí đang chọn.
 
-Đây là bản ghi từ implementation hiện tại, không phải đề xuất thiết kế mới. Nguồn: `src/index.css`, `src/App.tsx`, `src/components/JupyterCell.tsx`; mục đích và giới hạn hành vi ở [PRODUCT.md](PRODUCT.md). Chưa có ảnh chụp hay kiểm tra computed style bằng trình duyệt trong phiên này; tài liệu không xác nhận chất lượng hiển thị hoặc khả năng tiếp cận đã được kiểm toán.
+Đây là bản ghi từ implementation hiện tại, không phải đề xuất thiết kế mới. Nguồn: `src/index.css`, `src/App.tsx`, `src/features/cell/components/JupyterCell.tsx`; mục đích và giới hạn hành vi ở [PRODUCT.md](PRODUCT.md). Chưa có ảnh chụp hay kiểm tra computed style bằng trình duyệt trong phiên này; tài liệu không xác nhận chất lượng hiển thị hoặc khả năng tiếp cận đã được kiểm toán.
 
 DESIGN.md là hợp đồng visual chuẩn của baseline đã được chấp nhận: frontmatter quy định token, phần văn xuôi hướng dẫn áp dụng, sidecar là bản dẫn xuất để hiển thị ví dụ. Khi thay đổi visual được chấp thuận, cập nhật source, DESIGN.md và sidecar cùng nhau. Kế hoạch cũ trong `process/` hoặc token Tailwind còn sót không ghi đè hợp đồng này.
 

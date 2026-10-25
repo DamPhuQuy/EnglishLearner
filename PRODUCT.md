@@ -30,7 +30,7 @@ Mô hình notebook phục vụ luyện ngôn ngữ: Markdown ở bên trái, tà
 - Một notebook đang mở tại một thời điểm, không có điều hướng nhiều workspace hay thư viện notebook.
 - Nội dung chủ yếu xử lý và lưu trên trình duyệt. Audio URL và URL tài nguyên được nhập có thể truy cập mạng; không cam kết toàn bộ ứng dụng hoạt động offline.
 - Thu âm cần trình duyệt hỗ trợ `MediaRecorder`, quyền micro và môi trường HTTPS hoặc localhost.
-- Ngôn ngữ UI là tiếng Việt; giữ tên kỹ năng IELTS bằng tiếng Anh. Người học có thể viết nội dung tiếng Anh hoặc tiếng Việt.
+- Ngôn ngữ UI và nội dung mặc định là tiếng Anh (English). Người học có thể viết nội dung tiếng Anh hoặc ngôn ngữ tùy chọn.
 
 ## Capabilities and Constraints
 
@@ -59,7 +59,7 @@ Mô hình notebook phục vụ luyện ngôn ngữ: Markdown ở bên trái, tà
 - Tệp nhị phân mới dùng data URL; TXT/Markdown lưu nội dung văn bản. Liên kết blob cũ được báo cần đính kèm lại.
 - Xuất JSON theo cấu trúc riêng với đuôi `.ilnb`; có thể nhập `.ilnb`, `.json`, `.ipynb` nếu nội dung tuân theo cấu trúc riêng này. Đuôi `.ipynb` không đồng nghĩa tương thích chuẩn Jupyter Notebook.
 - Notebook nhập tối đa 20 MiB. Kiểm tra trường dữ liệu, loại cell, ID không trùng, bộ đếm và scheme URL; cần xác nhận trước khi thay notebook hiện tại.
-- Dữ liệu chính: notebook `{ id, title, cells }`; cell `{ id, executionCount, cellType, source, resource? }`; resource `{ type, url?, name?, textContent? }`. Định nghĩa cụ thể ở [src/types/notebook.ts](src/types/notebook.ts), kiểm tra import ở [src/lib/notebook.ts](src/lib/notebook.ts).
+- Dữ liệu chính: notebook `{ id, title, cells }`; cell `{ id, executionCount, cellType, source, resource? }`; resource `{ type, url?, name?, textContent? }`. Định nghĩa cụ thể ở [src/features/notebook/types/notebook.ts](src/features/notebook/types/notebook.ts), kiểm tra import ở [src/features/notebook/services/notebookValidator.ts](src/features/notebook/services/notebookValidator.ts).
 
 ### Chưa có trong baseline
 
@@ -72,8 +72,8 @@ Tên hiển thị: **IELTS Notebook**. Giọng điệu trực tiếp, ngắn, h�
 ## Evidence on Hand
 
 - [src/App.tsx](src/App.tsx): shell notebook, thêm/xóa/chuyển cell, import/export, lưu cục bộ.
-- [src/components/JupyterCell.tsx](src/components/JupyterCell.tsx): editor, tài nguyên, audio, thu âm.
-- [src/data/initialSample.ts](src/data/initialSample.ts): notebook mẫu bốn kỹ năng. Nội dung là demo; audio sonar được ghi nhãn demo, không phải bài Cambridge. Các prompt/số liệu mẫu không phải đề chính thức đã được kiểm chứng.
+- [src/features/cell/components/JupyterCell.tsx](src/features/cell/components/JupyterCell.tsx): editor, tài nguyên, audio, thu âm.
+- [src/features/notebook/data/initialSampleNotebook.ts](src/features/notebook/data/initialSampleNotebook.ts): notebook mẫu bốn kỹ năng. Nội dung là demo; audio sonar được ghi nhãn demo, không phải bài Cambridge. Các prompt/số liệu mẫu không phải đề chính thức đã được kiểm chứng.
 - [tests/notebook.test.js](tests/notebook.test.js): cấu trúc mẫu và một số ràng buộc import; không thay thế kiểm thử tương tác trình duyệt.
 - [review-ui.md](process/features/active/ielts-notebook-workbench/review-ui.md): bằng chứng kiểm tra của đợt sửa UI. Người dùng chấp nhận bản hiện tại; phiên làm việc chưa có ảnh desktop/mobile hoặc xác nhận browser smoke test.
 - Không có bằng chứng về hiệu quả tăng band, chứng nhận IELTS, tích hợp Cambridge, khách hàng, testimonial hoặc số liệu sử dụng. Không tự thêm các claim này.
