@@ -135,7 +135,7 @@ export const CellHeader: React.FC<CellHeaderProps> = ({
             </button>
             <button
               className="danger-action"
-              disabled={totalCells <= 1 || disabled}
+              disabled={disabled}
               onClick={onDelete}
             >
               <Trash2 size={15} />

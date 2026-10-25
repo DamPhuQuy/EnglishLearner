@@ -62,9 +62,6 @@ export function removeCellById(
   cells: readonly JupyterCell[],
   id: string,
 ): { cells: JupyterCell[]; removed: JupyterCell | null; index: number } {
-  if (cells.length <= 1) {
-    return { cells: [...cells], removed: null, index: -1 };
-  }
   const index = cells.findIndex((c) => c.id === id);
   if (index === -1) {
     return { cells: [...cells], removed: null, index: -1 };

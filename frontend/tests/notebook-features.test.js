@@ -33,11 +33,12 @@ test("notebook feature addCellAt inserts new cell at target index", () => {
   assert.strictEqual(next[2].id, c2.id);
 });
 
-test("notebook feature removeCellById preserves at least 1 cell", () => {
+test("notebook feature removeCellById allows deleting when only 1 cell exists", () => {
   const c1 = createCell("listening");
   const result = removeCellById([c1], c1.id);
-  assert.strictEqual(result.cells.length, 1);
-  assert.strictEqual(result.removed, null);
+  assert.strictEqual(result.cells.length, 0);
+  assert.strictEqual(result.removed?.id, c1.id);
+  assert.strictEqual(result.index, 0);
 });
 
 test("notebook feature removeCellById deletes target cell when more than 1 exists", () => {

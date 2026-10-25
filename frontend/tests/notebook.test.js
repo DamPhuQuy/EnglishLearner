@@ -38,8 +38,13 @@ test('notebook import accepts an exported notebook with persistent attachment da
   assert.ok(isNotebook(JSON.parse(JSON.stringify(doc))));
 });
 
-test('notebook import rejects missing fields, empty cells, duplicates and unsafe resources', () => {
-  for (const value of [null, {}, { cells: [] }, { ...sampleNotebook, cells: [] }]) assert.ok(!isNotebook(value));
+test('notebook import accepts an empty notebook without cells', () => {
+  const emptyDoc = { ...sampleNotebook, cells: [] };
+  assert.ok(isNotebook(emptyDoc));
+});
+
+test('notebook import rejects missing fields, duplicates and unsafe resources', () => {
+  for (const value of [null, {}, { cells: [] }, { title: "Test" }]) assert.ok(!isNotebook(value));
   const duplicate = structuredClone(sampleNotebook);
   duplicate.cells[1].id = duplicate.cells[0].id;
   assert.ok(!isNotebook(duplicate));

@@ -30,8 +30,7 @@ export function isNotebook(value: unknown): value is JupyterNotebookDoc {
   if (
     typeof doc.id !== "string" ||
     typeof doc.title !== "string" ||
-    !Array.isArray(doc.cells) ||
-    !doc.cells.length
+    !Array.isArray(doc.cells)
   ) {
     return false;
   }
