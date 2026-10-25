@@ -3,6 +3,8 @@ export * from "./data/initialSampleNotebook.ts";
 export * from "./services/notebookValidator.ts";
 export * from "./services/notebookStorage.ts";
 export * from "./services/notebookFile.ts";
+export * from "./services/notebookApiClient.ts";
 export * from "./hooks/useNotebook.ts";
 export * from "./components/NotebookHeader.tsx";
 export * from "./components/NotebookToolbar.tsx";
+export * from "./components/NotebookTabs.tsx";

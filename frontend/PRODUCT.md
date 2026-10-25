@@ -27,7 +27,7 @@ Mô hình notebook phục vụ luyện ngôn ngữ: Markdown ở bên trái, tà
 ## Operating Context
 
 - Một ứng dụng React/TypeScript chạy bằng Vite, dùng CSS và Tailwind; icon từ Lucide React. Lệnh phát triển: `npm run dev`; kiểm tra: `npm test`, `npm run build`.
-- Một notebook đang mở tại một thời điểm, không có điều hướng nhiều workspace hay thư viện notebook.
+- Hỗ trợ mở và chỉnh sửa đồng thời nhiều file (.ilnb, .json, .ipynb) thông qua cơ chế Tabs (thẻ bài học). Chuyển đổi tab tức thì, tạo tab mới (+), đóng tab (x), và mở cùng lúc nhiều file vào các tab riêng biệt.
 - Nội dung chủ yếu xử lý và lưu trên trình duyệt. Audio URL và URL tài nguyên được nhập có thể truy cập mạng; không cam kết toàn bộ ứng dụng hoạt động offline.
 - Thu âm cần trình duyệt hỗ trợ `MediaRecorder`, quyền micro và môi trường HTTPS hoặc localhost.
 - Ngôn ngữ UI và nội dung mặc định là tiếng Anh (English). Người học có thể viết nội dung tiếng Anh hoặc ngôn ngữ tùy chọn.
@@ -36,7 +36,7 @@ Mô hình notebook phục vụ luyện ngôn ngữ: Markdown ở bên trái, tà
 
 ### Notebook và thao tác cell
 
-- Đổi tên notebook; thêm, xóa, đổi thứ tự cell. Có ít nhất một cell; xóa cell có một bước hoàn tác cho cell vừa xóa.
+- Đổi tên notebook; thêm, xóa, đổi thứ tự cell. Cho phép xóa cell khi notebook chỉ còn 1 cell (cho phép trang trống không có cell nào); xóa cell có một bước hoàn tác cho cell vừa xóa. Khi trang trống, có thể thêm cell mới bất kỳ lúc nào để bắt đầu bài làm.
 - Năm loại cell: `listening`, `reading`, `writing`, `speaking`, `markdown` (nhãn UI: Ghi chú).
 - Bên trái luôn là textarea soạn Markdown thô, có đếm từ theo khoảng trắng. Chưa có chế độ render Markdown, rich text hoặc thực thi mã.
 - Đổi kỹ năng không tự thay bài làm hoặc loại tài nguyên đang đính kèm.
@@ -52,14 +52,14 @@ Mô hình notebook phục vụ luyện ngôn ngữ: Markdown ở bên trái, tà
 - Audio dùng player native, tua lùi 5 giây và tốc độ 0.75×, 1×, 1.25×, 1.5×. Listening cho phép nhập URL HTTP/HTTPS khi chưa có URL tài nguyên.
 - Speaking thu âm, dừng và nghe lại; bản thu được đưa vào trường `resource`. Nếu cell đang có audio, thu mới cần xác nhận thay audio đó. Chưa có hai bản audio mẫu/bản thu lưu song song, waveform hoặc so sánh phát âm tự động.
 
-### Lưu, nhập và xuất
+### Lưu, đồng bộ cơ sở dữ liệu và xuất nhập
 
-- Tự lưu notebook JSON vào `localStorage`, khóa `ielts_jupyter_notebook_v2`, sau khoảng 350 ms không đổi nội dung; có thêm ghi khi rời trang. Hiển thị đang lưu, đã lưu hoặc lỗi lưu thực tế.
-- Lưu cục bộ gắn với trình duyệt và origin. Không có đồng bộ tài khoản, cloud backup hay lưu trực tiếp vào Git. Tổng dung lượng phụ thuộc quota trình duyệt; giới hạn mỗi tệp không bảo đảm toàn notebook luôn vừa quota.
-- Tệp nhị phân mới dùng data URL; TXT/Markdown lưu nội dung văn bản. Liên kết blob cũ được báo cần đính kèm lại.
-- Xuất JSON theo cấu trúc riêng với đuôi `.ilnb`; có thể nhập `.ilnb`, `.json`, `.ipynb` nếu nội dung tuân theo cấu trúc riêng này. Đuôi `.ipynb` không đồng nghĩa tương thích chuẩn Jupyter Notebook.
+- Tự lưu hai lớp (Hybrid Resilience): Lưu ngay lập tức vào `localStorage` (khóa `ielts_jupyter_notebook_v2`), đồng thời đồng bộ nguyên tử (atomic sync) tới cơ sở dữ liệu Rails backend qua API `/api/v1/notebooks/:id/sync` sau debounce khoảng 350 ms.
+- Quản trị dữ liệu lâu dài (Database Governance): Backend lưu trữ cấu trúc Notebook, Cell và Resource trong cơ sở dữ liệu quan hệ có ràng buộc khóa ngoại, hỗ trợ lưu trữ phiên bản snapshot (`notebook_snapshots`) tự động sau mỗi lần sync hoặc checkpoint thủ công, cho phép khôi phục dữ liệu tức thì.
+- Chế độ offline-first tự thích ứng: Khi backend offline hoặc mạng gián đoạn, ứng dụng tiếp tục hoạt động và lưu cục bộ an toàn, hiển thị trạng thái `Saved locally (Offline)`. Khi backend kết nối trở lại, trạng thái tự chuyển sang `Saved to DB` và đồng bộ an toàn.
+- Xuất JSON theo cấu trúc riêng với đuôi `.ilnb`; có thể nhập `.ilnb`, `.json`, `.ipynb` nếu nội dung tuân theo cấu trúc riêng này.
 - Notebook nhập tối đa 20 MiB. Kiểm tra trường dữ liệu, loại cell, ID không trùng, bộ đếm và scheme URL; cần xác nhận trước khi thay notebook hiện tại.
-- Dữ liệu chính: notebook `{ id, title, cells }`; cell `{ id, executionCount, cellType, source, resource? }`; resource `{ type, url?, name?, textContent? }`. Định nghĩa cụ thể ở [src/features/notebook/types/notebook.ts](src/features/notebook/types/notebook.ts), kiểm tra import ở [src/features/notebook/services/notebookValidator.ts](src/features/notebook/services/notebookValidator.ts).
+- Dữ liệu chính: notebook `{ id, title, cells }`; cell `{ id, executionCount, cellType, source, resource? }`; resource `{ type, url?, name?, textContent? }`. Định nghĩa cụ thể ở [src/features/notebook/types/notebook.ts](src/features/notebook/types/notebook.ts), API client ở [src/features/notebook/services/notebookApiClient.ts](src/features/notebook/services/notebookApiClient.ts).
 
 ### Chưa có trong baseline
 
