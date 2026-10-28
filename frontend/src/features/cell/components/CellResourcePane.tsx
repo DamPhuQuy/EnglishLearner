@@ -2,6 +2,7 @@ import { Paperclip, X } from "lucide-react";
 import React, { useRef, useState } from "react";
 import type { CellResource, SkillType } from "../../notebook/types/notebook.ts";
 import { defaultNotebookFileAdapter } from "../../notebook/services/notebookFile.ts";
+import { defaultNotebookApiClient } from "../../notebook/services/notebookApiClient.ts";
 import { useVoiceRecorder, VoiceRecorderWorkspace } from "../../voice-recorder/index.ts";
 import { SKILL_RESOURCE_LABELS } from "../services/skillTemplates.ts";
 import { AudioUrlForm } from "./resources/AudioUrlForm.tsx";
@@ -32,18 +33,66 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
   const resourceTitle = SKILL_RESOURCE_LABELS[cellType] ?? "Attached Document";
   const isStaleBlob = Boolean(resource?.url?.startsWith("blob:"));
 
-  const recorder = useVoiceRecorder((dataUrl, fileName) => {
+  const recorder = useVoiceRecorder(async (dataUrl, fileName, file) => {
     onUpdateResource({
       type: "audio",
       name: fileName,
       url: dataUrl,
     });
+
+    if (file) {
+      try {
+        const uploadResult = await defaultNotebookApiClient.uploadFile(file, fileName);
+        if (uploadResult?.url) {
+          onUpdateResource({
+            type: "audio",
+            name: fileName,
+            url: uploadResult.url,
+          });
+        }
+      } catch (uploadErr) {
+        console.warn("Could not upload recording to Cloudflare R2, using local audio data:", uploadErr);
+      }
+    }
   });
 
   const attachFile = async (file: File) => {
     setError("");
     setBusy(true);
     try {
+      const isText =
+        file.type.startsWith("text/") ||
+        file.name.endsWith(".txt") ||
+        file.name.endsWith(".md");
+
+      if (isText) {
+        const textContent = await file.text();
+        onUpdateResource({
+          type: "text",
+          name: file.name,
+          textContent,
+        });
+        return;
+      }
+
+      // Try uploading binary asset (audio/pdf/image) to Cloudflare R2
+      try {
+        const uploaded = await defaultNotebookApiClient.uploadFile(file);
+        let resType: "audio" | "image" | "pdf" | "none" = "none";
+        if (file.type.startsWith("audio/")) resType = "audio";
+        else if (file.type.startsWith("image/")) resType = "image";
+        else if (file.type.includes("pdf") || file.name.endsWith(".pdf")) resType = "pdf";
+
+        onUpdateResource({
+          type: resType,
+          name: file.name,
+          url: uploaded.url,
+        });
+        return;
+      } catch (uploadErr) {
+        console.info("R2 upload fallback to local reader:", uploadErr);
+      }
+
       const res = await defaultNotebookFileAdapter.readFileAsResource(file);
       onUpdateResource(res);
     } catch (err) {

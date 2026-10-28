@@ -1,3 +1,5 @@
+import type { IeltsExerciseData } from "../../cell/types/ieltsSchema.ts";
+
 export type SkillType =
   | "listening"
   | "reading"
@@ -26,6 +28,7 @@ export interface JupyterCell {
   cellType: SkillType;
   source: string;
   resource?: CellResource;
+  structuredData?: IeltsExerciseData;
 }
 
 export interface JupyterNotebookDoc {
@@ -38,6 +41,7 @@ export function createCell(
   cellType: SkillType = "markdown",
   source = "",
   resource?: CellResource,
+  structuredData?: IeltsExerciseData,
 ): JupyterCell {
   return {
     id: crypto.randomUUID(),
@@ -45,6 +49,7 @@ export function createCell(
     cellType,
     source,
     resource,
+    structuredData,
   };
 }
 

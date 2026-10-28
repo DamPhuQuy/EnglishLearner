@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from "react";
+import type { IeltsExerciseData } from "../../cell/types/ieltsSchema.ts";
 import {
   addCellAt,
   createCell,
@@ -11,7 +12,10 @@ import {
   type JupyterNotebookDoc,
   type SkillType,
 } from "../types/notebook.ts";
-import { appendTemplateToSource } from "../../cell/services/skillTemplates.ts";
+import {
+  appendTemplateToSource,
+  getSkillTemplate,
+} from "../../cell/services/skillTemplates.ts";
 import {
   BrowserNotebookFileAdapter,
   defaultNotebookFileAdapter,
@@ -468,7 +472,12 @@ export function useNotebook(options?: UseNotebookOptions) {
   };
 
   const add = (index: number, skill: SkillType = "markdown") => {
-    const newCell = createCell(skill);
+    let initialResource: CellResource | undefined = undefined;
+    if (skill === "speaking") {
+      initialResource = { type: "voice_recorder", name: "Speaking_Voice_Studio" };
+    }
+    const initialSource = getSkillTemplate(skill);
+    const newCell = createCell(skill, initialSource, initialResource);
     pendingFocus.current = newCell.id;
     updateActiveDoc((prev) => ({
       ...prev,
@@ -582,6 +591,15 @@ export function useNotebook(options?: UseNotebookOptions) {
     cellId: string,
     resource: CellResource | undefined,
   ) => patch(cellId, { resource });
+  const updateStructuredData = (
+    cellId: string,
+    structuredData: IeltsExerciseData | undefined,
+  ) => {
+    patch(cellId, {
+      structuredData,
+      ...(structuredData?.skill ? { cellType: structuredData.skill as SkillType } : {}),
+    });
+  };
 
   return {
     doc,
@@ -621,5 +639,6 @@ export function useNotebook(options?: UseNotebookOptions) {
     updateSource,
     updateSkill,
     updateResource,
+    updateStructuredData,
   };
 }

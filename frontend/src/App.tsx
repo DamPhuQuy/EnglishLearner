@@ -48,6 +48,7 @@ export const App: React.FC = () => {
     updateSource,
     updateSkill,
     updateResource,
+    updateStructuredData,
   } = useNotebook();
 
   return (
@@ -130,6 +131,7 @@ export const App: React.FC = () => {
               onUpdateSource={updateSource}
               onUpdateSkill={updateSkill}
               onUpdateResource={updateResource}
+              onUpdateStructuredData={updateStructuredData}
               onRun={run}
               onDelete={remove}
               onMoveUp={(idx) => move(idx, -1)}

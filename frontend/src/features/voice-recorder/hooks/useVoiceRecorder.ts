@@ -12,7 +12,7 @@ export interface VoiceRecorderState {
 }
 
 export function useVoiceRecorder(
-  onRecorded?: (dataUrl: string, fileName: string) => void,
+  onRecorded?: (dataUrl: string, fileName: string, file?: File) => void,
 ): VoiceRecorderState {
   const [recording, setRecording] = useState(false);
   const [seconds, setSeconds] = useState(0);
@@ -88,7 +88,7 @@ export function useVoiceRecorder(
     try {
       const result = await recorder.stopRecording();
       if (aliveRef.current) {
-        onRecorded?.(result.dataUrl, result.file.name);
+        onRecorded?.(result.dataUrl, result.file.name, result.file);
       }
     } catch (err) {
       if (aliveRef.current) {

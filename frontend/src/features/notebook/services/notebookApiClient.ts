@@ -5,6 +5,7 @@ export interface DatabaseHealth {
   status: "ok" | "error";
   database: "connected" | "disconnected" | "error";
   adapter?: string;
+  storage?: string;
   environment?: string;
   notebooksCount?: number;
   cellsCount?: number;
@@ -195,6 +196,36 @@ export class NotebookApiClient {
         error: err instanceof Error ? err.message : "Restore network error",
       };
     }
+  }
+
+  async uploadFile(
+    file: File | Blob,
+    customFilename?: string
+  ): Promise<{
+    url: string;
+    key: string;
+    name: string;
+    type: string;
+    size: number;
+  }> {
+    const formData = new FormData();
+    if (file instanceof File) {
+      formData.append("file", file, file.name);
+    } else {
+      formData.append("file", file, customFilename || "recording.webm");
+    }
+
+    const response = await fetch(`${this.baseUrl}/upload`, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errJson = await response.json().catch(() => null);
+      throw new Error(errJson?.error || `Upload failed: HTTP ${response.status}`);
+    }
+
+    return await response.json();
   }
 }
 

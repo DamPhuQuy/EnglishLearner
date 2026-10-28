@@ -111,7 +111,9 @@ export const NotebookToolbar: React.FC<Props> = ({
 
               {dbHealth && isDbConnected && (
                 <div className="options-db-meta">
-                  Engine: {dbHealth.adapter} · Notebooks: {dbHealth.notebooksCount} · Checkpoints: {snapshots.length}
+                  Engine: {dbHealth.adapter === "cloudflare_d1_sqlite" ? "Cloudflare D1 (SQLite)" : dbHealth.adapter}
+                  {dbHealth.storage ? ` · Storage: ${dbHealth.storage === "cloudflare_r2" ? "Cloudflare R2" : dbHealth.storage}` : ""}
+                  {" "}· Notebooks: {dbHealth.notebooksCount} · Checkpoints: {snapshots.length}
                 </div>
               )}
 

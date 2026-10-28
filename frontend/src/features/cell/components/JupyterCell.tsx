@@ -4,6 +4,7 @@ import type {
   JupyterCell as CellType,
   SkillType,
 } from "../../notebook/types/notebook.ts";
+import type { IeltsExerciseData } from "../types/ieltsSchema.ts";
 import { SKILL_NAMES } from "../services/skillTemplates.ts";
 import { CellEditorPane } from "./CellEditorPane.tsx";
 import { CellGutter } from "./CellGutter.tsx";
@@ -19,6 +20,7 @@ export interface JupyterCellProps {
   onUpdateSource: (id: string, source: string) => void;
   onUpdateSkill: (id: string, skill: SkillType) => void;
   onUpdateResource: (id: string, resource: CellResource | undefined) => void;
+  onUpdateStructuredData?: (id: string, data: IeltsExerciseData | undefined) => void;
   onRun: (id: string) => void;
   onDelete: (id: string) => void;
   onMoveUp: (index: number) => void;
@@ -37,6 +39,7 @@ export const JupyterCell: React.FC<JupyterCellProps> = ({
   onUpdateSource,
   onUpdateSkill,
   onUpdateResource,
+  onUpdateStructuredData,
   onRun,
   onDelete,
   onMoveUp,
@@ -76,7 +79,11 @@ export const JupyterCell: React.FC<JupyterCellProps> = ({
           <CellEditorPane
             cellId={cell.id}
             source={cell.source}
+            cellType={cell.cellType}
+            structuredData={cell.structuredData}
             onUpdateSource={(src) => onUpdateSource(cell.id, src)}
+            onUpdateStructuredData={(data) => onUpdateStructuredData?.(cell.id, data)}
+            onUpdateResource={(res) => onUpdateResource(cell.id, res)}
             onRun={() => onRun(cell.id)}
           />
           <CellResourcePane
