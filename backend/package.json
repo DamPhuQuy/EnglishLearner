@@ -1,0 +1,26 @@
+{
+  "name": "ielts-backend-worker",
+  "version": "1.0.0",
+  "description": "IELTS Notebook Backend on Cloudflare Workers with Hono, D1 (SQLite) and R2 Storage",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 3000",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "CI=true wrangler d1 migrations apply ielts-db --local",
+    "db:migrate:remote": "CI=true wrangler d1 migrations apply ielts-db --remote",
+    "db:seed": "wrangler d1 execute ielts-db --local --file=./migrations/0002_seed_sample.sql",
+    "r2:create:local": "echo 'Local R2 is automatically simulated by Wrangler'",
+    "r2:create:remote": "wrangler r2 bucket create ielts-assets",
+    "build": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/integration.test.ts"
+  },
+  "dependencies": {
+    "hono": "^4.7.1"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261023.1",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.154.0"
+  }
+}
