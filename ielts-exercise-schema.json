@@ -1,0 +1,287 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IELTS 4-Skills Exercise Specification Schema",
+  "description": "Standardized schema for Cambridge / IDP / British Council IELTS computer-based practice exercises across Listening, Reading, Writing, and Speaking.",
+  "type": "object",
+  "required": ["version", "skill", "title"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": ["1.0"]
+    },
+    "skill": {
+      "type": "string",
+      "enum": ["reading", "listening", "writing", "speaking"]
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the test passage, section, or task"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "string",
+      "description": "Target difficulty e.g. 'Band 6.5–7.5', 'Academic Test 1'"
+    },
+    "timeLimitMinutes": {
+      "type": "integer"
+    },
+    "material": {
+      "type": "object",
+      "description": "Reading text, audio file, or visual stimulus (chart/map/diagram)",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["text", "audio", "image", "pdf"]
+        },
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string",
+          "description": "Passage text with [A], [B], [C] paragraph markers"
+        },
+        "audioUrl": {
+          "type": "string"
+        },
+        "audioTranscript": {
+          "type": "string"
+        },
+        "imageUrl": {
+          "type": "string"
+        },
+        "imageDescription": {
+          "type": "string",
+          "description": "Detailed text representation of charts/graphs/maps"
+        }
+      }
+    },
+    "questionGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "instruction", "questions"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "true_false_not_given",
+              "yes_no_not_given",
+              "multiple_choice",
+              "sentence_completion",
+              "summary_completion",
+              "note_completion",
+              "form_completion",
+              "table_completion",
+              "flow_chart_completion",
+              "short_answer",
+              "matching_headings",
+              "matching_information",
+              "matching_features",
+              "matching_sentence_endings",
+              "plan_map_diagram_labelling"
+            ]
+          },
+          "title": { "type": "string" },
+          "instruction": { "type": "string" },
+          "wordLimitRule": {
+            "type": "string",
+            "description": "e.g. 'NO MORE THAN TWO WORDS AND/OR A NUMBER'"
+          },
+          "headingsList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "heading"],
+              "properties": {
+                "id": { "type": "string" },
+                "heading": { "type": "string" }
+              }
+            }
+          },
+          "featuresList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["key", "name"],
+              "properties": {
+                "key": { "type": "string" },
+                "name": { "type": "string" },
+                "description": { "type": "string" }
+              }
+            }
+          },
+          "endingsList": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["key", "text"],
+              "properties": {
+                "key": { "type": "string" },
+                "text": { "type": "string" }
+              }
+            }
+          },
+          "boxOptions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["key", "word"],
+              "properties": {
+                "key": { "type": "string" },
+                "word": { "type": "string" }
+              }
+            }
+          },
+          "questions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["questionNumber", "answer"],
+              "properties": {
+                "questionNumber": { "type": "integer" },
+                "statement": { "type": "string" },
+                "question": { "type": "string" },
+                "prefix": { "type": "string" },
+                "suffix": { "type": "string" },
+                "paragraph": { "type": "string" },
+                "beginning": { "type": "string" },
+                "labelLocation": { "type": "string" },
+                "options": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["key", "text"],
+                    "properties": {
+                      "key": { "type": "string" },
+                      "text": { "type": "string" }
+                    }
+                  }
+                },
+                "answer": {
+                  "oneOf": [
+                    { "type": "string" },
+                    { "type": "array", "items": { "type": "string" } }
+                  ]
+                },
+                "acceptedAnswers": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "explanation": { "type": "string" },
+                "paragraphRef": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "writingTask": {
+      "type": "object",
+      "required": ["taskType", "prompt", "minWords"],
+      "properties": {
+        "taskType": {
+          "type": "string",
+          "enum": [
+            "task1",
+            "task2",
+            "task1_academic",
+            "task1_general",
+            "task2_opinion",
+            "task2_discussion",
+            "task2_advantages_disadvantages",
+            "task2_problem_solution",
+            "task2_two_part"
+          ]
+        },
+        "academicVisualType": {
+          "type": "string",
+          "enum": ["bar_chart", "line_graph", "pie_chart", "table", "map_plan", "process_diagram", "multiple_charts"]
+        },
+        "generalLetterType": {
+          "type": "string",
+          "enum": ["formal", "semi_formal", "informal"]
+        },
+        "prompt": { "type": "string" },
+        "bulletPoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "keyDataPoints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "minWords": { "type": "integer" },
+        "sampleEssay": { "type": "string" },
+        "sampleExaminerBand": { "type": "string" }
+      }
+    },
+    "speakingTask": {
+      "type": "object",
+      "required": ["part", "topic"],
+      "properties": {
+        "part": { "type": "integer", "enum": [1, 2, 3] },
+        "topic": { "type": "string" },
+        "part1Questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["questionNumber", "question"],
+            "properties": {
+              "questionNumber": { "type": "integer" },
+              "question": { "type": "string" }
+            }
+          }
+        },
+        "cueCard": {
+          "type": "object",
+          "required": ["title", "bulletPoints"],
+          "properties": {
+            "title": { "type": "string" },
+            "bulletPoints": { "type": "array", "items": { "type": "string" } },
+            "roundingOffQuestion": { "type": "string" }
+          }
+        },
+        "part3Questions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["questionNumber", "question"],
+            "properties": {
+              "questionNumber": { "type": "integer" },
+              "question": { "type": "string" }
+            }
+          }
+        },
+        "recommendedIdioms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "phrase": { "type": "string" },
+              "meaning": { "type": "string" },
+              "example": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "vocabularyNotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["word", "definition"],
+        "properties": {
+          "word": { "type": "string" },
+          "type": { "type": "string" },
+          "phonetic": { "type": "string" },
+          "definition": { "type": "string" },
+          "example": { "type": "string" }
+        }
+      }
+    }
+  }
+}
