@@ -930,14 +930,20 @@ audio {
 
 .audio-narration-bar {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   background: rgba(168, 85, 247, 0.08);
   border: 1px solid rgba(168, 85, 247, 0.25);
   border-radius: 8px;
+}
+
+.narration-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .narration-info {
@@ -949,10 +955,86 @@ audio {
   color: #c084fc;
 }
 
+.audio-live-waveform {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 12px;
+  margin-left: 4px;
+}
+
+.audio-live-waveform .wave-bar {
+  width: 2px;
+  height: 100%;
+  background: #c084fc;
+  border-radius: 1px;
+  animation: wavePulse 0.9s ease-in-out infinite alternate;
+}
+
+.audio-live-waveform .bar-1 { animation-delay: 0.1s; }
+.audio-live-waveform .bar-2 { animation-delay: 0.3s; }
+.audio-live-waveform .bar-3 { animation-delay: 0.2s; }
+.audio-live-waveform .bar-4 { animation-delay: 0.4s; }
+
+@keyframes wavePulse {
+  0% { transform: scaleY(0.25); opacity: 0.5; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+.narration-voice-picker {
+  display: flex;
+  align-items: center;
+}
+
+.voice-select {
+  height: 26px;
+  padding: 0 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 11px;
+  color: var(--text);
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.voice-select:focus {
+  border-color: #c084fc;
+  outline: none;
+}
+
 .narration-actions {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.narration-toggle-btn {
+  height: 30px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.turn-progress-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, 0.18);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.narration-error-alert {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
 .audio-transcript-wrapper {
@@ -989,28 +1071,84 @@ audio {
 }
 
 .audio-transcript-content {
-  padding: 12px 14px;
+  padding: 10px 12px;
   background: var(--canvas);
   border-top: 1px solid var(--line);
-  max-height: 280px;
+  max-height: 320px;
   overflow-y: auto;
-  font-size: 12px;
-  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.transcript-speaker-line {
-  margin: 0 0 8px 0;
-  color: var(--text);
-}
-
-.transcript-speaker-line strong,
-.transcript-speaker-line:first-letter {
-  font-weight: 600;
-}
-
-.transcript-line {
-  margin: 0 0 6px 0;
+.transcript-hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
   color: var(--muted);
+  font-style: italic;
+  padding-bottom: 4px;
+}
+
+.transcript-turn-card {
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.transcript-turn-card:hover {
+  border-color: #c084fc;
+  background: var(--raised);
+}
+
+.transcript-turn-card.active-turn {
+  border-color: #c084fc;
+  background: rgba(168, 85, 247, 0.14);
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.3);
+}
+
+.turn-meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.turn-speaker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #d8b4fe;
+}
+
+.turn-play-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.turn-play-btn:hover,
+.active-turn .turn-play-btn {
+  color: #c084fc;
+}
+
+.turn-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text);
 }
 .resource-empty {
   min-height:210px;

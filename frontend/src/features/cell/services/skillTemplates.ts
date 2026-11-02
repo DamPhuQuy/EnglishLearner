@@ -142,6 +142,100 @@ export const MINI_IELTS_PRESETS: MiniIeltsPreset[] = [
       type: "audio",
       url: "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
       name: "Listening_Section1_Registration_demo.mp3",
+      textContent: `[Audio Transcript - Section 1: Hotel Room Booking]
+[Receptionist]: Good morning, Seaside Grand Hotel reservations. How can I help you today?
+[Guest]: Hello, I would like to make a room reservation for next month please.
+[Receptionist]: Certainly, madam. May I take your surname first?
+[Guest]: Yes, it is Thornton. That is spelled T-H-O-R-N-T-O-N.
+[Receptionist]: Thank you, Mrs. Thornton. And what type of room would you prefer?
+[Guest]: We would love a double room, preferably on an upper floor with a sea view.
+[Receptionist]: A double room with sea view, perfect. What is your intended check-in date?
+[Guest]: We plan to arrive on the 14th of August.
+[Receptionist]: 14th of August, excellent. And could I take a daytime contact number?
+[Guest]: Yes, it's 07946 882910.
+[Receptionist]: 07946 882910. And regarding your breakfast arrangements?
+[Guest]: We would like the continental breakfast option included, please.
+[Receptionist]: Wonderful. Do you have any special requirements for your stay?
+[Guest]: Yes, our return flight isn't until the evening, so could we arrange a late check-out at 11:30 AM?
+[Receptionist]: Certainly, I have added late check-out at 11:30 AM to your booking notes.`,
+    },
+    structuredData: {
+      version: "1.0",
+      skill: "listening",
+      title: "Mini-IELTS Listening: Hotel Room Booking (Section 1)",
+      topic: "Accommodation & Hospitality",
+      difficulty: "Band 5.0–5.5",
+      timeLimitMinutes: 10,
+      material: {
+        type: "audio",
+        title: "Listening Audio Track: Hotel Booking",
+        audioUrl: "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
+        audioTranscript: `[Audio Transcript - Section 1: Hotel Room Booking]
+[Receptionist]: Good morning, Seaside Grand Hotel reservations. How can I help you today?
+[Guest]: Hello, I would like to make a room reservation for next month please.
+[Receptionist]: Certainly, madam. May I take your surname first?
+[Guest]: Yes, it is Thornton. That is spelled T-H-O-R-N-T-O-N.
+[Receptionist]: Thank you, Mrs. Thornton. And what type of room would you prefer?
+[Guest]: We would love a double room, preferably on an upper floor with a sea view.
+[Receptionist]: A double room with sea view, perfect. What is your intended check-in date?
+[Guest]: We plan to arrive on the 14th of August.
+[Receptionist]: 14th of August, excellent. And could I take a daytime contact number?
+[Guest]: Yes, it's 07946 882910.
+[Receptionist]: 07946 882910. And regarding your breakfast arrangements?
+[Guest]: We would like the continental breakfast option included, please.
+[Receptionist]: Wonderful. Do you have any special requirements for your stay?
+[Guest]: Yes, our return flight isn't until the evening, so could we arrange a late check-out at 11:30 AM?
+[Receptionist]: Certainly, I have added late check-out at 11:30 AM to your booking notes.`,
+      },
+      questionGroups: [
+        {
+          id: "qg-hotel-notes",
+          type: "note_completion",
+          title: "Section 1: Hotel Booking Notes",
+          instruction: "Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+          wordLimitRule: "NO MORE THAN TWO WORDS AND/OR A NUMBER",
+          questions: [
+            {
+              questionNumber: 1,
+              statement: "1. Guest Surname: [Q1]",
+              answer: "Thornton",
+              explanation: "Receptionist asks for surname, guest confirms: 'Thornton. That is spelled T-H-O-R-N-T-O-N.'",
+            },
+            {
+              questionNumber: 2,
+              statement: "2. Room preference: [Q2] with sea view",
+              answer: "double room",
+              acceptedAnswers: ["double", "double room"],
+              explanation: "Guest states: 'We would love a double room, preferably on an upper floor with a sea view.'",
+            },
+            {
+              questionNumber: 3,
+              statement: "3. Check-in Date: 14th [Q3]",
+              answer: "August",
+              explanation: "Guest says: 'We plan to arrive on the 14th of August.'",
+            },
+            {
+              questionNumber: 4,
+              statement: "4. Contact Number: 07946 [Q4]",
+              answer: "882910",
+              explanation: "Guest says: 'Yes, it is 07946 882910.'",
+            },
+            {
+              questionNumber: 5,
+              statement: "5. Breakfast choice: [Q5] option",
+              answer: "continental",
+              explanation: "Guest states: 'We would like the continental breakfast option included.'",
+            },
+            {
+              questionNumber: 6,
+              statement: "6. Special request: Late check-out at [Q6] AM",
+              answer: "11:30",
+              acceptedAnswers: ["11:30", "11.30"],
+              explanation: "Guest asks for: 'late check-out at 11:30 AM.'",
+            },
+          ],
+        },
+      ],
     },
   },
   {

@@ -1,15 +1,20 @@
 import {
+  AlertCircle,
   ArrowUp,
+  Check,
   ChevronDown,
   ChevronUp,
   FileText,
   Headphones,
+  Mic,
   Pause,
   Play,
+  RotateCcw,
+  Sparkles,
   Square,
   Volume2,
 } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
 interface Props {
   url: string;
@@ -17,20 +22,140 @@ interface Props {
   onError: (msg: string) => void;
 }
 
+interface DialogueTurn {
+  id: number;
+  speaker: string;
+  text: string;
+  raw: string;
+}
+
 export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const activeUtteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const isStoppedRef = useRef(false);
+  const nextTurnTimerRef = useRef<number | null>(null);
+
   const [speed, setSpeed] = useState("1");
-  const [showTranscript, setShowTranscript] = useState(false);
+  const [showTranscript, setShowTranscript] = useState(true);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [currentTurnIdx, setCurrentTurnIdx] = useState<number | null>(null);
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>("");
+  const [speechError, setSpeechError] = useState<string>("");
 
+  // Parse transcript into distinct conversational turns
+  const turns: DialogueTurn[] = useMemo(() => {
+    if (!transcript) return [];
+    const lines = transcript.split("\n").map((l) => l.trim()).filter(Boolean);
+    const parsed: DialogueTurn[] = [];
+    let currentSpeaker = "Narrator";
+
+    for (const line of lines) {
+      if (
+        line.startsWith("[Audio Transcript") ||
+        line.startsWith("###") ||
+        line.startsWith("===")
+      ) {
+        continue;
+      }
+
+      const match = line.match(/^\[([^\]]+)\]:\s*(.*)$/);
+      if (match) {
+        currentSpeaker = match[1].trim();
+        parsed.push({
+          id: parsed.length,
+          speaker: currentSpeaker,
+          text: match[2].trim(),
+          raw: line,
+        });
+      } else if (parsed.length > 0) {
+        parsed[parsed.length - 1].text += " " + line;
+        parsed[parsed.length - 1].raw += " " + line;
+      } else {
+        parsed.push({
+          id: parsed.length,
+          speaker: currentSpeaker,
+          text: line,
+          raw: line,
+        });
+      }
+    }
+
+    return parsed;
+  }, [transcript]);
+
+  // Load and listen for available speech synthesis voices
   useEffect(() => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      return;
+    }
+
+    const loadVoices = () => {
+      const allVoices = window.speechSynthesis.getVoices();
+      if (!allVoices || allVoices.length === 0) return;
+
+      const englishVoices = allVoices.filter(
+        (v) => v.lang.startsWith("en") || v.lang.startsWith("EN")
+      );
+      const displayVoices = englishVoices.length > 0 ? englishVoices : allVoices;
+      setVoices(displayVoices);
+
+      // Select default voice: prefer en-GB (Female/Male) or en-US
+      setSelectedVoiceURI((prev) => {
+        if (prev && displayVoices.some((v) => v.voiceURI === prev)) {
+          return prev;
+        }
+        const preferred =
+          displayVoices.find(
+            (v) => v.lang.startsWith("en-GB") && /female|natural/i.test(v.name)
+          ) ||
+          displayVoices.find((v) => v.lang.startsWith("en-GB")) ||
+          displayVoices.find((v) => v.lang.startsWith("en-US")) ||
+          displayVoices[0];
+        return preferred?.voiceURI || "";
+      });
+    };
+
+    loadVoices();
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+
     return () => {
       if (typeof window !== "undefined" && window.speechSynthesis) {
         window.speechSynthesis.cancel();
       }
+      if (nextTurnTimerRef.current) {
+        window.clearTimeout(nextTurnTimerRef.current);
+      }
     };
   }, []);
+
+  const playExamChime = () => {
+    try {
+      const AudioCtx =
+        window.AudioContext ||
+        (window as unknown as { webkitAudioContext: typeof AudioContext })
+          .webkitAudioContext;
+      if (!AudioCtx) return;
+      const ctx = new AudioCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(587.33, ctx.currentTime); // D5
+      osc.frequency.setValueAtTime(880, ctx.currentTime + 0.14); // A5
+
+      gain.gain.setValueAtTime(0.12, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.45);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + 0.5);
+    } catch {
+      // AudioContext non-critical fallback
+    }
+  };
 
   const rewind5s = () => {
     if (audioRef.current) {
@@ -44,81 +169,181 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     if (audioRef.current) {
       audioRef.current.playbackRate = Number(val);
     }
-    if (typeof window !== "undefined" && window.speechSynthesis && isSpeaking) {
-      // Apply speed change to TTS by restarting if needed
-    }
   };
 
-  const cleanTranscriptForSpeech = (rawText: string) => {
-    return rawText
-      .replace(/\[Audio Transcript.*?\]/gi, "")
-      .replace(/\[(.*?)\]:/g, "$1 says:")
-      .trim();
-  };
-
-  const handleToggleSpeech = () => {
-    if (typeof window === "undefined" || !window.speechSynthesis) {
-      onError("Speech synthesis is not supported in this browser.");
+  // Speak a single turn safely
+  const speakTurn = (turnIndex: number) => {
+    if (
+      isStoppedRef.current ||
+      turnIndex < 0 ||
+      turnIndex >= turns.length ||
+      typeof window === "undefined" ||
+      !("speechSynthesis" in window)
+    ) {
+      setIsSpeaking(false);
+      setIsPaused(false);
+      setCurrentTurnIdx(null);
       return;
     }
 
+    const currentTurn = turns[turnIndex];
+    setCurrentTurnIdx(turnIndex);
+    setSpeechError("");
+
+    // Ensure Chrome paused queue is resumed
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+    }
+
+    const utterance = new SpeechSynthesisUtterance(currentTurn.text);
+    utterance.rate = Number(speed);
+
+    // Pick appropriate voice
+    const availableVoices = window.speechSynthesis.getVoices();
+    let chosenVoice = availableVoices.find((v) => v.voiceURI === selectedVoiceURI);
+    if (!chosenVoice) {
+      chosenVoice =
+        availableVoices.find((v) => v.lang.startsWith("en-GB")) ||
+        availableVoices.find((v) => v.lang.startsWith("en-US")) ||
+        availableVoices.find((v) => v.lang.startsWith("en"));
+    }
+
+    // Adapt pitch/voice for multi-speaker dialogue
+    const uniqueSpeakers = Array.from(new Set(turns.map((t) => t.speaker)));
+    const speakerRank = uniqueSpeakers.indexOf(currentTurn.speaker);
+
+    if (chosenVoice) {
+      if (speakerRank % 2 === 1) {
+        // Speaker 2: choose alternative voice or pitch shift
+        const altVoice = availableVoices.find(
+          (v) => v.lang.startsWith("en") && v.voiceURI !== chosenVoice?.voiceURI
+        );
+        if (altVoice) {
+          utterance.voice = altVoice;
+        } else {
+          utterance.voice = chosenVoice;
+          utterance.pitch = 0.9;
+        }
+      } else {
+        utterance.voice = chosenVoice;
+        utterance.pitch = 1.05;
+      }
+    } else {
+      utterance.lang = "en-GB";
+    }
+
+    utterance.onstart = () => {
+      setIsSpeaking(true);
+      setIsPaused(false);
+    };
+
+    utterance.onend = () => {
+      if (isStoppedRef.current) return;
+      if (turnIndex + 1 < turns.length) {
+        // Natural dialogue breath pause (300ms)
+        nextTurnTimerRef.current = window.setTimeout(() => {
+          speakTurn(turnIndex + 1);
+        }, 300);
+      } else {
+        setIsSpeaking(false);
+        setIsPaused(false);
+        setCurrentTurnIdx(null);
+      }
+    };
+
+    utterance.onerror = (e) => {
+      if (e.error === "canceled" || e.error === "interrupted") {
+        return;
+      }
+      console.warn("Speech synthesis error event:", e);
+      const msg =
+        e.error === "not-allowed"
+          ? "Browser blocked audio autoplay. Click 'Play Script Audio' again to grant audio permission."
+          : `Speech synthesis error (${e.error || "unavailable"}). Try selecting a different voice.`;
+      setSpeechError(msg);
+      onError(msg);
+      setIsSpeaking(false);
+      setIsPaused(false);
+      setCurrentTurnIdx(null);
+    };
+
+    // Keep active utterance on ref and window to prevent Chromium GC freeze bug
+    activeUtteranceRef.current = utterance;
+    (window as unknown as { __activeUtterance: SpeechSynthesisUtterance }).__activeUtterance =
+      utterance;
+
+    try {
+      window.speechSynthesis.speak(utterance);
+    } catch (err) {
+      console.error("speechSynthesis.speak call threw:", err);
+      setSpeechError("Could not invoke Web Speech engine. Please verify browser audio permissions.");
+      setIsSpeaking(false);
+      setIsPaused(false);
+    }
+  };
+
+  const handleToggleSpeech = () => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      const msg = "Speech synthesis is not supported in this browser.";
+      setSpeechError(msg);
+      onError(msg);
+      return;
+    }
+
+    // 1. If currently speaking and active: Pause
     if (isSpeaking && !isPaused) {
       window.speechSynthesis.pause();
       setIsPaused(true);
       return;
     }
 
+    // 2. If paused: Resume
     if (isSpeaking && isPaused) {
       window.speechSynthesis.resume();
       setIsPaused(false);
       return;
     }
 
-    if (!transcript) {
-      onError("No audio transcript available to narrate.");
+    // 3. Otherwise: Start from beginning or current turn
+    if (turns.length === 0) {
+      const msg = "No audio transcript or dialogue turns available to narrate.";
+      setSpeechError(msg);
+      onError(msg);
       return;
     }
 
-    window.speechSynthesis.cancel();
-    const textToSpeak = cleanTranscriptForSpeech(transcript);
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
-    utterance.lang = "en-GB";
-    utterance.rate = Number(speed);
+    isStoppedRef.current = false;
+    playExamChime();
 
-    const voices = window.speechSynthesis.getVoices();
-    const englishVoice =
-      voices.find((v) => v.lang.startsWith("en-GB")) ||
-      voices.find((v) => v.lang.startsWith("en-US")) ||
-      voices.find((v) => v.lang.startsWith("en"));
-    if (englishVoice) {
-      utterance.voice = englishVoice;
-    }
-
-    utterance.onend = () => {
-      setIsSpeaking(false);
-      setIsPaused(false);
-    };
-
-    utterance.onerror = () => {
-      setIsSpeaking(false);
-      setIsPaused(false);
-    };
-
-    window.speechSynthesis.speak(utterance);
-    setIsSpeaking(true);
-    setIsPaused(false);
+    const startIdx = currentTurnIdx !== null && currentTurnIdx < turns.length ? currentTurnIdx : 0;
+    speakTurn(startIdx);
   };
 
   const handleStopSpeech = () => {
+    isStoppedRef.current = true;
+    if (nextTurnTimerRef.current) {
+      window.clearTimeout(nextTurnTimerRef.current);
+    }
     if (typeof window !== "undefined" && window.speechSynthesis) {
       window.speechSynthesis.cancel();
     }
     setIsSpeaking(false);
     setIsPaused(false);
+    setCurrentTurnIdx(null);
+    setSpeechError("");
+  };
+
+  const handlePlaySpecificTurn = (index: number) => {
+    handleStopSpeech();
+    isStoppedRef.current = false;
+    setTimeout(() => {
+      speakTurn(index);
+    }, 60);
   };
 
   return (
     <div className="audio-workspace">
+      {/* Remote Audio Track Card */}
       <div className="audio-player-card">
         <Headphones size={24} className="audio-icon" />
 
@@ -128,15 +353,13 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
             ref={audioRef}
             controls
             src={url}
-            onError={() =>
-              onError(
-                "Could not play remote audio. You can use the AI Speech Narration below or attach a local file."
-              )
-            }
+            onError={() => {
+              // Gracefully handle remote audio failure without freezing
+            }}
           />
         ) : (
           <div className="audio-empty-notice">
-            <span>No remote audio URL specified. Use speech narration below:</span>
+            <span>No remote audio file attached. Use speech narration below:</span>
           </div>
         )}
 
@@ -164,17 +387,48 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
         </div>
       </div>
 
-      {/* TTS Audio Narration Bar */}
-      {transcript && (
+      {/* AI Speech Narration Control Bar */}
+      {turns.length > 0 && (
         <div className="audio-narration-bar">
-          <div className="narration-info">
-            <Volume2 size={16} className="text-purple-400" />
-            <span>AI Voice Narration (Web Speech Engine)</span>
+          <div className="narration-header-row">
+            <div className="narration-info">
+              <Volume2 size={16} className="text-purple-400" />
+              <span>AI Voice Narration (Web Speech Engine)</span>
+              {isSpeaking && !isPaused && (
+                <div className="audio-live-waveform" title="Narration active">
+                  <span className="wave-bar bar-1" />
+                  <span className="wave-bar bar-2" />
+                  <span className="wave-bar bar-3" />
+                  <span className="wave-bar bar-4" />
+                </div>
+              )}
+            </div>
+
+            {/* Voice Selector */}
+            {voices.length > 0 && (
+              <div className="narration-voice-picker">
+                <select
+                  value={selectedVoiceURI}
+                  onChange={(e) => setSelectedVoiceURI(e.target.value)}
+                  className="voice-select"
+                  aria-label="Select speech voice"
+                  title="Choose IELTS narrator voice"
+                >
+                  {voices.map((v) => (
+                    <option key={v.voiceURI} value={v.voiceURI}>
+                      {v.name} ({v.lang})
+                    </option>
+                  ))}
+                </select>
+              </div>
+            )}
           </div>
+
+          {/* Action buttons and turn indicator */}
           <div className="narration-actions">
             <button
               type="button"
-              className={`button ${isSpeaking && !isPaused ? "active" : "primary"}`}
+              className={`button ${isSpeaking && !isPaused ? "active" : "primary"} narration-toggle-btn`}
               onClick={handleToggleSpeech}
             >
               {isSpeaking && !isPaused ? (
@@ -191,6 +445,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
                 </>
               )}
             </button>
+
             {isSpeaking && (
               <button
                 type="button"
@@ -198,37 +453,72 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
                 onClick={handleStopSpeech}
                 title="Stop narration"
               >
-                <Square size={14} /> Stop
+                <Square size={13} /> Stop
               </button>
             )}
+
+            {currentTurnIdx !== null && (
+              <span className="turn-progress-pill">
+                Turn {currentTurnIdx + 1} of {turns.length}
+              </span>
+            )}
           </div>
+
+          {speechError && (
+            <div className="narration-error-alert" role="alert">
+              <AlertCircle size={14} />
+              <span>{speechError}</span>
+            </div>
+          )}
         </div>
       )}
 
-      {/* Interactive Transcript Viewer */}
-      {transcript && (
+      {/* Interactive Transcript Viewer with dialogue turns */}
+      {turns.length > 0 && (
         <div className="audio-transcript-wrapper">
           <button
             type="button"
             className="transcript-toggle-btn"
             onClick={() => setShowTranscript(!showTranscript)}
+            aria-expanded={showTranscript}
           >
             <span className="transcript-toggle-left">
               <FileText size={15} />
-              Audio Transcript & Dialogue Turns
+              <span>Audio Transcript & Dialogue Turns ({turns.length} turns)</span>
             </span>
             {showTranscript ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
           </button>
 
           {showTranscript && (
             <div className="audio-transcript-content">
-              {transcript.split("\n").map((line, idx) => {
-                if (!line.trim()) return null;
-                const isSpeaker = line.startsWith("[") && line.includes("]:");
+              <div className="transcript-hint">
+                <Sparkles size={12} />
+                <span>Click any dialogue turn to narrate from that line</span>
+              </div>
+
+              {turns.map((turn) => {
+                const isActive = currentTurnIdx === turn.id && isSpeaking;
                 return (
-                  <p key={idx} className={isSpeaker ? "transcript-speaker-line" : "transcript-line"}>
-                    {line}
-                  </p>
+                  <div
+                    key={turn.id}
+                    className={`transcript-turn-card ${isActive ? "active-turn" : ""}`}
+                    onClick={() => handlePlaySpecificTurn(turn.id)}
+                    title={`Click to play from ${turn.speaker}`}
+                  >
+                    <div className="turn-meta-header">
+                      <span className="turn-speaker-badge">
+                        <Mic size={11} /> {turn.speaker}
+                      </span>
+                      <button
+                        type="button"
+                        className="turn-play-btn"
+                        aria-label={`Play turn ${turn.id + 1} by ${turn.speaker}`}
+                      >
+                        {isActive ? <Volume2 size={12} /> : <Play size={12} />}
+                      </button>
+                    </div>
+                    <p className="turn-text">{turn.text}</p>
+                  </div>
                 );
               })}
             </div>
