@@ -1,16 +1,19 @@
 import { CircleAlert, Plus } from "lucide-react";
 import React, { useRef, useState } from "react";
 import { JupyterCell, SKILL_NAMES } from "./features/cell/index.ts";
+import type { IeltsExerciseData } from "./features/cell/types/ieltsSchema.ts";
 import {
   NotebookHeader,
   NotebookToolbar,
   useNotebook,
   type SkillType,
 } from "./features/notebook/index.ts";
+import { QuestionBankModal } from "./features/question-bank/index.ts";
 import { UndoNotice } from "./shared/index.ts";
 
 export const App: React.FC = () => {
   const [addType, setAddType] = useState<SkillType>("markdown");
+  const [isQuestionBankOpen, setIsQuestionBankOpen] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const {
@@ -51,6 +54,54 @@ export const App: React.FC = () => {
     updateStructuredData,
   } = useNotebook();
 
+  const handleSelectQuestionBankExercise = (
+    exercise: IeltsExerciseData,
+    asNewCell = false
+  ) => {
+    if (asNewCell || doc.cells.length === 0 || !activeId) {
+      const insertIdx = activeIndex >= 0 ? activeIndex : doc.cells.length - 1;
+      add(insertIdx, exercise.skill as SkillType);
+      setTimeout(() => {
+        const targetCell =
+          doc.cells[insertIdx + 1] || doc.cells[doc.cells.length - 1];
+        if (targetCell) {
+          updateStructuredData(targetCell.id, exercise);
+          if (exercise.material?.content) {
+            updateResource(targetCell.id, {
+              type: "text",
+              name: exercise.material.title || `${exercise.title}.txt`,
+              textContent: exercise.material.content,
+            });
+          } else if (exercise.material?.type === "audio" || exercise.skill === "listening") {
+            updateResource(targetCell.id, {
+              type: "audio",
+              name: exercise.material?.title || `${exercise.title}.mp3`,
+              url: exercise.material?.audioUrl || "",
+              textContent: exercise.material?.audioTranscript || "",
+            });
+          }
+        }
+      }, 60);
+    } else {
+      updateStructuredData(activeId, exercise);
+      updateSkill(activeId, exercise.skill as SkillType);
+      if (exercise.material?.content) {
+        updateResource(activeId, {
+          type: "text",
+          name: exercise.material.title || `${exercise.title}.txt`,
+          textContent: exercise.material.content,
+        });
+      } else if (exercise.material?.type === "audio" || exercise.skill === "listening") {
+        updateResource(activeId, {
+          type: "audio",
+          name: exercise.material?.title || `${exercise.title}.mp3`,
+          url: exercise.material?.audioUrl || "",
+          textContent: exercise.material?.audioTranscript || "",
+        });
+      }
+    }
+  };
+
   return (
     <div className="app-shell">
       <a className="skip-link" href="#notebook">
@@ -81,6 +132,7 @@ export const App: React.FC = () => {
         snapshots={snapshots}
         onAddTypeChange={setAddType}
         onAddCell={() => add(activeIndex, addType)}
+        onOpenQuestionBank={() => setIsQuestionBankOpen(true)}
         onResetToSample={resetToSample}
         onCreateSnapshot={createSnapshotNow}
         onRestoreSnapshot={restoreSnapshot}
@@ -163,6 +215,12 @@ export const App: React.FC = () => {
       </main>
 
       {deleted && <UndoNotice onUndo={undoDelete} onDismiss={dismissUndo} />}
+
+      <QuestionBankModal
+        isOpen={isQuestionBankOpen}
+        onClose={() => setIsQuestionBankOpen(false)}
+        onSelectExercise={handleSelectQuestionBankExercise}
+      />
     </div>
   );
 };

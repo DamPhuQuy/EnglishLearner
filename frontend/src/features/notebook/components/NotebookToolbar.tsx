@@ -1,4 +1,4 @@
-import { History, Plus, RotateCcw, ShieldCheck } from "lucide-react";
+import { BookOpen, History, Plus, RotateCcw, ShieldCheck } from "lucide-react";
 import React, { useState } from "react";
 import type { DatabaseHealth, DatabaseStatus, SnapshotSummary } from "../index.ts";
 import type { SkillType } from "../types/notebook.ts";
@@ -11,6 +11,7 @@ interface Props {
   snapshots?: SnapshotSummary[];
   onAddTypeChange: (skill: SkillType) => void;
   onAddCell: () => void;
+  onOpenQuestionBank?: () => void;
   onResetToSample: () => void;
   onCreateSnapshot?: () => Promise<boolean>;
   onRestoreSnapshot?: (snapshotId: number) => Promise<boolean>;
@@ -23,6 +24,7 @@ export const NotebookToolbar: React.FC<Props> = ({
   snapshots = [],
   onAddTypeChange,
   onAddCell,
+  onOpenQuestionBank,
   onResetToSample,
   onCreateSnapshot,
   onRestoreSnapshot,
@@ -82,6 +84,17 @@ export const NotebookToolbar: React.FC<Props> = ({
             <Plus size={16} />
             Add cell
           </button>
+          {onOpenQuestionBank && (
+            <button
+              type="button"
+              className="button outlined toolbar-bank-btn"
+              onClick={onOpenQuestionBank}
+              title="Open question bank"
+            >
+              <BookOpen size={14} />
+              Question bank
+            </button>
+          )}
         </div>
         <details className="notebook-options">
           <summary className="button quiet">
