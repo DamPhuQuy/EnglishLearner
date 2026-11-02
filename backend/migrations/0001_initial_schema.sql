@@ -18,7 +18,6 @@ CREATE TABLE IF NOT EXISTS cells (
   resource_url TEXT,
   resource_name TEXT,
   resource_text_content TEXT,
-  structured_data TEXT,
   created_at TEXT NOT NULL,
   updated_at TEXT NOT NULL
 );

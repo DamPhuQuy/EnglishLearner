@@ -1,7 +1,10 @@
 import type { CellResource, CellRow, JupyterCell } from "../model/Cell.ts";
 
 export class CellRepository {
-  constructor(private readonly db: D1Database) {}
+  private readonly db: D1Database;
+  constructor(db: D1Database) {
+    this.db = db;
+  }
 
   static toDomain(row: CellRow): JupyterCell {
     let resource: CellResource | undefined = undefined;

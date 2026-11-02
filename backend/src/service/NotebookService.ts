@@ -12,11 +12,13 @@ import { NotebookRepository } from "../repository/NotebookRepository.ts";
 import { SnapshotService } from "./SnapshotService.ts";
 
 export class NotebookService {
+  private readonly db: D1Database;
   private readonly notebookRepo: NotebookRepository;
   private readonly cellRepo: CellRepository;
   private readonly snapshotService: SnapshotService;
 
-  constructor(private readonly db: D1Database) {
+  constructor(db: D1Database) {
+    this.db = db;
     this.notebookRepo = new NotebookRepository(db);
     this.cellRepo = new CellRepository(db);
     this.snapshotService = new SnapshotService(db);

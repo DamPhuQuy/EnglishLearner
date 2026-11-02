@@ -1,7 +1,10 @@
 import type { FileUploadResponseDto } from "../dto/StorageDto.ts";
 
 export class StorageService {
-  constructor(private readonly bucket: R2Bucket) {}
+  private readonly bucket: R2Bucket;
+  constructor(bucket: R2Bucket) {
+    this.bucket = bucket;
+  }
 
   async uploadFile(file: File): Promise<FileUploadResponseDto> {
     const sanitizedName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");

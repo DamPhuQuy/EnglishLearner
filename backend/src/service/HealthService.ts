@@ -4,11 +4,15 @@ import { NotebookRepository } from "../repository/NotebookRepository.ts";
 import { SnapshotRepository } from "../repository/SnapshotRepository.ts";
 
 export class HealthService {
+  private readonly db: D1Database;
+  private readonly environment: string;
   private readonly notebookRepo: NotebookRepository;
   private readonly cellRepo: CellRepository;
   private readonly snapshotRepo: SnapshotRepository;
 
-  constructor(private readonly db: D1Database, private readonly environment = "development") {
+  constructor(db: D1Database, environment = "development") {
+    this.db = db;
+    this.environment = environment;
     this.notebookRepo = new NotebookRepository(db);
     this.cellRepo = new CellRepository(db);
     this.snapshotRepo = new SnapshotRepository(db);

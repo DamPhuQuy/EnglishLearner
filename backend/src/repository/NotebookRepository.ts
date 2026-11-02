@@ -2,7 +2,10 @@ import type { NotebookRow } from "../model/Notebook.ts";
 import type { NotebookSummaryDto } from "../dto/NotebookDto.ts";
 
 export class NotebookRepository {
-  constructor(private readonly db: D1Database) {}
+  private readonly db: D1Database;
+  constructor(db: D1Database) {
+    this.db = db;
+  }
 
   async findById(id: string): Promise<NotebookRow | null> {
     const row = await this.db

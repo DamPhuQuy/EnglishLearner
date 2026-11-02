@@ -2,7 +2,10 @@ import type { SnapshotRow } from "../model/Snapshot.ts";
 import type { SnapshotSummaryDto } from "../dto/SnapshotDto.ts";
 
 export class SnapshotRepository {
-  constructor(private readonly db: D1Database) {}
+  private readonly db: D1Database;
+  constructor(db: D1Database) {
+    this.db = db;
+  }
 
   static toSummary(row: SnapshotRow): SnapshotSummaryDto {
     return {
