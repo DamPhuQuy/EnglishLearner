@@ -1,0 +1,3231 @@
+[
+  {
+    "id": "read-bio-mcq-01",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "drill",
+    "title": "Marine Bioluminescence: Living Lights of the Deep",
+    "topic": "Marine Biology & Ecology",
+    "material": {
+      "type": "text",
+      "title": "Passage: Living Lights of the Ocean Depths",
+      "content": "[A] Bioluminescence is the biochemical production and emission of light by living organisms. In the pitch-black twilight and midnight zones of the ocean, where sunlight cannot penetrate below 200 meters, an estimated 76% of pelagic marine creatures produce their own optical luminescence. The chemical reaction relies on a light-emitting molecule called luciferin and an enzyme catalyst known as luciferase.\n\n[B] Unlike human incandescent bulbs, which waste over 90% of energy as thermal heat, marine bioluminescence is almost entirely 'cold light'. Nearly 95% to 98% of the chemical energy converts directly into radiant glow. This efficiency ensures deep-sea organisms do not lose crucial metabolic energy or overheat in cold abyssal trenches.\n\n[C] Deep-sea anglerfish utilize a specialized dorsal spine tip called an esca, which contains millions of symbiotic bioluminescent bacteria. By dangling this glowing organ before its razor-lined jaws, the anglerfish draws inquisitive prey into striking distance without expending predatory chase effort.\n\n[D] In contrast, certain squid and shrimp species employ bioluminescence for counter-illumination. By projecting downward light matching the intensity and wavelength of downwelling surface sunlight, they effectively erase their own silhouettes from predators lurking beneath."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "What percentage of deep pelagic marine creatures can generate their own light?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Around 20%"
+          },
+          {
+            "key": "B",
+            "text": "Roughly 50%"
+          },
+          {
+            "key": "C",
+            "text": "Approximately 76%"
+          },
+          {
+            "key": "D",
+            "text": "More than 95%"
+          }
+        ],
+        "answer": "C",
+        "paragraphRef": "Paragraph A",
+        "explanation": "Paragraph A explicitly states: 'an estimated 76% of pelagic marine creatures produce their own optical luminescence'."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Luciferase acts within the bioluminescent reaction as:",
+        "options": [
+          {
+            "key": "A",
+            "text": "A light-emitting substrate"
+          },
+          {
+            "key": "B",
+            "text": "A catalytic enzyme"
+          },
+          {
+            "key": "C",
+            "text": "A thermal regulator"
+          },
+          {
+            "key": "D",
+            "text": "A bacteria repellent"
+          }
+        ],
+        "answer": "B",
+        "paragraphRef": "Paragraph A",
+        "explanation": "Paragraph A confirms the reaction relies on 'a light-emitting molecule called luciferin and an enzyme catalyst known as luciferase'."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Why is marine bioluminescent illumination described as 'cold light'?",
+        "options": [
+          {
+            "key": "A",
+            "text": "It can only occur in freezing waters"
+          },
+          {
+            "key": "B",
+            "text": "Over 95% of energy is turned directly into light with minimal heat"
+          },
+          {
+            "key": "C",
+            "text": "It lowers the surrounding ocean temperature"
+          },
+          {
+            "key": "D",
+            "text": "It emits only blue and ultraviolet radiation"
+          }
+        ],
+        "answer": "B",
+        "paragraphRef": "Paragraph B",
+        "explanation": "Paragraph B states 'Nearly 95% to 98% of the chemical energy converts directly into radiant glow' without wasting energy as heat."
+      },
+      {
+        "questionNumber": 4,
+        "question": "The glowing esca of an anglerfish is populated by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Photosynthetic coral algae"
+          },
+          {
+            "key": "B",
+            "text": "Symbiotic luminescent bacteria"
+          },
+          {
+            "key": "C",
+            "text": "Fluorescent microscopic shrimp"
+          },
+          {
+            "key": "D",
+            "text": "Reflective mineral scales"
+          }
+        ],
+        "answer": "B",
+        "paragraphRef": "Paragraph C",
+        "explanation": "Paragraph C confirms the esca 'contains millions of symbiotic bioluminescent bacteria'."
+      },
+      {
+        "questionNumber": 5,
+        "question": "What is the primary hunting advantage provided by the esca?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Blinding prey with flashes"
+          },
+          {
+            "key": "B",
+            "text": "Attracting prey without active pursuit"
+          },
+          {
+            "key": "C",
+            "text": "Warming the anglerfish's jaws"
+          },
+          {
+            "key": "D",
+            "text": "Communicating with rival anglerfish"
+          }
+        ],
+        "answer": "B",
+        "paragraphRef": "Paragraph C",
+        "explanation": "Paragraph C notes that it 'draws inquisitive prey into striking distance without expending predatory chase effort'."
+      },
+      {
+        "questionNumber": 6,
+        "question": "How do squid utilize counter-illumination for survival?",
+        "options": [
+          {
+            "key": "A",
+            "text": "By projecting bright flashes upward to warn competitors"
+          },
+          {
+            "key": "B",
+            "text": "By illuminating downward to cancel out their silhouette from beneath"
+          },
+          {
+            "key": "C",
+            "text": "By producing thermal shocks in water"
+          },
+          {
+            "key": "D",
+            "text": "By temporarily blinding hunting sharks"
+          }
+        ],
+        "answer": "B",
+        "paragraphRef": "Paragraph D",
+        "explanation": "Paragraph D states they match downwelling sunlight downward to 'effectively erase their own silhouettes from predators lurking beneath'."
+      },
+      {
+        "questionNumber": 7,
+        "question": "Downwelling sunlight typically fails to reach deeper than:",
+        "options": [
+          {
+            "key": "A",
+            "text": "50 meters"
+          },
+          {
+            "key": "B",
+            "text": "200 meters"
+          },
+          {
+            "key": "C",
+            "text": "500 meters"
+          },
+          {
+            "key": "D",
+            "text": "1,000 meters"
+          }
+        ],
+        "answer": "B",
+        "paragraphRef": "Paragraph A",
+        "explanation": "Paragraph A explicitly remarks that 'sunlight cannot penetrate below 200 meters'."
+      }
+    ]
+  },
+  {
+    "id": "read-tru-02",
+    "skill": "reading",
+    "questionType": "true_false_not_given",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The Roman Aqueduct Engineering",
+    "topic": "Civil Engineering & Antiquity",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Roman Aqueduct Engineering",
+      "content": "[A] The Roman Aqueduct Engineering represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Roman engineers relied solely on gravity to move water across vast distances.",
+        "answer": "TRUE",
+        "explanation": "Paragraph A confirms water was transported entirely by the continuous downward slope of gravity."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Aqueduct arches were predominantly constructed using imported African marble.",
+        "answer": "FALSE",
+        "explanation": "Paragraph B notes local volcanic pozzolana concrete and brick were the primary materials, not marble."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Lead piping in Roman households caused widespread population collapse in 100 AD.",
+        "answer": "NOT GIVEN",
+        "explanation": "The text mentions lead pipes but offers no evidence regarding population collapse."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Inverted siphons were engineered when valleys were too deep for raised arcade bridges.",
+        "answer": "TRUE",
+        "explanation": "Paragraph C explains pressurized inverted siphons crossed deep ravines."
+      },
+      {
+        "questionNumber": 5,
+        "statement": "Maintenance crews were comprised exclusively of captured military prisoners.",
+        "answer": "FALSE",
+        "explanation": "Paragraph D clarifies that skilled Roman freedmen and licensed municipal contractors managed maintenance."
+      },
+      {
+        "questionNumber": 6,
+        "statement": "Underground tunnels formed more than seventy percent of total aqueduct mileage.",
+        "answer": "TRUE",
+        "explanation": "Paragraph D notes over 80% of aqueduct infrastructure was subterranean to prevent evaporation."
+      }
+    ]
+  },
+  {
+    "id": "read-yes-03",
+    "skill": "reading",
+    "questionType": "yes_no_not_given",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Urban Microclimates & The Heat Island Effect",
+    "topic": "Environmental Science",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Urban Microclimates & The Heat Island Effect",
+      "content": "[A] Urban Microclimates & The Heat Island Effect represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "High thermal mass construction materials significantly amplify nocturnal ambient temperatures.",
+        "answer": "YES",
+        "explanation": "Paragraph A argues dense asphalt and concrete discharge trapped diurnal heat throughout the night."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Urban planners should prioritize reflective albedo coatings over green canopy expansion.",
+        "answer": "NO",
+        "explanation": "Paragraph B asserts vegetative transpiration yields superior thermodynamic cooling compared to passive albedo."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Satellite thermal imaging has eliminated discrepancies in local urban heat measurements.",
+        "answer": "NOT GIVEN",
+        "explanation": "The author mentions satellite data but does not state all measurement discrepancies were eliminated."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Breeze corridors between high-rises can unintentionally exacerbate street-level wind turbulence.",
+        "answer": "YES",
+        "explanation": "Paragraph C affirms wind-funneling effects create hostile aerodynamic conditions for pedestrians."
+      },
+      {
+        "questionNumber": 5,
+        "statement": "Suburban green belts have entirely mitigated downtown heat dome formations.",
+        "answer": "NO",
+        "explanation": "Paragraph D directly refutes this, demonstrating downtown heat domes persist despite surrounding vegetation."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-04",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Neuroplasticity & Adult Language Acquisition",
+    "topic": "Cognitive Neuroscience",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Neuroplasticity & Adult Language Acquisition",
+      "content": "[A] Neuroplasticity & Adult Language Acquisition represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Early twentieth-century neurology viewed the mature human brain as:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Infinitely malleable across all ages"
+          },
+          {
+            "key": "B",
+            "text": "Functionally fixed and incapable of new neural pathways"
+          },
+          {
+            "key": "C",
+            "text": "Prone to rapid spontaneous cellular regeneration"
+          },
+          {
+            "key": "D",
+            "text": "Structurally identical to neonatal neural structures"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A states classic dogma considered the adult brain structurally static and immutable."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Synaptic pruning during adolescence primarily serves to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Enhance cognitive efficiency by eliminating unused pathways"
+          },
+          {
+            "key": "B",
+            "text": "Prevent emotional instability in social contexts"
+          },
+          {
+            "key": "C",
+            "text": "Accelerate physical bone growth"
+          },
+          {
+            "key": "D",
+            "text": "Protect myelin sheaths from bacterial infections"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph B shows pruning strips redundant connections to streamline critical cognitive pathways."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Second-language learners beyond the critical period demonstrate:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Complete inability to master phonetic distinctions"
+          },
+          {
+            "key": "B",
+            "text": "Compensation through prefrontal cortical engagement"
+          },
+          {
+            "key": "C",
+            "text": "Total loss of grammatical working memory"
+          },
+          {
+            "key": "D",
+            "text": "Reversal of hemisphere dominance"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph C documents greater prefrontal neural recruitment during syntax processing in adults."
+      }
+    ]
+  },
+  {
+    "id": "read-sen-05",
+    "skill": "reading",
+    "questionType": "sentence_completion",
+    "difficulty": "easy",
+    "band": "Band 5.5–6.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The History of Maritime Navigation & Chronometers",
+    "topic": "Maritime History",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The History of Maritime Navigation & Chronometers",
+      "content": "[A] The History of Maritime Navigation & Chronometers represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "prefix": "Early sailors could reliably calculate latitude by observing the height of the",
+        "answer": "Polaris",
+        "acceptedAnswers": [
+          "polaris",
+          "Polaris"
+        ],
+        "explanation": "Paragraph A: Sailors measured the angle of the North Star, Polaris."
+      },
+      {
+        "questionNumber": 2,
+        "prefix": "Determining longitude at sea required an accurate measurement of local and Greenwich",
+        "answer": "time",
+        "acceptedAnswers": [
+          "time",
+          "Time"
+        ],
+        "explanation": "Paragraph B: Longitude calculation demanded precise time comparison with Greenwich."
+      },
+      {
+        "questionNumber": 3,
+        "prefix": "John Harrison designed a breakthrough sea clock called the",
+        "answer": "marine chronometer",
+        "acceptedAnswers": [
+          "marine chronometer",
+          "Marine chronometer"
+        ],
+        "explanation": "Paragraph C: Harrison developed the H4 marine chronometer."
+      },
+      {
+        "questionNumber": 4,
+        "prefix": "Unlike pendulum clocks, Harrison's chronometer was unaffected by ship",
+        "answer": "motion",
+        "acceptedAnswers": [
+          "motion",
+          "Motion"
+        ],
+        "explanation": "Paragraph D: Balance springs resisted the rocking motion of ocean swells."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-06",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 8.0–8.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Artificial Intelligence in Medical Diagnostic Imaging",
+    "topic": "Medical Technology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Artificial Intelligence in Medical Diagnostic Imaging",
+      "content": "[A] Artificial Intelligence in Medical Diagnostic Imaging represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Deep convolutional neural networks detect oncological anomalies by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Simulating human empathetic intuition"
+          },
+          {
+            "key": "B",
+            "text": "Analyzing hierarchical pixel patterns and textural variance"
+          },
+          {
+            "key": "C",
+            "text": "Replacing physical histological biopsies entirely"
+          },
+          {
+            "key": "D",
+            "text": "Querying global hospital billing databases"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph B explains CNNs process hierarchical spatial features across pixel gradients."
+      },
+      {
+        "questionNumber": 2,
+        "question": "The 'black box' problem in clinical diagnostic algorithms refers to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Physical overheating of computational server racks"
+          },
+          {
+            "key": "B",
+            "text": "The opacity of intermediate neural weight calculations to human clinicians"
+          },
+          {
+            "key": "C",
+            "text": "Strict copyright firewalls erected by software developers"
+          },
+          {
+            "key": "D",
+            "text": "Loss of medical image resolution during cloud transmission"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph C defines the black box issue as the mathematical inability to trace decision paths transparently."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Regulatory bodies require AI diagnostic tools to operate primarily as:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Autonomous decision makers replacing radiologists"
+          },
+          {
+            "key": "B",
+            "text": "Augmentative decision-support systems supervised by licensed practitioners"
+          },
+          {
+            "key": "C",
+            "text": "Cost-cutting mechanisms to reduce clinical staff"
+          },
+          {
+            "key": "D",
+            "text": "Experimental software restricted to laboratory trials"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph D emphasizes guidelines mandate human-in-the-loop clinical supervision."
+      }
+    ]
+  },
+  {
+    "id": "read-sum-07",
+    "skill": "reading",
+    "questionType": "summary_completion",
+    "difficulty": "medium",
+    "band": "Band 6.0–6.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Sustainable Architecture & Passivhaus Standards",
+    "topic": "Architecture & Energy",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Sustainable Architecture & Passivhaus Standards",
+      "content": "[A] Sustainable Architecture & Passivhaus Standards represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "prefix": "Passivhaus buildings reduce domestic heating demands by employing continuous external",
+        "answer": "insulation",
+        "acceptedAnswers": [
+          "insulation",
+          "Insulation"
+        ],
+        "explanation": "Paragraph B highlights a thick thermal envelope of unbroken insulation."
+      },
+      {
+        "questionNumber": 2,
+        "prefix": "Air leakage is systematically identified and sealed through specialized",
+        "answer": "blower door",
+        "acceptedAnswers": [
+          "blower door",
+          "Blower door"
+        ],
+        "explanation": "Paragraph C mentions airtightness is verified via blower door tests."
+      },
+      {
+        "questionNumber": 3,
+        "prefix": "Fresh air exchange without thermal loss is accomplished via mechanical heat",
+        "answer": "recovery",
+        "acceptedAnswers": [
+          "recovery",
+          "Recovery"
+        ],
+        "explanation": "Paragraph D describes mechanical ventilation heat recovery (MVHR) systems."
+      },
+      {
+        "questionNumber": 4,
+        "prefix": "Glazing on south-facing elevations maximizes seasonal solar",
+        "answer": "gains",
+        "acceptedAnswers": [
+          "gains",
+          "Gains"
+        ],
+        "explanation": "Paragraph E notes triple-glazed south windows capture passive solar gains."
+      }
+    ]
+  },
+  {
+    "id": "read-mat-08",
+    "skill": "reading",
+    "questionType": "matching_headings",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The Archaeology of the Indus Valley Civilization",
+    "topic": "Archaeology & Anthropology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Archaeology of the Indus Valley Civilization",
+      "content": "[A] The Archaeology of the Indus Valley Civilization represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "paragraph": "A",
+        "answer": "v",
+        "explanation": "Paragraph A details advanced grid-iron street planning and baked brick standard sizes -> v: Standardized Urban Infrastructure"
+      },
+      {
+        "questionNumber": 2,
+        "paragraph": "B",
+        "answer": "ii",
+        "explanation": "Paragraph B explores the absence of monumental royal palaces or militaristic weaponry -> ii: Enigma of Egalitarian Governance"
+      },
+      {
+        "questionNumber": 3,
+        "paragraph": "C",
+        "answer": "vii",
+        "explanation": "Paragraph C analyzes complex drainage systems and private covered latrines -> vii: Sophisticated Public Sanitation"
+      },
+      {
+        "questionNumber": 4,
+        "paragraph": "D",
+        "answer": "i",
+        "explanation": "Paragraph D examines climate shifts and the drying of the Sarasvati River basin -> i: Environmental Triggers of Deurbanization"
+      }
+    ]
+  },
+  {
+    "id": "read-mul-09",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Bee Colony Communication: The Waggle Dance",
+    "topic": "Entomology & Animal Behavior",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Bee Colony Communication: The Waggle Dance",
+      "content": "[A] Bee Colony Communication: The Waggle Dance represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Karl von Frisch discovered that worker bees communicate foraging sites using:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Ultrasonic acoustic pulses"
+          },
+          {
+            "key": "B",
+            "text": "Rhythmical abdominal movements known as the waggle dance"
+          },
+          {
+            "key": "C",
+            "text": "Pheromone scent trails marked on flowers"
+          },
+          {
+            "key": "D",
+            "text": "Direct physical leading of companion bees"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A describes von Frisch's decoding of the figure-eight waggle dance."
+      },
+      {
+        "questionNumber": 2,
+        "question": "The angle of the central waggle run relative to vertical indicates:",
+        "options": [
+          {
+            "key": "A",
+            "text": "The sweetness of the nectar"
+          },
+          {
+            "key": "B",
+            "text": "The direction of food relative to the sun"
+          },
+          {
+            "key": "C",
+            "text": "The presence of predatory hornets"
+          },
+          {
+            "key": "D",
+            "text": "The time remaining until sunset"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph B notes the angle of the dance matches the food source's direction relative to the solar azimuth."
+      },
+      {
+        "questionNumber": 3,
+        "question": "The duration of the waggle phase correlates directly with:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Distance from the hive to the target resource"
+          },
+          {
+            "key": "B",
+            "text": "The ambient hive temperature"
+          },
+          {
+            "key": "C",
+            "text": "The seniority of the dancing bee"
+          },
+          {
+            "key": "D",
+            "text": "The quantity of water available"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph C indicates each second of waggle corresponds to approximately one kilometer of distance."
+      }
+    ]
+  },
+  {
+    "id": "read-tru-10",
+    "skill": "reading",
+    "questionType": "true_false_not_given",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Desalination Technologies & Global Freshwater Security",
+    "topic": "Resource Management",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Desalination Technologies & Global Freshwater Security",
+      "content": "[A] Desalination Technologies & Global Freshwater Security represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Reverse osmosis accounts for the majority of modern commercial desalination installations.",
+        "answer": "TRUE",
+        "explanation": "Paragraph A notes membrane reverse osmosis produces over 65% of globally desalinated potable water."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Thermal distillation requires less electrical energy than reverse osmosis.",
+        "answer": "FALSE",
+        "explanation": "Paragraph B indicates multi-stage flash distillation consumes far more thermal and electrical energy."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Hypersaline brine discharge poses zero environmental risk to benthic marine ecosystems.",
+        "answer": "FALSE",
+        "explanation": "Paragraph C highlights that dense, oxygen-depleted brine plumes can suffocate seabed flora and fauna."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Graphene-oxide sieve membranes have completely replaced polyamide filters in commercial facilities.",
+        "answer": "NOT GIVEN",
+        "explanation": "The passage discusses graphene research as promising, but does not state it has fully replaced polyamide."
+      },
+      {
+        "questionNumber": 5,
+        "statement": "Solar-powered electrodialysis is increasingly viable for small-scale inland brackish water treatment.",
+        "answer": "TRUE",
+        "explanation": "Paragraph D explicitly validates solar-assisted brackish desalination in remote arid villages."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-11",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Psychological Dynamics of Flow State in Peak Performance",
+    "topic": "Psychology & Sports",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Psychological Dynamics of Flow State in Peak Performance",
+      "content": "[A] Psychological Dynamics of Flow State in Peak Performance represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Mihaly Csikszentmihalyi defined 'flow' as a cognitive state characterized by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Hyper-awareness of social approval and status"
+          },
+          {
+            "key": "B",
+            "text": "Complete absorption where skill level perfectly balances task challenge"
+          },
+          {
+            "key": "C",
+            "text": "Passive relaxation induced by meditative breathing"
+          },
+          {
+            "key": "D",
+            "text": "High anxiety driving frantic physical exertion"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A details the delicate equilibrium between personal mastery and challenge complexity."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Transient hypofrontality during flow states results in:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Increased self-critical internal monologue"
+          },
+          {
+            "key": "B",
+            "text": "Temporary suppression of self-referential doubt and time distortion"
+          },
+          {
+            "key": "C",
+            "text": "Diminished motor reaction times"
+          },
+          {
+            "key": "D",
+            "text": "Severe memory impairment post-activity"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph C explains the down-regulation of the prefrontal cortex quiets the inner critic and warps subjective time perception."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Which condition is essential for triggering an autotelic flow experience?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Immediate feedback and unambiguous proximate objectives"
+          },
+          {
+            "key": "B",
+            "text": "Large monetary compensation upon completion"
+          },
+          {
+            "key": "C",
+            "text": "Constant external coaching intervention"
+          },
+          {
+            "key": "D",
+            "text": "High degrees of task ambiguity to encourage trial-and-error"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph D identifies explicit short-term goals and direct feedback loops as primary catalysts."
+      }
+    ]
+  },
+  {
+    "id": "read-sen-12",
+    "skill": "reading",
+    "questionType": "sentence_completion",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Renewable Geothermal Energy Extraction",
+    "topic": "Renewable Energy",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Renewable Geothermal Energy Extraction",
+      "content": "[A] Renewable Geothermal Energy Extraction represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "prefix": "Enhanced geothermal systems inject pressurized cold water into deep fractured",
+        "answer": "granite",
+        "acceptedAnswers": [
+          "granite",
+          "Granite"
+        ],
+        "explanation": "Paragraph B: High-pressure fluid circulates through hot fractured granite bedrock."
+      },
+      {
+        "questionNumber": 2,
+        "prefix": "Binary cycle plants utilize secondary working fluids with a lower boiling",
+        "answer": "point",
+        "acceptedAnswers": [
+          "point",
+          "Point"
+        ],
+        "explanation": "Paragraph C: Isobutane boils at a lower temperature than water to spin turbines."
+      },
+      {
+        "questionNumber": 3,
+        "prefix": "Unlike wind and solar, geothermal provides continuous baseload electrical",
+        "answer": "power",
+        "acceptedAnswers": [
+          "power",
+          "Power"
+        ],
+        "explanation": "Paragraph D: Geothermal facilities operate 24/7 without weather interruptions."
+      }
+    ]
+  },
+  {
+    "id": "read-mat-13",
+    "skill": "reading",
+    "questionType": "matching_information",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Ancient Silk Road Trade Networks & Cultural Exchange",
+    "topic": "Global History",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Ancient Silk Road Trade Networks & Cultural Exchange",
+      "content": "[A] Ancient Silk Road Trade Networks & Cultural Exchange represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "The role of oasis caravan cities in currency exchange and translation services.",
+        "answer": "B",
+        "explanation": "Paragraph B discusses Dunhuang and Samarkand as commercial hubs facilitating multilingual contracts."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "The introduction of sericulture secrets into the Byzantine Empire.",
+        "answer": "D",
+        "explanation": "Paragraph D recounts the smuggling of silkworm cocoons to Constantinople in hollow walking canes."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Archaeological evidence of glass beads transported from Rome to Central Asia.",
+        "answer": "A",
+        "explanation": "Paragraph A notes Roman glassware unearthed in Chinese tombs along northern trade tracks."
+      }
+    ]
+  },
+  {
+    "id": "read-tru-14",
+    "skill": "reading",
+    "questionType": "true_false_not_given",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Microplastics in Terrestrial Agricultural Soils",
+    "topic": "Agronomy & Toxicology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Microplastics in Terrestrial Agricultural Soils",
+      "content": "[A] Microplastics in Terrestrial Agricultural Soils represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Agricultural plastic mulching films are a primary source of soil microplastic contamination.",
+        "answer": "TRUE",
+        "explanation": "Paragraph A notes seasonal plastic film degradation leaves persistent polymers in topsoil."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Composted sewage sludge is universally tested and cleared of microfibers prior to field application.",
+        "answer": "FALSE",
+        "explanation": "Paragraph B reveals that wastewater treatment plants lack standardized filtration for synthetic textiles in sludge."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Earthworms exposed to concentrated microplastics experience reduced burrowing activity and nutrient cycling.",
+        "answer": "TRUE",
+        "explanation": "Paragraph C documents behavioral lethargy and gut lacerations in Eisenia fetida earthworms."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Soil microplastics have been proven to accelerate global crop yields by retaining moisture.",
+        "answer": "FALSE",
+        "explanation": "Paragraph D directly contradicts this, reporting impaired root hydraulic conductivity."
+      },
+      {
+        "questionNumber": 5,
+        "statement": "Organic farms located adjacent to highways are completely insulated from airborne microplastic deposition.",
+        "answer": "NOT GIVEN",
+        "explanation": "The text discusses atmospheric transport near highways but does not affirm organic farms are completely insulated."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-15",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: The Evolution of Written Typography and Printing",
+    "topic": "Cultural History",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Evolution of Written Typography and Printing",
+      "content": "[A] The Evolution of Written Typography and Printing represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Johannes Gutenberg's core breakthrough was:",
+        "options": [
+          {
+            "key": "A",
+            "text": "The invention of papyrus sheets"
+          },
+          {
+            "key": "B",
+            "text": "Movable metal type cast from a durable lead-tin alloy"
+          },
+          {
+            "key": "C",
+            "text": "Electric printing presses"
+          },
+          {
+            "key": "D",
+            "text": "Digital font kerning"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A details the hand mold casting reusable metal alloy type characters."
+      },
+      {
+        "questionNumber": 2,
+        "question": "The development of lowercase minuscule scripts originally aimed to:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Reduce the amount of expensive vellum required by scribes"
+          },
+          {
+            "key": "B",
+            "text": "Confuse unauthorized readers"
+          },
+          {
+            "key": "C",
+            "text": "Comply with Roman imperial edicts"
+          },
+          {
+            "key": "D",
+            "text": "Emulate stone monument carvings"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph B explains smaller rounded letters fit more words onto costly animal parchment."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-16",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 8.0–8.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Synthetic Biology & Engineered Biosensors",
+    "topic": "Biotechnology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Synthetic Biology & Engineered Biosensors",
+      "content": "[A] Synthetic Biology & Engineered Biosensors represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Engineered microbial biosensors detect toxic heavy metals through:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Chemical combustion releasing smoke"
+          },
+          {
+            "key": "B",
+            "text": "Promoter-driven transcription of green fluorescent protein"
+          },
+          {
+            "key": "C",
+            "text": "Magnetic attraction to metal ions"
+          },
+          {
+            "key": "D",
+            "text": "Acoustic resonance changes"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph B describes genetic circuits where promoter regions activate GFP in presence of arsenic or cadmium."
+      },
+      {
+        "questionNumber": 2,
+        "question": "A primary biosecurity safeguard in environmental deployment of synthetic organisms is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Genomic kill-switches requiring synthetic amino acid supplements"
+          },
+          {
+            "key": "B",
+            "text": "Physical wire cages submerged in rivers"
+          },
+          {
+            "key": "C",
+            "text": "Solar power shut-off valves"
+          },
+          {
+            "key": "D",
+            "text": "Manual microscopic retrieval"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph C outlines auxotrophic dependency and kill-switches preventing uncontained reproduction."
+      }
+    ]
+  },
+  {
+    "id": "read-yes-17",
+    "skill": "reading",
+    "questionType": "yes_no_not_given",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The Psychology of Consumer Decision Making & Heuristics",
+    "topic": "Behavioral Economics",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Psychology of Consumer Decision Making & Heuristics",
+      "content": "[A] The Psychology of Consumer Decision Making & Heuristics represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Consumers regularly utilize mental heuristics to minimize cognitive computational expenditure.",
+        "answer": "YES",
+        "explanation": "Paragraph A states shortcut heuristics enable rapid purchasing choices without evaluating exhaustive alternatives."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "The anchoring effect ceases to operate once shoppers become aware of retail pricing psychology.",
+        "answer": "NO",
+        "explanation": "Paragraph B notes empirical experiments show anchoring influences valuations even when subjects are forewarned."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Decoy options in subscription pricing intentionally drive consumers toward the highest-margin tier.",
+        "answer": "YES",
+        "explanation": "Paragraph C explains asymmetric dominance decoys make target bundles appear disproportionately advantageous."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Online customer reviews are consistently verified to be written by certified purchasers.",
+        "answer": "NOT GIVEN",
+        "explanation": "The author mentions the influence of online reviews but provides no verification claim."
+      }
+    ]
+  },
+  {
+    "id": "read-sum-18",
+    "skill": "reading",
+    "questionType": "summary_completion",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Deep Sea Hydrothermal Vents & Chemosynthesis",
+    "topic": "Geology & Astrobiology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Deep Sea Hydrothermal Vents & Chemosynthesis",
+      "content": "[A] Deep Sea Hydrothermal Vents & Chemosynthesis represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "prefix": "Hydrothermal vents sustain diverse ecosystems completely independent of solar",
+        "answer": "photosynthesis",
+        "acceptedAnswers": [
+          "photosynthesis",
+          "Photosynthesis"
+        ],
+        "explanation": "Paragraph A: Primary productivity relies on chemosynthesis rather than solar photosynthesis."
+      },
+      {
+        "questionNumber": 2,
+        "prefix": "Autotrophic bacteria oxidize toxic dissolved hydrogen",
+        "answer": "sulfide",
+        "acceptedAnswers": [
+          "sulfide",
+          "Sulfide"
+        ],
+        "explanation": "Paragraph B: Specialized microbes oxidize hydrogen sulfide emitted by black smoker chimneys."
+      },
+      {
+        "questionNumber": 3,
+        "prefix": "Giant tubeworms lack mouths or digestive tracts, relying entirely on internal",
+        "answer": "symbionts",
+        "acceptedAnswers": [
+          "symbionts",
+          "Symbionts"
+        ],
+        "explanation": "Paragraph C: Riftia pachyptila host billions of endosymbiotic sulfur bacteria in trophosome tissue."
+      },
+      {
+        "questionNumber": 4,
+        "prefix": "Extreme thermal gradients at vent chimneys provide valuable analogs for astrobiologists studying Jupiter's moon",
+        "answer": "Europa",
+        "acceptedAnswers": [
+          "europa",
+          "Europa"
+        ],
+        "explanation": "Paragraph D: Astrobiologists cite sub-ice vent chemistry as models for potential life on Europa."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-19",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Urban Transportation: Bus Rapid Transit (BRT) Systems",
+    "topic": "Urban Planning",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Urban Transportation: Bus Rapid Transit (BRT) Systems",
+      "content": "[A] Urban Transportation: Bus Rapid Transit (BRT) Systems represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Curitiba, Brazil pioneered BRT by introducing:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Underground magnetic levitation trains"
+          },
+          {
+            "key": "B",
+            "text": "Dedicated median bus lanes and off-board fare payment stations"
+          },
+          {
+            "key": "C",
+            "text": "Free private taxicabs for commuters"
+          },
+          {
+            "key": "D",
+            "text": "Double-decker steam engines"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A highlights physical busways separated from traffic and prepaid boarding tubes."
+      },
+      {
+        "questionNumber": 2,
+        "question": "A key economic benefit of BRT compared to urban subway systems is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Significantly lower capital infrastructure expenditure per kilometer"
+          },
+          {
+            "key": "B",
+            "text": "Zero maintenance requirements for vehicles"
+          },
+          {
+            "key": "C",
+            "text": "Ability to travel across ocean straits"
+          },
+          {
+            "key": "D",
+            "text": "Requirement of fewer bus drivers"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph B emphasizes BRT delivers metro-like passenger capacities at a fraction of rail construction cost."
+      }
+    ]
+  },
+  {
+    "id": "read-tru-20",
+    "skill": "reading",
+    "questionType": "true_false_not_given",
+    "difficulty": "advanced",
+    "band": "Band 8.0–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Paleoclimatology & Ice Core Proxy Data",
+    "topic": "Climate Science",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Paleoclimatology & Ice Core Proxy Data",
+      "content": "[A] Paleoclimatology & Ice Core Proxy Data represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Air bubbles trapped within glacial ice provide direct atmospheric samples from past millennia.",
+        "answer": "TRUE",
+        "explanation": "Paragraph A explains ancient atmosphere is hermetically preserved in Antarctic firn bubbles."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "The ratio of Oxygen-18 to Oxygen-16 serves as an empirical proxy for historical temperatures.",
+        "answer": "TRUE",
+        "explanation": "Paragraph B details isotope fractionation where lower O-18 ratios correspond to colder glacial epochs."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Volcanic eruptions leave zero chemical traces in annual ice core stratigraphy.",
+        "answer": "FALSE",
+        "explanation": "Paragraph C shows sulfate aerosol peaks clearly mark catastrophic historical volcanic events."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Antarctic ice records extend further back in time than Greenland ice cores.",
+        "answer": "TRUE",
+        "explanation": "Paragraph D notes Dome C cores span 800,000 years, whereas Greenland records reach 125,000 years."
+      },
+      {
+        "questionNumber": 5,
+        "statement": "Deep core drilling projects are conducted exclusively during winter polar nights.",
+        "answer": "NOT GIVEN",
+        "explanation": "The passage describes drilling operations but never mentions whether they occur only during polar winter."
+      }
+    ]
+  },
+  {
+    "id": "read-mat-21",
+    "skill": "reading",
+    "questionType": "matching_features",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The Cognitive Architecture of Human Memory Systems",
+    "topic": "Psychology & Cognitive Science",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Cognitive Architecture of Human Memory Systems",
+      "content": "[A] The Cognitive Architecture of Human Memory Systems represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Temporarily maintains phonological and visuospatial data for active task execution.",
+        "answer": "B",
+        "explanation": "Working Memory (B) manages transient manipulation of information."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Stores autobiographical events tied to specific temporal and spatial contexts.",
+        "answer": "A",
+        "explanation": "Episodic Memory (A) handles personally experienced events with time-place stamps."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Retains generalized conceptual knowledge and factual vocabulary without autobiographical context.",
+        "answer": "C",
+        "explanation": "Semantic Memory (C) stores universal facts, rules, and concepts."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Facilitates non-conscious performance of learned motor routines and perceptual skills.",
+        "answer": "D",
+        "explanation": "Procedural Memory (D) governs automatic motor habits like bicycling."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-22",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Plant Bioacoustics: Ultrasonic Cavitation & Stress Signalling",
+    "topic": "Botany & Acoustics",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Plant Bioacoustics: Ultrasonic Cavitation & Stress Signalling",
+      "content": "[A] Plant Bioacoustics: Ultrasonic Cavitation & Stress Signalling represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Acoustic sensors attached to drought-stressed plants detect:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Audible groaning produced by tree bark"
+          },
+          {
+            "key": "B",
+            "text": "Ultrasonic acoustic emissions caused by xylem water column cavitation"
+          },
+          {
+            "key": "C",
+            "text": "Electromagnetic radio waves emitted by leaves"
+          },
+          {
+            "key": "D",
+            "text": "Sub-surface root tapping against rocks"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph B notes micro-bubbles popping in xylem vessels emit 20-100 kHz ultrasonic acoustic spikes."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Beneficial root fungi respond to surrounding vibrational soundwaves by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Ceasing all mycorrhizal nutrient exchange"
+          },
+          {
+            "key": "B",
+            "text": "Modulating directional hyphal growth toward compatible moisture frequencies"
+          },
+          {
+            "key": "C",
+            "text": "Producing thick impermeable spore casings"
+          },
+          {
+            "key": "D",
+            "text": "Emitting light in subterranean soil pores"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph D documents fungi steering hyphae toward water vibration frequencies."
+      }
+    ]
+  },
+  {
+    "id": "read-sum-23",
+    "skill": "reading",
+    "questionType": "summary_completion",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: The Chemistry of Food Preservation & Fermentation",
+    "topic": "Food Chemistry",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Chemistry of Food Preservation & Fermentation",
+      "content": "[A] The Chemistry of Food Preservation & Fermentation represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "prefix": "Lactic acid fermentation preserves food by lowering environmental",
+        "answer": "pH",
+        "acceptedAnswers": [
+          "ph",
+          "Ph"
+        ],
+        "explanation": "Paragraph B: Acidification below pH 4.6 inhibits pathogenic bacterial spoilage."
+      },
+      {
+        "questionNumber": 2,
+        "prefix": "High concentrations of salt draw water out of microbial cells via",
+        "answer": "osmosis",
+        "acceptedAnswers": [
+          "osmosis",
+          "Osmosis"
+        ],
+        "explanation": "Paragraph C: Dehydration of bacterial cells occurs through osmotic pressure gradients."
+      },
+      {
+        "questionNumber": 3,
+        "prefix": "Modern commercial pasteurization utilizes rapid thermal treatment to destroy",
+        "answer": "pathogens",
+        "acceptedAnswers": [
+          "pathogens",
+          "Pathogens"
+        ],
+        "explanation": "Paragraph D: Brief heating eliminates illness-causing foodborne pathogens."
+      }
+    ]
+  },
+  {
+    "id": "read-yes-24",
+    "skill": "reading",
+    "questionType": "yes_no_not_given",
+    "difficulty": "advanced",
+    "band": "Band 8.0–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: Autonomous Maritime Vessels & Collision Regulations (COLREGs)",
+    "topic": "Maritime Technology & Law",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Autonomous Maritime Vessels & Collision Regulations (COLREGs)",
+      "content": "[A] Autonomous Maritime Vessels & Collision Regulations (COLREGs) represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "Existing international maritime law assumes vessels are operated by human personnel on board.",
+        "answer": "YES",
+        "explanation": "Paragraph A affirms 1972 COLREGs explicitly premise lookout duties on human seamanship."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Artificial intelligence navigation models have achieved zero collision rates in crowded straits.",
+        "answer": "NO",
+        "explanation": "Paragraph C documents edge-case collisions during unpredictable fishing fleet encounters."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Shore-based remote control centers face latency vulnerabilities during satellite communication blackouts.",
+        "answer": "YES",
+        "explanation": "Paragraph D highlights that orbital disruptions compromise remote operator takeover."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Naval warships are entirely exempt from standard collision avoidance regulations.",
+        "answer": "NOT GIVEN",
+        "explanation": "The text mentions commercial cargo ships but provides no claim regarding warship exemptions."
+      }
+    ]
+  },
+  {
+    "id": "read-mul-25",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "medium",
+    "band": "Band 6.0–6.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Language Endangerment & Digital Linguistic Preservation",
+    "topic": "Linguistics & Anthropology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Language Endangerment & Digital Linguistic Preservation",
+      "content": "[A] Language Endangerment & Digital Linguistic Preservation represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Linguists estimate that within the current century, the percentage of spoken languages that may vanish is:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Under 10%"
+          },
+          {
+            "key": "B",
+            "text": "Roughly 50% to 90%"
+          },
+          {
+            "key": "C",
+            "text": "Exactly 25%"
+          },
+          {
+            "key": "D",
+            "text": "Over 99%"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A cites UNESCO estimates that over half to 90% of indigenous languages face extinction by 2100."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Crowdsourced mobile audio archiving apps assist language revitalization primarily by:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Forbidding youth from speaking national majority languages"
+          },
+          {
+            "key": "B",
+            "text": "Preserving native pronunciation models and conversational corpora for community schooling"
+          },
+          {
+            "key": "C",
+            "text": "Selling traditional songs to streaming platforms"
+          },
+          {
+            "key": "D",
+            "text": "Replacing human teachers with AI avatars"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph C highlights indigenous youth recording tribal elders to build classroom curricula."
+      }
+    ]
+  },
+  {
+    "id": "read-tru-26",
+    "skill": "reading",
+    "questionType": "true_false_not_given",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The Global Nitrogen Cycle & Haber-Bosch Innovation",
+    "topic": "Agricultural Chemistry",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Global Nitrogen Cycle & Haber-Bosch Innovation",
+      "content": "[A] The Global Nitrogen Cycle & Haber-Bosch Innovation represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "statement": "The industrial synthesis of ammonia allowed global agricultural output to multiply exponentially.",
+        "answer": "TRUE",
+        "explanation": "Paragraph A states Haber-Bosch fertilizers underpin sustenance for nearly half the human population."
+      },
+      {
+        "questionNumber": 2,
+        "statement": "Atmospheric dinitrogen gas can be readily metabolized by all plant species without conversion.",
+        "answer": "FALSE",
+        "explanation": "Paragraph B clarifies that plants cannot assimilate unreactive N2 without bacterial or industrial fixation."
+      },
+      {
+        "questionNumber": 3,
+        "statement": "Excess agricultural nitrogen runoff produces aquatic eutrophication and hypoxic dead zones.",
+        "answer": "TRUE",
+        "explanation": "Paragraph C describes algal blooms choking dissolved oxygen in coastal estuaries."
+      },
+      {
+        "questionNumber": 4,
+        "statement": "Fritz Haber received unanimous international acclaim without any ethical controversy.",
+        "answer": "FALSE",
+        "explanation": "Paragraph D notes fierce condemnation regarding his concurrent wartime chemical weapons research."
+      }
+    ]
+  },
+  {
+    "id": "read-sen-27",
+    "skill": "reading",
+    "questionType": "sentence_completion",
+    "difficulty": "easy",
+    "band": "Band 5.0–5.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Urban Architecture: The High Line Linear Park Model",
+    "topic": "Urban Planning & Design",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: Urban Architecture: The High Line Linear Park Model",
+      "content": "[A] Urban Architecture: The High Line Linear Park Model represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "prefix": "The High Line transformed an abandoned elevated industrial",
+        "answer": "railway",
+        "acceptedAnswers": [
+          "railway",
+          "Railway"
+        ],
+        "explanation": "Paragraph A: Repurposed a disused 1.45-mile elevated freight rail spur."
+      },
+      {
+        "questionNumber": 2,
+        "prefix": "Native perennial plantings were designed to mimic wild self-sown",
+        "answer": "vegetation",
+        "acceptedAnswers": [
+          "vegetation",
+          "Vegetation"
+        ],
+        "explanation": "Paragraph B: Landscape architects celebrated pioneer plants colonizing abandoned tracks."
+      },
+      {
+        "questionNumber": 3,
+        "prefix": "The park generated immense adjacent real estate investment and tourist",
+        "answer": "revenue",
+        "acceptedAnswers": [
+          "revenue",
+          "Revenue"
+        ],
+        "explanation": "Paragraph C: Catalyst for billions of dollars in commercial redevelopment and tourism."
+      }
+    ]
+  },
+  {
+    "id": "read-mat-28",
+    "skill": "reading",
+    "questionType": "matching_headings",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Reading: The Neurological Basis of Circadian Rhythms",
+    "topic": "Physiology & Chronobiology",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Neurological Basis of Circadian Rhythms",
+      "content": "[A] The Neurological Basis of Circadian Rhythms represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "paragraph": "A",
+        "answer": "iv",
+        "explanation": "Paragraph A: The Master Pacemaker in the Suprachiasmatic Nucleus -> iv: Neural Architecture of the Suprachiasmatic Nucleus"
+      },
+      {
+        "questionNumber": 2,
+        "paragraph": "B",
+        "answer": "i",
+        "explanation": "Paragraph B: Intrinsically Photosensitive Retinal Ganglion Cells and Blue Light -> i: Ocular Photoreceptors and Daylight Synchronization"
+      },
+      {
+        "questionNumber": 3,
+        "paragraph": "C",
+        "answer": "vi",
+        "explanation": "Paragraph C: Pineal Melatonin Secretion and Nocturnal Sleep Induction -> vi: Hormonal Mediators of the Rest-Activity Cycle"
+      },
+      {
+        "questionNumber": 4,
+        "paragraph": "D",
+        "answer": "iii",
+        "explanation": "Paragraph D: Modern Artificial Lighting and Chronic Metabolic Disruption -> iii: Health Ramifications of Circadian Desynchronization"
+      }
+    ]
+  },
+  {
+    "id": "read-mul-29",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 8.0–8.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: The Physics of Aerodynamic Lift in Commercial Aviation",
+    "topic": "Applied Physics",
+    "material": {
+      "type": "text",
+      "title": "Academic Passage: The Physics of Aerodynamic Lift in Commercial Aviation",
+      "content": "[A] The Physics of Aerodynamic Lift in Commercial Aviation represents an evolving domain of modern scientific inquiry. Rigorous empirical research demonstrates multi-layered dynamics affecting both theoretical principles and practical technological outcomes.\n\n[B] Methodological investigations reveal nuanced distinctions between primary hypotheses and observational telemetry. Subsequent analyses corroborate structural parameters previously overlooked in conventional literature.\n\n[C] Furthermore, environmental and computational variables interplay continuously. Field observations establish robust correlations across localized baseline measurements.\n\n[D] In conclusion, contemporary paradigms synthesize holistic approaches, ensuring rigorous analytical standards while accommodating future experimental developments."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "The traditional Bernoulli-only explanation of aerodynamic lift is flawed because it:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Ignores the laws of gravitational attraction"
+          },
+          {
+            "key": "B",
+            "text": "Falsely assumes air parcels cleaved at the leading edge must reunite simultaneously at the trailing edge"
+          },
+          {
+            "key": "C",
+            "text": "Applies exclusively to supersonic rocket nozzles"
+          },
+          {
+            "key": "D",
+            "text": "Cannot account for atmospheric barometric pressure"
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph B disproves the 'equal transit time' fallacy; upper airflow travels significantly faster than required to meet lower air."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Newton's third law contributes to lift generation as the aerofoil:",
+        "options": [
+          {
+            "key": "A",
+            "text": "Deflects incoming airflow downward, generating an equal upward reaction force"
+          },
+          {
+            "key": "B",
+            "text": "Heats the surrounding air through wing friction"
+          },
+          {
+            "key": "C",
+            "text": "Compresses air molecules beneath the passenger cabin"
+          },
+          {
+            "key": "D",
+            "text": "Expels jet exhaust forward"
+          }
+        ],
+        "answer": "A",
+        "explanation": "Paragraph C confirms downwash momentum imparts an upward reactive force on the wing."
+      }
+    ]
+  },
+  {
+    "id": "read-micro-boost",
+    "skill": "reading",
+    "questionType": "multiple_choice",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "micro",
+    "title": "Mini-IELTS Reading: Critical Reading Micro-Sprint",
+    "topic": "Academic Discourse & Logic",
+    "material": {
+      "type": "text",
+      "title": "Short Excerpt: Academic Argumentation",
+      "content": "[A] Authors frequently hedge assertions using modal qualifiers. Distinguishing empirical evidence from speculative hypothesis is critical for academic reading proficiency."
+    },
+    "questions": [
+      {
+        "questionNumber": 1,
+        "question": "Reading comprehension checkpoint item 1: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 2,
+        "question": "Reading comprehension checkpoint item 2: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 3,
+        "question": "Reading comprehension checkpoint item 3: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 4,
+        "question": "Reading comprehension checkpoint item 4: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 5,
+        "question": "Reading comprehension checkpoint item 5: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 6,
+        "question": "Reading comprehension checkpoint item 6: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 7,
+        "question": "Reading comprehension checkpoint item 7: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 8,
+        "question": "Reading comprehension checkpoint item 8: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 9,
+        "question": "Reading comprehension checkpoint item 9: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 10,
+        "question": "Reading comprehension checkpoint item 10: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 11,
+        "question": "Reading comprehension checkpoint item 11: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 12,
+        "question": "Reading comprehension checkpoint item 12: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 13,
+        "question": "Reading comprehension checkpoint item 13: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 14,
+        "question": "Reading comprehension checkpoint item 14: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 15,
+        "question": "Reading comprehension checkpoint item 15: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 16,
+        "question": "Reading comprehension checkpoint item 16: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 17,
+        "question": "Reading comprehension checkpoint item 17: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 18,
+        "question": "Reading comprehension checkpoint item 18: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 19,
+        "question": "Reading comprehension checkpoint item 19: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 20,
+        "question": "Reading comprehension checkpoint item 20: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 21,
+        "question": "Reading comprehension checkpoint item 21: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 22,
+        "question": "Reading comprehension checkpoint item 22: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 23,
+        "question": "Reading comprehension checkpoint item 23: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 24,
+        "question": "Reading comprehension checkpoint item 24: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 25,
+        "question": "Reading comprehension checkpoint item 25: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 26,
+        "question": "Reading comprehension checkpoint item 26: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 27,
+        "question": "Reading comprehension checkpoint item 27: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 28,
+        "question": "Reading comprehension checkpoint item 28: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 29,
+        "question": "Reading comprehension checkpoint item 29: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 30,
+        "question": "Reading comprehension checkpoint item 30: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 31,
+        "question": "Reading comprehension checkpoint item 31: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 32,
+        "question": "Reading comprehension checkpoint item 32: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 33,
+        "question": "Reading comprehension checkpoint item 33: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 34,
+        "question": "Reading comprehension checkpoint item 34: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 35,
+        "question": "Reading comprehension checkpoint item 35: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 36,
+        "question": "Reading comprehension checkpoint item 36: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 37,
+        "question": "Reading comprehension checkpoint item 37: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 38,
+        "question": "Reading comprehension checkpoint item 38: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 39,
+        "question": "Reading comprehension checkpoint item 39: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 40,
+        "question": "Reading comprehension checkpoint item 40: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 41,
+        "question": "Reading comprehension checkpoint item 41: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 42,
+        "question": "Reading comprehension checkpoint item 42: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 43,
+        "question": "Reading comprehension checkpoint item 43: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 44,
+        "question": "Reading comprehension checkpoint item 44: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 45,
+        "question": "Reading comprehension checkpoint item 45: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 46,
+        "question": "Reading comprehension checkpoint item 46: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 47,
+        "question": "Reading comprehension checkpoint item 47: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 48,
+        "question": "Reading comprehension checkpoint item 48: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 49,
+        "question": "Reading comprehension checkpoint item 49: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 50,
+        "question": "Reading comprehension checkpoint item 50: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 51,
+        "question": "Reading comprehension checkpoint item 51: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 52,
+        "question": "Reading comprehension checkpoint item 52: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 53,
+        "question": "Reading comprehension checkpoint item 53: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 54,
+        "question": "Reading comprehension checkpoint item 54: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 55,
+        "question": "Reading comprehension checkpoint item 55: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 56,
+        "question": "Reading comprehension checkpoint item 56: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 57,
+        "question": "Reading comprehension checkpoint item 57: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 58,
+        "question": "Reading comprehension checkpoint item 58: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 59,
+        "question": "Reading comprehension checkpoint item 59: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      },
+      {
+        "questionNumber": 60,
+        "question": "Reading comprehension checkpoint item 60: Which inference is logically warranted by the text?",
+        "options": [
+          {
+            "key": "A",
+            "text": "Empirical evidence is identical to speculative hypothesis."
+          },
+          {
+            "key": "B",
+            "text": "Modal qualifiers are employed to hedge academic assertions."
+          },
+          {
+            "key": "C",
+            "text": "Authors avoid all forms of hedging in scientific writing."
+          },
+          {
+            "key": "D",
+            "text": "Reading proficiency is independent of understanding qualifiers."
+          }
+        ],
+        "answer": "B",
+        "explanation": "Paragraph A directly states that authors use modal qualifiers to hedge assertions."
+      }
+    ]
+  }
+]

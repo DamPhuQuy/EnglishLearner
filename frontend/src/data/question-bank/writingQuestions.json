@@ -1,0 +1,1681 @@
+[
+  {
+    "id": "writ-line_-01",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Global Renewable Electricity Generation (2000–2025)",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "academicVisualType": "line_graph",
+      "generalLetterType": null,
+      "essayCategory": null,
+      "prompt": "The line graph shows the percentage of electricity generated from wind, solar, and hydro sources in four European nations from 2000 to 2025.",
+      "bulletPoints": [
+        "Wind power demonstrated the steepest upward trajectory, surging from 5% to 38% in Denmark.",
+        "Hydro power remained constant at approximately 55% in Norway, representing the highest overall share.",
+        "Solar energy experienced exponential growth after 2012 in Germany, peaking at 28% in 2025."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: The line graph illustrates the share of electricity derived from three renewable sources across four European countries over a 25-year period... Overall, all nations experienced an upward trend, with solar exhibiting the most dramatic expansion.",
+      "sampleExaminerBand": "Band 6.5–7.5"
+    }
+  },
+  {
+    "id": "writ-bar_c-02",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 5.5–6.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Adult Educational Attainment by Gender (1980 vs 2020)",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "academicVisualType": "bar_chart",
+      "generalLetterType": null,
+      "essayCategory": null,
+      "prompt": "The bar chart compares the percentage of men and women completing tertiary education degrees across five OECD countries in 1980 and 2020.",
+      "bulletPoints": [
+        "Female graduation rates rose sharply across all surveyed nations, overtaking male rates by 2020.",
+        "In Canada, female tertiary graduation reached 62% in 2020 compared to only 28% in 1980.",
+        "Male graduation rates experienced modest steady increases of between 8% and 15%."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: The bar chart provides a comparative breakdown of university graduation percentages... In summary, tertiary attainment rose across all surveyed countries, with females reversing the gender disparity by 2020.",
+      "sampleExaminerBand": "Band 5.5–6.5"
+    }
+  },
+  {
+    "id": "writ-pie_c-03",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 5.5–6.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Household Energy Consumption Breakdown in the UK",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "academicVisualType": "pie_chart",
+      "generalLetterType": null,
+      "essayCategory": null,
+      "prompt": "The pie charts compare how an average UK household utilized energy across heating, water, appliances, and lighting in 1990 and 2020.",
+      "bulletPoints": [
+        "Space heating accounted for more than half of all domestic energy use in both years (52% in 1990 and 48% in 2020).",
+        "Energy dedicated to consumer electrical appliances doubled from 12% to 24%.",
+        "Lighting efficiency gains lowered lighting consumption from 14% to 8%."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: The two pie charts delineate the proportion of domestic energy consumed across four functional categories... Overall, space heating remained the predominant energy sink throughout both decades.",
+      "sampleExaminerBand": "Band 5.5–6.5"
+    }
+  },
+  {
+    "id": "writ-proce-04",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Industrial Lithium-Ion Battery Recycling Procedure",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "academicVisualType": "process_diagram",
+      "generalLetterType": null,
+      "essayCategory": null,
+      "prompt": "The diagram illustrates the chemical and mechanical stages involved in recycling spent automotive lithium-ion batteries.",
+      "bulletPoints": [
+        "Phase 1: Automated mechanical shredding under inert argon atmosphere prevents thermal runaway.",
+        "Phase 2: Hydrometallurgical acid leaching extracts cobalt, nickel, and lithium salts at 98% purity.",
+        "Phase 3: Precipitation and calcination regenerates reusable cathode precursor compounds."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: The schematic outlines the cyclical industrial process of recovering valuable elements from spent lithium-ion battery packs... Overall, the system consists of three distinct phases converting waste cells into battery-grade precursors.",
+      "sampleExaminerBand": "Band 7.5–8.5"
+    }
+  },
+  {
+    "id": "writ-map_p-05",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Redevelopment of Port Haven Industrial Docks (2000–Present)",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "academicVisualType": "map_plan",
+      "generalLetterType": null,
+      "essayCategory": null,
+      "prompt": "The two maps compare Port Haven in the year 2000 and following its urban waterfront revitalization today.",
+      "bulletPoints": [
+        "Disused cargo cranes and timber warehouses in the north were converted into mixed-use residential apartments and an art gallery.",
+        "The central commercial shipping dock was converted into a recreational marina with a pedestrian promenade.",
+        "A light rail tram terminus was installed connecting the waterfront directly to the city center."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: The comparative maps depict structural alterations undertaken at Port Haven between 2000 and the present day... Overall, the port underwent extensive modernization, transitioning from heavy freight shipping to residential and recreational hospitality.",
+      "sampleExaminerBand": "Band 6.5–7.0"
+    }
+  },
+  {
+    "id": "writ-forma-06",
+    "skill": "writing",
+    "questionType": "task1_general",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Formal Complaint Regarding Delayed Flight & Lost Luggage",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_general",
+      "academicVisualType": null,
+      "generalLetterType": "formal",
+      "essayCategory": null,
+      "prompt": "You recently traveled on an international flight where your luggage was delayed for four days, causing significant inconvenience.",
+      "bulletPoints": [
+        "Introduce your flight details, booking reference, and baggage tags.",
+        "Explain the specific problems and expenses caused by the delay.",
+        "State clearly the financial compensation and action you expect the airline to take."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: Dear Customer Relations Manager, I am writing to lodge a formal complaint regarding flight BA-284 from London Heathrow to Singapore on October 14th...",
+      "sampleExaminerBand": "Band 6.5–7.0"
+    }
+  },
+  {
+    "id": "writ-semi_-07",
+    "skill": "writing",
+    "questionType": "task1_general",
+    "difficulty": "easy",
+    "band": "Band 5.5–6.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Letter to Apartment Landlord Requesting Urgent Heating Repair",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task1_general",
+      "academicVisualType": null,
+      "generalLetterType": "semi_formal",
+      "essayCategory": null,
+      "prompt": "You are renting an apartment, and the central heating boiler has stopped functioning during winter. Write a letter to your landlord.",
+      "bulletPoints": [
+        "State the exact nature and onset date of the heating breakdown.",
+        "Explain the severe impact on your living conditions in cold weather.",
+        "Request an immediate technician inspection within 24 hours."
+      ],
+      "minWords": 150,
+      "sampleEssay": "Band 8.5 Model: Dear Mr. Robinson, I am writing to bring to your urgent attention a serious mechanical failure concerning the central heating boiler at Apartment 4B...",
+      "sampleExaminerBand": "Band 5.5–6.0"
+    }
+  },
+  {
+    "id": "writ-agree-08",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Automation & AI Replacing Human White-Collar Jobs",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "academicVisualType": null,
+      "generalLetterType": null,
+      "essayCategory": "agree_disagree",
+      "prompt": "Some experts predict that artificial intelligence will render the majority of white-collar professional careers obsolete within decades. To what extent do you agree or disagree?",
+      "bulletPoints": [
+        "Examine high-frequency analytical tasks (legal discovery, radiology, basic software coding) being automated.",
+        "Contrast with uniquely human skills: nuanced ethical judgment, empathetic counseling, and creative conceptual leaps.",
+        "Conclude with a balanced view that roles will transform collaboratively rather than disappear."
+      ],
+      "minWords": 250,
+      "sampleEssay": "Band 8.5 Model: It is increasingly argued that rapid breakthroughs in generative AI and autonomous systems will displace skilled white-collar professionals... I largely disagree with the claim of wholesale obsolescence; while clerical workflows will automate, strategic human judgment remains indispensable.",
+      "sampleExaminerBand": "Band 7.5–8.5"
+    }
+  },
+  {
+    "id": "writ-discu-09",
+    "skill": "writing",
+    "questionType": "task2_discussion",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Universal Basic Income (UBI) vs Traditional Welfare Programs",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task2_discussion",
+      "academicVisualType": null,
+      "generalLetterType": null,
+      "essayCategory": "discuss_both_views",
+      "prompt": "Some believe governments should provide every citizen with an unconditional Universal Basic Income (UBI). Others argue that targeted conditional welfare assistance is more effective and fiscally sustainable. Discuss both views and give your own opinion.",
+      "bulletPoints": [
+        "UBI benefits: Eradicates bureaucratic stigma, provides economic safety net during automation transitions.",
+        "Targeted welfare arguments: Prevents wasteful disbursements to affluent demographics, maintains incentive to seek employment.",
+        "Personal synthesis: Phased negative income tax targeting low-to-middle brackets."
+      ],
+      "minWords": 250,
+      "sampleEssay": "Band 8.5 Model: The economic debate regarding whether state welfare should take the form of unconditional universal payments or targeted conditional assistance has intensified... While UBI eliminates bureaucratic overhead, I believe targeted welfare preserves sovereign fiscal solvency.",
+      "sampleExaminerBand": "Band 7.5–8.5"
+    }
+  },
+  {
+    "id": "writ-cause-10",
+    "skill": "writing",
+    "questionType": "task2_problem_solution",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Writing: Urban Sprawl and Traffic Congestion in Megacities",
+    "topic": "Academic Composition & Analytical Writing",
+    "writingTask": {
+      "taskType": "task2_problem_solution",
+      "academicVisualType": null,
+      "generalLetterType": null,
+      "essayCategory": "causes_solutions",
+      "prompt": "In many global metropolises, increasing urban sprawl and private automobile dependency create severe air pollution and lost economic productivity. What are the primary causes of this issue, and what feasible measures can municipal governments implement?",
+      "bulletPoints": [
+        "Causes: Inadequate commuter public transit, low-density single-family zoning, subsidized highway construction.",
+        "Solutions: High-density transit-oriented development (TOD), congestion pricing zones, investing in electrified metro lines."
+      ],
+      "minWords": 250,
+      "sampleEssay": "Band 8.5 Model: Rapid urbanization over recent decades has catalyzed sprawling suburban peripheries, resulting in acute vehicular congestion... This essay will examine the underlying architectural drivers and propose systemic infrastructure remedies.",
+      "sampleExaminerBand": "Band 6.5–7.0"
+    }
+  },
+  {
+    "id": "writ-prompt-drill-01",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 1: Critical Argument Formulation",
+    "topic": "Topic Module 1: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 1: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 1: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-02",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 2: Critical Argument Formulation",
+    "topic": "Topic Module 2: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 2: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 2: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-03",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 3: Critical Argument Formulation",
+    "topic": "Topic Module 3: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 3: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 3: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-04",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 4: Critical Argument Formulation",
+    "topic": "Topic Module 4: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 4: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 4: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-05",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 5: Critical Argument Formulation",
+    "topic": "Topic Module 5: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 5: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 5: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-06",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 6: Critical Argument Formulation",
+    "topic": "Topic Module 6: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 6: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 6: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-07",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 7: Critical Argument Formulation",
+    "topic": "Topic Module 7: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 7: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 7: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-08",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 8: Critical Argument Formulation",
+    "topic": "Topic Module 8: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 8: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 8: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-09",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 9: Critical Argument Formulation",
+    "topic": "Topic Module 9: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 9: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 9: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-10",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 10: Critical Argument Formulation",
+    "topic": "Topic Module 10: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 10: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 10: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-11",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 11: Critical Argument Formulation",
+    "topic": "Topic Module 11: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 11: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 11: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-12",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 12: Critical Argument Formulation",
+    "topic": "Topic Module 12: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 12: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 12: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-13",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 13: Critical Argument Formulation",
+    "topic": "Topic Module 13: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 13: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 13: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-14",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 14: Critical Argument Formulation",
+    "topic": "Topic Module 14: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 14: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 14: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-15",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 15: Critical Argument Formulation",
+    "topic": "Topic Module 15: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 15: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 15: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-16",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 16: Critical Argument Formulation",
+    "topic": "Topic Module 16: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 16: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 16: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-17",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 17: Critical Argument Formulation",
+    "topic": "Topic Module 17: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 17: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 17: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-18",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 18: Critical Argument Formulation",
+    "topic": "Topic Module 18: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 18: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 18: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-19",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 19: Critical Argument Formulation",
+    "topic": "Topic Module 19: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 19: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 19: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-20",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 20: Critical Argument Formulation",
+    "topic": "Topic Module 20: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 20: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 20: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-21",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 21: Critical Argument Formulation",
+    "topic": "Topic Module 21: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 21: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 21: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-22",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 22: Critical Argument Formulation",
+    "topic": "Topic Module 22: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 22: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 22: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-23",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 23: Critical Argument Formulation",
+    "topic": "Topic Module 23: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 23: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 23: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-24",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 24: Critical Argument Formulation",
+    "topic": "Topic Module 24: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 24: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 24: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-25",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 25: Critical Argument Formulation",
+    "topic": "Topic Module 25: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 25: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 25: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-26",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 26: Critical Argument Formulation",
+    "topic": "Topic Module 26: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 26: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 26: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-27",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 27: Critical Argument Formulation",
+    "topic": "Topic Module 27: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 27: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 27: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-28",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 28: Critical Argument Formulation",
+    "topic": "Topic Module 28: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 28: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 28: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-29",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 29: Critical Argument Formulation",
+    "topic": "Topic Module 29: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 29: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 29: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-30",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 30: Critical Argument Formulation",
+    "topic": "Topic Module 30: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 30: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 30: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-31",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 31: Critical Argument Formulation",
+    "topic": "Topic Module 31: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 31: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 31: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-32",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 32: Critical Argument Formulation",
+    "topic": "Topic Module 32: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 32: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 32: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-33",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 33: Critical Argument Formulation",
+    "topic": "Topic Module 33: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 33: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 33: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-34",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 34: Critical Argument Formulation",
+    "topic": "Topic Module 34: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 34: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 34: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-35",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 35: Critical Argument Formulation",
+    "topic": "Topic Module 35: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 35: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 35: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-36",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 36: Critical Argument Formulation",
+    "topic": "Topic Module 36: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 36: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 36: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-37",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 37: Critical Argument Formulation",
+    "topic": "Topic Module 37: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 37: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 37: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-38",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 38: Critical Argument Formulation",
+    "topic": "Topic Module 38: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 38: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 38: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-39",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 39: Critical Argument Formulation",
+    "topic": "Topic Module 39: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 39: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 39: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-40",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 40: Critical Argument Formulation",
+    "topic": "Topic Module 40: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 40: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 40: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-41",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 41: Critical Argument Formulation",
+    "topic": "Topic Module 41: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 41: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 41: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-42",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 42: Critical Argument Formulation",
+    "topic": "Topic Module 42: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 42: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 42: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-43",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 43: Critical Argument Formulation",
+    "topic": "Topic Module 43: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 43: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 43: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-44",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 44: Critical Argument Formulation",
+    "topic": "Topic Module 44: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 44: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 44: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-45",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 45: Critical Argument Formulation",
+    "topic": "Topic Module 45: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 45: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 45: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-46",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 46: Critical Argument Formulation",
+    "topic": "Topic Module 46: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 46: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 46: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-47",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 47: Critical Argument Formulation",
+    "topic": "Topic Module 47: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 47: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 47: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-48",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 48: Critical Argument Formulation",
+    "topic": "Topic Module 48: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 48: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 48: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-49",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 49: Critical Argument Formulation",
+    "topic": "Topic Module 49: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 49: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 49: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-50",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 50: Critical Argument Formulation",
+    "topic": "Topic Module 50: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 50: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 50: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-51",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 51: Critical Argument Formulation",
+    "topic": "Topic Module 51: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 51: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 51: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-52",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 52: Critical Argument Formulation",
+    "topic": "Topic Module 52: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 52: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 52: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-53",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 53: Critical Argument Formulation",
+    "topic": "Topic Module 53: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 53: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 53: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-54",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 54: Critical Argument Formulation",
+    "topic": "Topic Module 54: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 54: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 54: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-55",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 55: Critical Argument Formulation",
+    "topic": "Topic Module 55: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 55: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 55: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-56",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 56: Critical Argument Formulation",
+    "topic": "Topic Module 56: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 56: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 56: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-57",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 57: Critical Argument Formulation",
+    "topic": "Topic Module 57: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 57: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 57: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-58",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 58: Critical Argument Formulation",
+    "topic": "Topic Module 58: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 58: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 58: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-59",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 59: Critical Argument Formulation",
+    "topic": "Topic Module 59: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 59: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 59: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-60",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 60: Critical Argument Formulation",
+    "topic": "Topic Module 60: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 60: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 60: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-61",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 61: Critical Argument Formulation",
+    "topic": "Topic Module 61: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 61: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 61: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-62",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 62: Critical Argument Formulation",
+    "topic": "Topic Module 62: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 62: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 62: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-63",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 63: Critical Argument Formulation",
+    "topic": "Topic Module 63: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 63: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 63: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-64",
+    "skill": "writing",
+    "questionType": "task2_opinion",
+    "difficulty": "advanced",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 64: Critical Argument Formulation",
+    "topic": "Topic Module 64: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task2_opinion",
+      "prompt": "Practice prompt 64: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 250,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 64: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  },
+  {
+    "id": "writ-prompt-drill-65",
+    "skill": "writing",
+    "questionType": "task1_academic",
+    "difficulty": "easy",
+    "band": "Band 6.5–7.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Writing Drill 65: Critical Argument Formulation",
+    "topic": "Topic Module 65: Global Society & Economy",
+    "writingTask": {
+      "taskType": "task1_academic",
+      "prompt": "Practice prompt 65: Should governments allocate greater research funding to space exploration or terrestrial environmental conservation? State your position clearly with supporting empirical reasoning.",
+      "bulletPoints": [
+        "Present clear introductory thesis statement.",
+        "Develop two well-substantiated body arguments.",
+        "Conclude with a balanced summary."
+      ],
+      "minWords": 150,
+      "sampleExaminerBand": "Band 8.0",
+      "sampleEssay": "Examiner Sample 65: In contemporary budgetary discussions, whether state resources should prioritize space exploration or planetary preservation remains contentious... Ultimately, protecting our terrestrial biosphere must supersede extra-planetary endeavors."
+    }
+  }
+]

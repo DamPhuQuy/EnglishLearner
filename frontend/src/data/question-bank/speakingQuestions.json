@@ -1,0 +1,892 @@
+[
+  {
+    "id": "spk-part1-01",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "easy",
+    "band": "Band 5.5–6.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Hometown, Architecture & Urban Community",
+    "topic": "Hometown & Architecture",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Hometown & Architecture",
+      "part1Questions": [
+        {
+          "questionNumber": 1,
+          "question": "Where is your hometown situated, and what makes it notable?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "What kind of architectural styles are typical in your neighborhood?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Has your hometown experienced substantial transformation over the past decade?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "What public amenity would you introduce to enhance your hometown's livability?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "a bustling metropolis",
+          "meaning": "a very busy and energetic city",
+          "example": "My hometown has transformed from a sleepy town into a bustling metropolis."
+        },
+        {
+          "phrase": "on the outskirts",
+          "meaning": "in the outer areas of a town or city",
+          "example": "I reside in a peaceful suburb on the outskirts of the capital."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-part1-02",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Digital Technology & Smart Devices in Daily Life",
+    "topic": "Digital Habits & Artificial Intelligence",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Digital Habits & Artificial Intelligence",
+      "part1Questions": [
+        {
+          "questionNumber": 5,
+          "question": "How frequently do you utilize artificial intelligence or voice assistants in your daily routine?"
+        },
+        {
+          "questionNumber": 6,
+          "question": "Do you prefer reading books on electronic screens or traditional printed paper?"
+        },
+        {
+          "questionNumber": 7,
+          "question": "What digital application could you not function without on a typical workday?"
+        },
+        {
+          "questionNumber": 8,
+          "question": "Do you feel digital notifications distract from sustained intellectual focus?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "double-edged sword",
+          "meaning": "something having both favorable and unfavorable consequences",
+          "example": "Smartphones are a double-edged sword; they connect us but erode deep focus."
+        },
+        {
+          "phrase": "at the touch of a button",
+          "meaning": "instantly and easily available",
+          "example": "Virtually any scholarly paper can now be retrieved at the touch of a button."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-part2-03",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Cue Card: An Environmental Initiative You Admire",
+    "topic": "Environmental Protection",
+    "speakingTask": {
+      "part": 2,
+      "topic": "Environmental Protection",
+      "cueCard": {
+        "title": "Describe an environmental initiative or project that you find inspiring",
+        "bulletPoints": [
+          "What the initiative is and who created it",
+          "How it operates and what ecological problem it tackles",
+          "What positive consequences or milestones it has accomplished",
+          "And explain why you personally find this initiative inspiring"
+        ],
+        "roundingOffQuestion": "Do you believe local community actions can catalyze national environmental policy shifts?"
+      },
+      "recommendedIdioms": [
+        {
+          "phrase": "game changer",
+          "meaning": "a newly introduced element that significantly alters an existing situation",
+          "example": "The community micro-grid proved to be a real game changer for rural energy autonomy."
+        },
+        {
+          "phrase": "lead by example",
+          "meaning": "act in ways that encourage others to follow",
+          "example": "By composting waste, the university led by example for the entire municipality."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-part2-04",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Cue Card: An Influential Mentor or Teacher",
+    "topic": "Education & Personal Growth",
+    "speakingTask": {
+      "part": 2,
+      "topic": "Education & Personal Growth",
+      "cueCard": {
+        "title": "Describe an educator or mentor who had a profound impact on your academic development",
+        "bulletPoints": [
+          "Who this person was and what subject they taught",
+          "When and where you first encountered them",
+          "What distinct pedagogical methods or qualities made them memorable",
+          "And explain how their mentorship influenced your career trajectory"
+        ],
+        "roundingOffQuestion": "Do you still maintain contact with this teacher today?"
+      },
+      "recommendedIdioms": [
+        {
+          "phrase": "broaden my horizons",
+          "meaning": "expand one's knowledge and outlook",
+          "example": "Her lectures on literature genuinely broadened my intellectual horizons."
+        },
+        {
+          "phrase": "ignite a passion",
+          "meaning": "spark immense enthusiasm for something",
+          "example": "He ignited my enduring passion for marine biology."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-part3-05",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 8.0–9.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Abstract Discussion: Higher Education & Artificial Intelligence",
+    "topic": "Higher Education in the AI Era",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Higher Education in the AI Era",
+      "part3Questions": [
+        {
+          "questionNumber": 9,
+          "question": "To what degree will generative AI alter the validity of conventional university examinations?"
+        },
+        {
+          "questionNumber": 10,
+          "question": "Should universities prioritize vocational market competencies over theoretical philosophical inquiries?"
+        },
+        {
+          "questionNumber": 11,
+          "question": "How can developing countries bridge the widening digital divide in scientific research resources?"
+        },
+        {
+          "questionNumber": 12,
+          "question": "Will lifelong micro-credentialing eventually supersede traditional four-year bachelor degrees?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "paradigm shift",
+          "meaning": "a fundamental change in basic concepts or practices",
+          "example": "Generative learning represents a historic paradigm shift in pedagogy."
+        },
+        {
+          "phrase": "rest on one's laurels",
+          "meaning": "be satisfied with past success without ongoing effort",
+          "example": "Universities cannot afford to rest on their laurels in an era of rapid technological disruption."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-01",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Art, Museums & Public Heritage",
+    "topic": "Cultural Studies",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Cultural Studies",
+      "part1Questions": null,
+      "part3Questions": [
+        {
+          "questionNumber": 1,
+          "question": "Do you frequently visit art galleries or historical museums?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "Should entrance to national museums remain universally free of charge?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "How does traditional art preserve cultural identity during globalization?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Can digital virtual tours ever replace the physical aesthetic experience of seeing masterpieces in person?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-02",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Sustainable Transportation & Urban Commuting",
+    "topic": "Urban Studies",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Urban Studies",
+      "part1Questions": [
+        {
+          "questionNumber": 1,
+          "question": "What is your primary method of daily transportation?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "How could public transport in your city be made more eco-friendly?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Do high taxes on private vehicle ownership successfully curtail congestion?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "What are the societal consequences of autonomous self-driving vehicle networks?"
+        }
+      ],
+      "part3Questions": null,
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-03",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Sleep, Circadian Health & Workplace Productivity",
+    "topic": "Health & Psychology",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Health & Psychology",
+      "part1Questions": null,
+      "part3Questions": [
+        {
+          "questionNumber": 1,
+          "question": "How many hours of sleep do you consider optimal for sustained mental performance?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "Do modern corporate cultures undervalue rest and recuperation?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "How do blue-light emitting devices compromise natural circadian rhythms?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Should companies introduce mandatory afternoon nap periods for knowledge workers?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-04",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Global Tourism & Cultural Preservation",
+    "topic": "Tourism & Economics",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Tourism & Economics",
+      "part1Questions": [
+        {
+          "questionNumber": 1,
+          "question": "What motivates people to explore foreign destinations rather than holidaying domestically?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "How does mass tourism damage fragile ecological and architectural heritage sites?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Can sustainable eco-tourism balance economic revenue with cultural integrity?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Will space tourism ever become a mainstream commercial reality?"
+        }
+      ],
+      "part3Questions": null,
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-05",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Food Security & Modern Dietary Shifts",
+    "topic": "Agronomy & Society",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Agronomy & Society",
+      "part1Questions": null,
+      "part3Questions": [
+        {
+          "questionNumber": 1,
+          "question": "How have dietary habits transformed among young people in your country?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "Is the shift toward plant-based diets primarily driven by ethics or health concerns?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "What responsibility do governments bear regarding regulating ultra-processed foods?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Can laboratory-grown cultured meat alleviate planetary environmental burdens?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-06",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Music, Psychology & Emotional Well-being",
+    "topic": "Music & Neuroscience",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Music & Neuroscience",
+      "part1Questions": [
+        {
+          "questionNumber": 1,
+          "question": "What genre of music do you listen to when you need to concentrate on complex tasks?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "Why does music evoke such profound emotional nostalgia in human memories?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Should music education be compulsory in elementary primary schools?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "How has music streaming algorithms impacted the diversity of songs we discover?"
+        }
+      ],
+      "part3Questions": null,
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-07",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Work-Life Integration & Remote Employment",
+    "topic": "Sociology of Work",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Sociology of Work",
+      "part1Questions": null,
+      "part3Questions": [
+        {
+          "questionNumber": 1,
+          "question": "Do you prefer working remotely from home or in a collaborative office environment?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "What psychological boundaries prevent remote workers from burning out?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "How can corporate leaders sustain team cohesion across distributed time zones?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Will the standard five-day workweek be replaced by a four-day model within our lifetimes?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-08",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Public Spaces & Community Social Capital",
+    "topic": "Urban Sociology",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Urban Sociology",
+      "part1Questions": [
+        {
+          "questionNumber": 1,
+          "question": "What types of public parks or communal plazas exist in your neighborhood?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "Why are green public spaces vital for urban mental health and social cohesion?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "How can municipal planners design plazas that are accessible to all demographic groups?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Are private commercial shopping malls replacing authentic civic public forums?"
+        }
+      ],
+      "part3Questions": null,
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-09",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Reading Habits, Literature & Cognitive Development",
+    "topic": "Literature & Cognition",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Literature & Cognition",
+      "part1Questions": null,
+      "part3Questions": [
+        {
+          "questionNumber": 1,
+          "question": "Do you read fictional literature or non-fiction investigative works more frequently?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "How does reading long-form novels enhance emotional empathy and perspective-taking?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Why are attention spans for continuous book reading diminishing in the digital age?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Will audiobooks and podcasts entirely supplant the traditional printed page?"
+        }
+      ],
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-topic-10",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "medium",
+    "band": "Band 6.5–8.0",
+    "granularity": "drill",
+    "title": "Mini-IELTS Speaking: Sports, Physical Activity & Public Health Policy",
+    "topic": "Sports Science & Policy",
+    "speakingTask": {
+      "part": 1,
+      "topic": "Sports Science & Policy",
+      "part1Questions": [
+        {
+          "questionNumber": 1,
+          "question": "Did you participate in team sports or individual athletic pursuits during school?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "What health benefits does regular moderate aerobic exercise confer on cognitive longevity?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Should governments heavily subsidize gym memberships and athletic facilities?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Do international sporting tournaments foster genuine diplomatic goodwill between nations?"
+        }
+      ],
+      "part3Questions": null,
+      "recommendedIdioms": [
+        {
+          "phrase": "food for thought",
+          "meaning": "something that makes you think carefully",
+          "example": "That research data provides serious food for thought."
+        },
+        {
+          "phrase": "hit the nail on the head",
+          "meaning": "state something with complete accuracy",
+          "example": "Your analysis of the economic trade-off hits the nail on the head."
+        }
+      ]
+    }
+  },
+  {
+    "id": "spk-boost-drill",
+    "skill": "speaking",
+    "questionType": "speaking_task",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "micro",
+    "title": "Mini-IELTS Speaking: Philosophical Inquiry Sprint",
+    "topic": "Ethics & Society",
+    "speakingTask": {
+      "part": 3,
+      "topic": "Philosophy & Ethics",
+      "part3Questions": [
+        {
+          "questionNumber": 1,
+          "question": "Abstract inquiry 1: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 2,
+          "question": "Abstract inquiry 2: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 3,
+          "question": "Abstract inquiry 3: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 4,
+          "question": "Abstract inquiry 4: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 5,
+          "question": "Abstract inquiry 5: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 6,
+          "question": "Abstract inquiry 6: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 7,
+          "question": "Abstract inquiry 7: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 8,
+          "question": "Abstract inquiry 8: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 9,
+          "question": "Abstract inquiry 9: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 10,
+          "question": "Abstract inquiry 10: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 11,
+          "question": "Abstract inquiry 11: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 12,
+          "question": "Abstract inquiry 12: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 13,
+          "question": "Abstract inquiry 13: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 14,
+          "question": "Abstract inquiry 14: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 15,
+          "question": "Abstract inquiry 15: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 16,
+          "question": "Abstract inquiry 16: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 17,
+          "question": "Abstract inquiry 17: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 18,
+          "question": "Abstract inquiry 18: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 19,
+          "question": "Abstract inquiry 19: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 20,
+          "question": "Abstract inquiry 20: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 21,
+          "question": "Abstract inquiry 21: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 22,
+          "question": "Abstract inquiry 22: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 23,
+          "question": "Abstract inquiry 23: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 24,
+          "question": "Abstract inquiry 24: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 25,
+          "question": "Abstract inquiry 25: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 26,
+          "question": "Abstract inquiry 26: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 27,
+          "question": "Abstract inquiry 27: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 28,
+          "question": "Abstract inquiry 28: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 29,
+          "question": "Abstract inquiry 29: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 30,
+          "question": "Abstract inquiry 30: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 31,
+          "question": "Abstract inquiry 31: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 32,
+          "question": "Abstract inquiry 32: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 33,
+          "question": "Abstract inquiry 33: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 34,
+          "question": "Abstract inquiry 34: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 35,
+          "question": "Abstract inquiry 35: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 36,
+          "question": "Abstract inquiry 36: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 37,
+          "question": "Abstract inquiry 37: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 38,
+          "question": "Abstract inquiry 38: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 39,
+          "question": "Abstract inquiry 39: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 40,
+          "question": "Abstract inquiry 40: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 41,
+          "question": "Abstract inquiry 41: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 42,
+          "question": "Abstract inquiry 42: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 43,
+          "question": "Abstract inquiry 43: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 44,
+          "question": "Abstract inquiry 44: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 45,
+          "question": "Abstract inquiry 45: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 46,
+          "question": "Abstract inquiry 46: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 47,
+          "question": "Abstract inquiry 47: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 48,
+          "question": "Abstract inquiry 48: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 49,
+          "question": "Abstract inquiry 49: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 50,
+          "question": "Abstract inquiry 50: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 51,
+          "question": "Abstract inquiry 51: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 52,
+          "question": "Abstract inquiry 52: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 53,
+          "question": "Abstract inquiry 53: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 54,
+          "question": "Abstract inquiry 54: How should human societies equitably distribute technological abundance?"
+        },
+        {
+          "questionNumber": 55,
+          "question": "Abstract inquiry 55: How should human societies equitably distribute technological abundance?"
+        }
+      ]
+    }
+  }
+]
