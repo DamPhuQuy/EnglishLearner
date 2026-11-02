@@ -2513,7 +2513,7 @@ audio {
 .qb-header-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .qb-header-title-row {
@@ -2536,35 +2536,15 @@ audio {
   white-space: nowrap;
 }
 
-.qb-mode-tabs {
-  display: inline-flex;
-  background: var(--canvas);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 2px;
-  gap: 2px;
-}
-
-.qb-mode-tab {
-  border: none;
-  background: transparent;
-  color: var(--muted);
-  font-size: 12px;
+.qb-header-badge {
+  font-size: 11px;
   font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.14s ease;
-}
-
-.qb-mode-tab:hover {
-  color: var(--text);
-}
-
-.qb-mode-tab.active {
+  padding: 2px 8px;
+  border-radius: 12px;
   background: var(--raised);
-  color: var(--text);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
 
 .qb-close-btn {
@@ -2802,44 +2782,13 @@ audio {
   color: var(--text);
 }
 
-/* Generator Toolbar */
-.qb-generator-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: auto;
+.qb-generate-btn {
+  color: var(--accent);
 }
 
-.qb-seed-wrap {
-  display: flex;
-  align-items: center;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  overflow: hidden;
-  height: 30px;
-}
-
-.qb-seed-prefix {
-  padding: 0 0 0 8px;
-  color: var(--muted);
-  font-size: 12px;
-  font-family: monospace;
-}
-
-.qb-seed-input {
-  width: 90px;
-  height: 100%;
-  border: none;
-  background: transparent;
-  color: var(--text);
-  font-size: 12px;
-  font-family: monospace;
-  padding: 0 6px;
-}
-
-.qb-seed-input:focus {
-  outline: none;
+.qb-generate-btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: #dce8ff;
 }
 
 /* Results Strip */
@@ -2862,6 +2811,11 @@ audio {
 .qb-results-text strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.qb-generated-summary {
+  color: #c084fc;
+  font-weight: 500;
 }
 
 .qb-clear-all-link {
@@ -2981,6 +2935,19 @@ audio {
   font-size: 11px;
   color: var(--muted);
   font-weight: 500;
+}
+
+.qb-generated-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #c084fc;
+  background: rgba(192, 132, 252, 0.12);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  font-size: 10.5px;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 1px 6px;
 }
 
 .qb-band-badge {
@@ -3120,7 +3087,15 @@ audio {
   font-size: 13px;
   color: var(--muted);
   margin: 0 0 16px 0;
-  max-width: 320px;
+  max-width: 340px;
+}
+
+.qb-empty-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Responsive adjustments */

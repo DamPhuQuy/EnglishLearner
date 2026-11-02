@@ -3,6 +3,7 @@ import {
   Dices,
   RotateCcw,
   Search,
+  Sparkles,
   Wand2,
   X,
 } from "lucide-react";
@@ -70,14 +71,12 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
   onClose,
   onSelectExercise,
 }) => {
-  const [bankMode, setBankMode] = useState<"curated" | "infinite">("curated");
   const [selectedSkill, setSelectedSkill] = useState<IeltsSkill | "all">("all");
   const [selectedType, setSelectedType] = useState<string>("all");
   const [selectedDiff, setSelectedDiff] = useState<QuestionDifficulty>("all");
   const [selectedGranularity, setSelectedGranularity] = useState<QuestionGranularity>("all");
   const [searchQuery, setSearchQuery] = useState("");
-  const [indexInput, setIndexInput] = useState("428192");
-  const [proceduralItems, setProceduralItems] = useState<QuestionBankItem[]>([]);
+  const [generatedItems, setGeneratedItems] = useState<QuestionBankItem[]>([]);
 
   const stats = useMemo(() => getQuestionBankStats(), []);
 
@@ -125,34 +124,15 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
 
   const filteredItems = useMemo(() => filterQuestionBank(activeFilter), [activeFilter]);
 
-  const handleGenerateProcedural = (count = 6) => {
-    const batch = generateProceduralBatch(
-      {
-        skill: selectedSkill,
-        questionType: selectedType !== "all" ? selectedType : undefined,
-        difficulty: selectedDiff,
-      },
-      count
-    );
-    setProceduralItems(batch);
-  };
+  // Filter generated items using active filters so they blend seamlessly
+  const matchingGeneratedItems = useMemo(() => {
+    return filterQuestionBank(activeFilter, generatedItems);
+  }, [activeFilter, generatedItems]);
 
-  const handleFetchIndex = () => {
-    const num = parseInt(indexInput, 10);
-    if (!isNaN(num) && num >= 0) {
-      const single = getProceduralQuestionByIndex(num);
-      setProceduralItems([single]);
-    }
-  };
-
-  // Auto-generate items when switching to infinite mode or changing filters
-  useEffect(() => {
-    if (bankMode === "infinite") {
-      handleGenerateProcedural(6);
-    }
-  }, [bankMode, selectedSkill, selectedType, selectedDiff]);
-
-  const displayItems = bankMode === "curated" ? filteredItems : proceduralItems;
+  // Unified items list: newly generated exercises at top, followed by curated questions
+  const displayItems = useMemo(() => {
+    return [...matchingGeneratedItems, ...filteredItems];
+  }, [matchingGeneratedItems, filteredItems]);
 
   const displayQuestionsCount = useMemo(() => {
     return displayItems.reduce((acc, item) => acc + getQuestionCount(item), 0);
@@ -171,26 +151,35 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
     setSelectedDiff("all");
     setSelectedGranularity("all");
     setSearchQuery("");
-    if (bankMode === "infinite") {
-      handleGenerateProcedural(6);
-    }
+  };
+
+  const handleGenerateDrill = () => {
+    const batch = generateProceduralBatch(
+      {
+        skill: selectedSkill !== "all" ? selectedSkill : undefined,
+        questionType: selectedType !== "all" ? selectedType : undefined,
+        difficulty: selectedDiff !== "all" ? selectedDiff : undefined,
+      },
+      3
+    );
+    setGeneratedItems((prev) => [...batch, ...prev]);
   };
 
   const handleRandomDrill = () => {
-    if (bankMode === "infinite") {
-      const randomIdx = Math.floor(Math.random() * TOTAL_PROCEDURAL_CAPACITY);
-      const randomItem = getProceduralQuestionByIndex(randomIdx);
+    if (displayItems.length > 0) {
+      const randomIdx = Math.floor(Math.random() * displayItems.length);
+      const randomItem = displayItems[randomIdx];
       const exercise = convertQuestionBankItemToExerciseData(randomItem);
       onSelectExercise(exercise, false);
       onClose();
       return;
     }
-    const randomItem = getRandomDrill(activeFilter);
-    if (randomItem) {
-      const exercise = convertQuestionBankItemToExerciseData(randomItem);
-      onSelectExercise(exercise, false);
-      onClose();
-    }
+    const randomProcedural = getProceduralQuestionByIndex(
+      Math.floor(Math.random() * TOTAL_PROCEDURAL_CAPACITY)
+    );
+    const exercise = convertQuestionBankItemToExerciseData(randomProcedural);
+    onSelectExercise(exercise, false);
+    onClose();
   };
 
   const handleApplyItem = (item: QuestionBankItem, asNewCell = false) => {
@@ -216,26 +205,7 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
             <div className="qb-header-title-row">
               <BookOpen size={16} className="qb-header-icon" />
               <h2 id="qb-modal-title" className="qb-title">Question bank</h2>
-            </div>
-            <div className="qb-mode-tabs" role="tablist" aria-label="Question Bank Mode">
-              <button
-                type="button"
-                role="tab"
-                aria-selected={bankMode === "curated"}
-                className={`qb-mode-tab ${bankMode === "curated" ? "active" : ""}`}
-                onClick={() => setBankMode("curated")}
-              >
-                Curated ({stats.totalQuestions})
-              </button>
-              <button
-                type="button"
-                role="tab"
-                aria-selected={bankMode === "infinite"}
-                className={`qb-mode-tab ${bankMode === "infinite" ? "active" : ""}`}
-                onClick={() => setBankMode("infinite")}
-              >
-                Generator
-              </button>
+              <span className="qb-header-badge">{stats.totalQuestions} questions</span>
             </div>
           </div>
           <button
@@ -341,79 +311,49 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
               </select>
             </div>
 
-            {bankMode === "infinite" ? (
-              <div className="qb-generator-bar">
-                <div className="qb-seed-wrap">
-                  <span className="qb-seed-prefix">#</span>
-                  <input
-                    type="number"
-                    min="0"
-                    max={TOTAL_PROCEDURAL_CAPACITY - 1}
-                    value={indexInput}
-                    onChange={(e) => setIndexInput(e.target.value)}
-                    onKeyDown={(e) => e.key === "Enter" && handleFetchIndex()}
-                    className="qb-seed-input"
-                    aria-label="Question seed index"
-                    placeholder="Index"
-                  />
-                  <button
-                    type="button"
-                    className="button quiet qb-sm-btn"
-                    onClick={handleFetchIndex}
-                  >
-                    Jump
-                  </button>
-                </div>
+            <div className="qb-actions-right">
+              <button
+                type="button"
+                className="button quiet qb-sm-btn"
+                onClick={handleRandomDrill}
+                title="Pick a random drill from matching exercises"
+              >
+                <Dices size={14} />
+                Random drill
+              </button>
+              <button
+                type="button"
+                className="button quiet qb-sm-btn qb-generate-btn"
+                onClick={handleGenerateDrill}
+                title="Generate fresh practice questions matching current filters"
+              >
+                <Wand2 size={13} />
+                Generate drill
+              </button>
+              {hasActiveFilters && (
                 <button
                   type="button"
-                  className="button quiet qb-sm-btn"
-                  onClick={() => handleGenerateProcedural(6)}
-                  title="Synthesize 6 new questions"
+                  className="button quiet qb-sm-btn qb-reset-btn"
+                  onClick={handleResetFilters}
+                  title="Reset all filters"
                 >
-                  <Wand2 size={13} />
-                  Synthesize
+                  <RotateCcw size={12} />
+                  Reset
                 </button>
-              </div>
-            ) : (
-              <div className="qb-actions-right">
-                <button
-                  type="button"
-                  className="button quiet qb-sm-btn"
-                  onClick={handleRandomDrill}
-                  disabled={displayItems.length === 0}
-                  title="Pick a random drill from current results"
-                >
-                  <Dices size={14} />
-                  Random drill
-                </button>
-                {hasActiveFilters && (
-                  <button
-                    type="button"
-                    className="button quiet qb-sm-btn qb-reset-btn"
-                    onClick={handleResetFilters}
-                    title="Reset all filters"
-                  >
-                    <RotateCcw size={12} />
-                    Reset
-                  </button>
-                )}
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
 
         {/* Results Info Bar */}
         <div className="qb-results-bar">
           <span className="qb-results-text">
-            {bankMode === "curated" ? (
-              <>
-                Showing <strong>{displayItems.length}</strong> modules (
-                <strong>{displayQuestionsCount}</strong> questions)
-              </>
-            ) : (
-              <>
-                Showing <strong>{displayItems.length}</strong> synthesized modules from 500,000+ generator space
-              </>
+            Showing <strong>{displayItems.length}</strong> modules (
+            <strong>{displayQuestionsCount}</strong> questions)
+            {matchingGeneratedItems.length > 0 && (
+              <span className="qb-generated-summary">
+                {" "}· includes {matchingGeneratedItems.length} newly generated
+              </span>
             )}
           </span>
           {hasActiveFilters && (
@@ -436,15 +376,25 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
               </div>
               <h3 className="qb-empty-title">No matching exercises</h3>
               <p className="qb-empty-desc">
-                No exercises found matching your current filter criteria.
+                No pre-authored questions found for this filter. Generate a new custom drill below:
               </p>
-              <button
-                type="button"
-                className="button secondary"
-                onClick={handleResetFilters}
-              >
-                Reset all filters
-              </button>
+              <div className="qb-empty-actions">
+                <button
+                  type="button"
+                  className="button primary"
+                  onClick={handleGenerateDrill}
+                >
+                  <Wand2 size={14} />
+                  Generate drill for this filter
+                </button>
+                <button
+                  type="button"
+                  className="button secondary"
+                  onClick={handleResetFilters}
+                >
+                  Reset all filters
+                </button>
+              </div>
             </div>
           ) : (
             <div className="qb-cards-grid">
@@ -459,6 +409,7 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
                   "";
                 const snippet = formatSnippetTeaser(rawSnippet);
 
+                const isGenerated = generatedItems.some((g) => g.id === item.id);
                 const skillLabel =
                   item.skill.charAt(0).toUpperCase() + item.skill.slice(1);
                 const bandLabel =
@@ -479,6 +430,12 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
                           {QUESTION_TYPE_LABELS[item.questionType] ||
                             item.questionType.replace(/_/g, " ")}
                         </span>
+                        {isGenerated && (
+                          <span className="qb-generated-badge">
+                            <Sparkles size={10} />
+                            Generated
+                          </span>
+                        )}
                         <span className={`qb-band-badge ${item.difficulty}`}>
                           <span className={`qb-band-dot ${item.difficulty}`} />
                           {bandLabel}
