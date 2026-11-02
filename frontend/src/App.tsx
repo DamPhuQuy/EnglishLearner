@@ -38,6 +38,7 @@ export const App: React.FC = () => {
     setActiveId,
     setLoadError,
     add,
+    applyExercise,
     run,
     remove,
     move,
@@ -58,48 +59,7 @@ export const App: React.FC = () => {
     exercise: IeltsExerciseData,
     asNewCell = false
   ) => {
-    if (asNewCell || doc.cells.length === 0 || !activeId) {
-      const insertIdx = activeIndex >= 0 ? activeIndex : doc.cells.length - 1;
-      add(insertIdx, exercise.skill as SkillType);
-      setTimeout(() => {
-        const targetCell =
-          doc.cells[insertIdx + 1] || doc.cells[doc.cells.length - 1];
-        if (targetCell) {
-          updateStructuredData(targetCell.id, exercise);
-          if (exercise.material?.content) {
-            updateResource(targetCell.id, {
-              type: "text",
-              name: exercise.material.title || `${exercise.title}.txt`,
-              textContent: exercise.material.content,
-            });
-          } else if (exercise.material?.type === "audio" || exercise.skill === "listening") {
-            updateResource(targetCell.id, {
-              type: "audio",
-              name: exercise.material?.title || `${exercise.title}.mp3`,
-              url: exercise.material?.audioUrl || "",
-              textContent: exercise.material?.audioTranscript || "",
-            });
-          }
-        }
-      }, 60);
-    } else {
-      updateStructuredData(activeId, exercise);
-      updateSkill(activeId, exercise.skill as SkillType);
-      if (exercise.material?.content) {
-        updateResource(activeId, {
-          type: "text",
-          name: exercise.material.title || `${exercise.title}.txt`,
-          textContent: exercise.material.content,
-        });
-      } else if (exercise.material?.type === "audio" || exercise.skill === "listening") {
-        updateResource(activeId, {
-          type: "audio",
-          name: exercise.material?.title || `${exercise.title}.mp3`,
-          url: exercise.material?.audioUrl || "",
-          textContent: exercise.material?.audioTranscript || "",
-        });
-      }
-    }
+    applyExercise(exercise, asNewCell);
   };
 
   return (

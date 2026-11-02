@@ -486,6 +486,74 @@ export function useNotebook(options?: UseNotebookOptions) {
     setActiveId(newCell.id);
   };
 
+  const applyExercise = (exercise: IeltsExerciseData, asNewCell = false) => {
+    const skill = exercise.skill as SkillType;
+    let initialResource: CellResource | undefined = undefined;
+    let initialSource = "";
+
+    if (exercise.material?.content) {
+      initialResource = {
+        type: "text",
+        name: exercise.material.title || `${exercise.title}.txt`,
+        textContent: exercise.material.content,
+      };
+    } else if (exercise.material?.type === "audio" || skill === "listening") {
+      initialResource = {
+        type: "audio",
+        name: exercise.material?.title || `${exercise.title}.mp3`,
+        url: exercise.material?.audioUrl || "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
+        textContent: exercise.material?.audioTranscript || "",
+      };
+    } else if (skill === "writing" && exercise.writingTask) {
+      const wt = exercise.writingTask;
+      const bullets = (wt.bulletPoints || wt.keyDataPoints || []).map((b) => `• ${b}`).join("\n");
+      initialResource = {
+        type: "text",
+        name: `${exercise.title}_Prompt.txt`,
+        textContent: `[IELTS WRITING SPECIFICATION: ${exercise.title}]\n\nPrompt:\n${wt.prompt}\n\nKey Highlights / Requirements:\n${bullets}\n\nTarget: At least ${wt.minWords || 150} words.`,
+      };
+      initialSource = `### ${exercise.title} — Essay Draft\n\n[Write your essay response here. Aim for ${wt.minWords || 150}+ words. Track your real-time word count below.]\n`;
+    } else if (skill === "speaking") {
+      initialResource = {
+        type: "voice_recorder",
+        name: `${exercise.title}_Voice_Studio`,
+      };
+      initialSource = `### ${exercise.title} — Speaking Preparation Notes\n\n- **1-Min Preparation Strategy**:\n- **Topic Vocabulary & Idioms**:\n`;
+    }
+
+    updateActiveDoc((prev) => {
+      const activeIdx = prev.cells.findIndex((c) => c.id === activeId);
+      const shouldCreateNew = asNewCell || prev.cells.length === 0 || activeIdx === -1;
+
+      if (shouldCreateNew) {
+        const insertIdx = activeIdx >= 0 ? activeIdx : prev.cells.length - 1;
+        const newCell = createCell(skill, initialSource, initialResource, exercise);
+        pendingFocus.current = newCell.id;
+        setActiveId(newCell.id);
+        return {
+          ...prev,
+          cells: addCellAt(prev.cells, insertIdx, newCell),
+        };
+      }
+
+      // Update existing active cell in-place
+      const currentCell = prev.cells[activeIdx];
+      const nextSource = currentCell.source.trim() && !currentCell.source.startsWith("### Mini-IELTS")
+        ? currentCell.source
+        : initialSource;
+
+      return {
+        ...prev,
+        cells: patchCell(prev.cells, activeId, {
+          cellType: skill,
+          structuredData: exercise,
+          resource: initialResource,
+          source: nextSource,
+        }),
+      };
+    });
+  };
+
   const run = (id: string) => {
     updateActiveDoc((prev) => {
       const { cells, nextActiveId } = executeCellInList(prev.cells, id);
@@ -624,6 +692,7 @@ export function useNotebook(options?: UseNotebookOptions) {
     setLoadError,
     setTitle,
     add,
+    applyExercise,
     run,
     remove,
     move,

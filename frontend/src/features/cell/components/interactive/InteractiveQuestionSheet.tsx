@@ -637,11 +637,11 @@ export const InteractiveQuestionSheet: React.FC<InteractiveQuestionSheetProps> =
           <p>{wt.prompt}</p>
         </div>
 
-        {wt.keyDataPoints && wt.keyDataPoints.length > 0 && (
+        {((wt.bulletPoints && wt.bulletPoints.length > 0) || (wt.keyDataPoints && wt.keyDataPoints.length > 0)) && (
           <div className="writing-datapoints-card">
-            <strong>Key Data Highlights:</strong>
+            <strong>Key Data Highlights & Requirements:</strong>
             <ul>
-              {wt.keyDataPoints.map((dp, i) => (
+              {(wt.bulletPoints || wt.keyDataPoints || []).map((dp, i) => (
                 <li key={i}>{dp}</li>
               ))}
             </ul>

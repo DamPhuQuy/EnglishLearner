@@ -90,6 +90,7 @@ export const JupyterCell: React.FC<JupyterCellProps> = ({
             cellId={cell.id}
             cellType={cell.cellType}
             resource={cell.resource}
+            structuredData={cell.structuredData}
             onUpdateResource={(res) => onUpdateResource(cell.id, res)}
           />
         </div>

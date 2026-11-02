@@ -5,17 +5,22 @@ import { defaultNotebookFileAdapter } from "../../notebook/services/notebookFile
 import { defaultNotebookApiClient } from "../../notebook/services/notebookApiClient.ts";
 import { useVoiceRecorder, VoiceRecorderWorkspace } from "../../voice-recorder/index.ts";
 import { SKILL_RESOURCE_LABELS } from "../services/skillTemplates.ts";
+import type { IeltsExerciseData } from "../types/ieltsSchema.ts";
 import { AudioUrlForm } from "./resources/AudioUrlForm.tsx";
 import { AudioWorkspace } from "./resources/AudioWorkspace.tsx";
 import { EmptyResourceWorkspace } from "./resources/EmptyResourceWorkspace.tsx";
 import { ImageWorkspace } from "./resources/ImageWorkspace.tsx";
 import { PdfWorkspace } from "./resources/PdfWorkspace.tsx";
+import { ReadingPassageWorkspace } from "./resources/ReadingPassageWorkspace.tsx";
+import { SpeakingStudioWorkspace } from "./resources/SpeakingStudioWorkspace.tsx";
 import { TextWorkspace } from "./resources/TextWorkspace.tsx";
+import { WritingPromptWorkspace } from "./resources/WritingPromptWorkspace.tsx";
 
 export interface CellResourcePaneProps {
   cellId: string;
   cellType: SkillType;
   resource?: CellResource;
+  structuredData?: IeltsExerciseData;
   onUpdateResource: (resource: CellResource | undefined) => void;
 }
 
@@ -23,6 +28,7 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
   cellId,
   cellType,
   resource,
+  structuredData,
   onUpdateResource,
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -30,7 +36,17 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
 
-  const resourceTitle = SKILL_RESOURCE_LABELS[cellType] ?? "Attached Document";
+  const resourceTitle = structuredData
+    ? cellType === "reading"
+      ? "Reading Passage"
+      : cellType === "listening"
+      ? "Audio Track & Script"
+      : cellType === "writing"
+      ? "Writing Prompt & Data Highlights"
+      : cellType === "speaking"
+      ? "Voice Studio & Cue Card"
+      : (SKILL_RESOURCE_LABELS[cellType] ?? "Attached Document")
+    : (SKILL_RESOURCE_LABELS[cellType] ?? "Attached Document");
   const isStaleBlob = Boolean(resource?.url?.startsWith("blob:"));
 
   const recorder = useVoiceRecorder(async (dataUrl, fileName, file) => {
@@ -197,8 +213,42 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
             notebook.
           </span>
         </div>
-      ) : resource &&
-        !["voice_recorder", "none"].includes(resource.type) ? (
+      ) : structuredData?.writingTask ? (
+        <WritingPromptWorkspace
+          writingTask={structuredData.writingTask}
+          title={structuredData.title}
+          difficulty={structuredData.difficulty}
+        />
+      ) : structuredData?.speakingTask ? (
+        <SpeakingStudioWorkspace
+          speakingTask={structuredData.speakingTask}
+          title={structuredData.title}
+          difficulty={structuredData.difficulty}
+          recording={recorder.recording}
+          seconds={recorder.seconds}
+          disabled={isInteracting}
+          onStartRecording={handleStartRecording}
+          onStopRecording={recorder.stop}
+        />
+      ) : (structuredData?.skill === "reading" || cellType === "reading") &&
+        (structuredData?.material?.content || resource?.textContent) ? (
+        <ReadingPassageWorkspace
+          title={structuredData?.material?.title || resource?.name || structuredData?.title}
+          content={structuredData?.material?.content || resource?.textContent || ""}
+        />
+      ) : (structuredData?.skill === "listening" || cellType === "listening") &&
+        (resource?.url || structuredData?.material?.audioUrl || resource?.textContent || structuredData?.material?.audioTranscript) ? (
+        <div className="resource-body">
+          <div className="resource-filename" title={resource?.name || structuredData?.material?.title || structuredData?.title}>
+            {resource?.name || structuredData?.material?.title || structuredData?.title || "Listening Audio Track"}
+          </div>
+          <AudioWorkspace
+            url={resource?.url || structuredData?.material?.audioUrl || ""}
+            transcript={resource?.textContent || structuredData?.material?.audioTranscript || ""}
+            onError={setError}
+          />
+        </div>
+      ) : resource && !["voice_recorder", "none"].includes(resource.type) ? (
         <div className="resource-body">
           <div className="resource-filename" title={resource.name}>
             {resource.name || "Attached Document"}
@@ -229,7 +279,7 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
         )
       )}
 
-      {cellType === "listening" && !resource?.url && (
+      {cellType === "listening" && !resource?.url && !structuredData?.material?.audioUrl && (
         <AudioUrlForm
           cellId={cellId}
           disabled={isInteracting}
@@ -245,7 +295,7 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
         />
       )}
 
-      {cellType === "speaking" && (
+      {cellType === "speaking" && !structuredData?.speakingTask && (
         <VoiceRecorderWorkspace
           recording={recorder.recording}
           seconds={recorder.seconds}
