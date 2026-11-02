@@ -360,6 +360,24 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     }
   };
 
+  // Helper to accurately identify genuine male voices and strictly prevent matching female voices (e.g. feMALE)
+  const isAuthenticMaleVoice = (v: SpeechSynthesisVoice) => {
+    // Explicitly exclude any female names or keywords
+    if (
+      /female|woman|girl|zira|susan|hazel|jenny|eva|victoria|catherine|linda|heather|karen|alice|samantha|kendra|salli|joanna/i.test(
+        v.name
+      )
+    ) {
+      return false;
+    }
+    // Match explicit standalone word boundaries for male, or known male voice personas
+    return (
+      /\bmale\b|david|aaron|guy|george|christopher|daniel|oliver|arthur|alex|fred|tom|richard|james|matthew|michael|john|brian|steven|mark|ryan|russell/i.test(
+        v.name
+      ) || v.name.includes("English Male")
+    );
+  };
+
   // Find best matching browser voice for a specific persona
   const resolveVoiceForPersona = (personaId: VoicePersonaId) => {
     if (personaId === "system-default" || voices.length === 0) {
@@ -367,44 +385,62 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     }
 
     if (personaId === "us-male-deep") {
-      return (
-        voices.find(
-          (v) =>
-            v.lang.startsWith("en-US") &&
-            /male|david|aaron|guy|george|christopher|natural/i.test(v.name)
-        ) ||
-        voices.find((v) => v.name.includes("US English")) ||
-        voices.find((v) => v.lang.startsWith("en-US")) ||
-        null
+      // 1. Try authentic US Male voice (e.g. Microsoft David, Microsoft Mark, Alex, Fred)
+      const usMale = voices.find(
+        (v) => v.lang.startsWith("en-US") && isAuthenticMaleVoice(v)
       );
+      if (usMale) return usMale;
+
+      // 2. Try any authentic English Male voice across accents (e.g. Google UK English Male, Daniel, Oliver)
+      const anyMale = voices.find(
+        (v) => v.lang.startsWith("en") && isAuthenticMaleVoice(v)
+      );
+      if (anyMale) return anyMale;
+
+      // 3. Fallback: return null so Web Speech uses native system synthesizer with calibrated pitch 0.82
+      // NEVER fallback to "Google US English" because it is a recorded female voice actor!
+      return null;
     }
 
     if (personaId === "uk-male-oxford") {
-      return (
-        voices.find(
-          (v) =>
-            v.lang.startsWith("en-GB") &&
-            /male|daniel|oliver|george|arthur/i.test(v.name)
-        ) ||
-        voices.find((v) => v.name.includes("UK English Male")) ||
-        voices.find((v) => v.lang.startsWith("en-GB")) ||
-        null
+      // 1. Try authentic UK English Male voice (e.g. Google UK English Male, Daniel, Oliver, Arthur)
+      const ukMale = voices.find(
+        (v) => v.lang.startsWith("en-GB") && isAuthenticMaleVoice(v)
       );
+      if (ukMale) return ukMale;
+
+      // 2. Try any authentic English Male voice across accents
+      const anyMale = voices.find(
+        (v) => v.lang.startsWith("en") && isAuthenticMaleVoice(v)
+      );
+      if (anyMale) return anyMale;
+
+      return null;
     }
 
     if (personaId === "uk-female-bbc") {
+      const ukFemale = voices.find(
+        (v) =>
+          v.lang.startsWith("en-GB") &&
+          /female|hazel|susan|victoria|catherine/i.test(v.name)
+      );
+      if (ukFemale) return ukFemale;
       return (
-        voices.find((v) => v.lang.startsWith("en-GB") && /female/i.test(v.name)) ||
-        voices.find((v) => v.name.includes("UK English Female")) ||
-        voices.find((v) => v.lang.startsWith("en-GB")) ||
+        voices.find((v) => v.lang.startsWith("en-GB") && !isAuthenticMaleVoice(v)) ||
         null
       );
     }
 
     if (personaId === "us-female-clear") {
+      const usFemale = voices.find(
+        (v) =>
+          v.lang.startsWith("en-US") &&
+          (/female|zira|susan|jenny|eva|salli|joanna/i.test(v.name) ||
+            v.name === "Google US English")
+      );
+      if (usFemale) return usFemale;
       return (
-        voices.find((v) => v.lang.startsWith("en-US") && /female/i.test(v.name)) ||
-        voices.find((v) => v.lang.startsWith("en-US")) ||
+        voices.find((v) => v.lang.startsWith("en-US") && !isAuthenticMaleVoice(v)) ||
         null
       );
     }
