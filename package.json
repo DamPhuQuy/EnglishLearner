@@ -1,0 +1,18 @@
+{
+  "name": "ielts-notebook-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "IELTS Notebook with Mini-IELTS Architecture, Cloudflare Workers Backend, Docker Containerization, and 7-Layer QA/QC System",
+  "scripts": {
+    "dev": "docker compose up",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:build": "docker compose build",
+    "docker:verify": "bash scripts/verify-docker.sh",
+    "test": "npm test --prefix frontend && npm test --prefix backend",
+    "test:e2e": "node scripts/test-e2e.js",
+    "qa:7layers": "bash scripts/qa-qc-7layers.sh",
+    "qa:quick": "bash scripts/qa-qc-7layers.sh --quick"
+  }
+}

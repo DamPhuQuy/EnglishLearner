@@ -1,0 +1,49 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ielts-backend
+    ports:
+      - "${BACKEND_PORT:-3000}:3000"
+    environment:
+      - ENVIRONMENT=development
+      - PORT=3000
+      - RUN_SEED=${RUN_SEED:-true}
+    volumes:
+      - backend-d1-data:/app/.wrangler
+      - ./backend/src:/app/src
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://127.0.0.1:3000/api/v1/health || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: ${FRONTEND_TARGET:-dev}
+    container_name: ielts-frontend
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    environment:
+      - VITE_BACKEND_URL=http://backend:3000
+    depends_on:
+      backend:
+        condition: service_healthy
+    volumes:
+      - ./frontend/src:/app/src
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://127.0.0.1:5173/ || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 6
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  backend-d1-data:
+    name: ielts-backend-d1-data
