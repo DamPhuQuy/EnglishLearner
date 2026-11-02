@@ -141,7 +141,7 @@ export const MINI_IELTS_PRESETS: MiniIeltsPreset[] = [
     resource: {
       type: "audio",
       url: "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      name: "Listening_Section1_Registration.mp3",
+      name: "Listening_Section1_Registration_demo.mp3",
     },
   },
   {

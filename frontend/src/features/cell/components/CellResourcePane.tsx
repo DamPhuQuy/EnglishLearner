@@ -203,8 +203,12 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
           <div className="resource-filename" title={resource.name}>
             {resource.name || "Attached Document"}
           </div>
-          {resource.type === "audio" && resource.url && (
-            <AudioWorkspace url={resource.url} onError={setError} />
+          {resource.type === "audio" && (
+            <AudioWorkspace
+              url={resource.url || ""}
+              transcript={resource.textContent}
+              onError={setError}
+            />
           )}
           {resource.type === "pdf" && resource.url && (
             <PdfWorkspace url={resource.url} name={resource.name} />

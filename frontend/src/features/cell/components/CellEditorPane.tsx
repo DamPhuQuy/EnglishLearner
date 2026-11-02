@@ -65,11 +65,12 @@ export const CellEditorPane: React.FC<CellEditorPaneProps> = ({
           name: exercise.material.title || `${exercise.title}.txt`,
           textContent: exercise.material.content,
         });
-      } else if (exercise.material.type === "audio" && exercise.material.audioUrl) {
+      } else if (exercise.material.type === "audio") {
         onUpdateResource({
           type: "audio",
           name: exercise.material.title || `${exercise.title}.mp3`,
-          url: exercise.material.audioUrl,
+          url: exercise.material.audioUrl || "",
+          textContent: exercise.material.audioTranscript || "",
         });
       }
     }

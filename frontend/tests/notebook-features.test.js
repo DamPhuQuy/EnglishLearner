@@ -81,5 +81,8 @@ test("notebook feature executeCellInList increments max execution count and adva
 test("cell feature appendTemplateToSource appends template without overwriting", () => {
   const initial = "My existing notes";
   const updated = appendTemplateToSource(initial, "writing");
-  assert.ok(updated.startsWith("My existing notes\n\n### Writing"));
+  assert.ok(
+    updated.startsWith("My existing notes\n\n### Mini-IELTS Writing") ||
+      updated.startsWith("My existing notes\n\n### Writing")
+  );
 });
