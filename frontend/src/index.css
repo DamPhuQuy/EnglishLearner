@@ -2027,6 +2027,13 @@ audio {
   color: var(--text);
 }
 
+.completion-prompt-label {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .completion-input {
   min-height: 30px;
   padding: 3px 10px;
@@ -2036,7 +2043,8 @@ audio {
   color: var(--accent);
   font-size: 13px;
   font-weight: 500;
-  max-width: 200px;
+  min-width: 180px;
+  max-width: 340px;
 }
 
 .completion-input:focus {

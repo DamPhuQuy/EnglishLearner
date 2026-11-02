@@ -365,6 +365,19 @@ export const InteractiveQuestionSheet: React.FC<InteractiveQuestionSheetProps> =
               (currentAns.trim().toLowerCase() === expected ||
                 accepted.includes(currentAns.trim().toLowerCase()));
 
+            const rawPrompt =
+              (cq as any).labelLocation ||
+              cq.prompt ||
+              (cq as any).question ||
+              (cq as any).statement ||
+              (cq as any).sentenceStart ||
+              (cq as any).item ||
+              ((cq as any).paragraph ? `Paragraph ${(cq as any).paragraph}:` : "");
+
+            const showPrompt =
+              rawPrompt &&
+              (!cq.prefix || !cq.prefix.includes(rawPrompt));
+
             return (
               <div
                 key={cq.questionNumber}
@@ -373,7 +386,11 @@ export const InteractiveQuestionSheet: React.FC<InteractiveQuestionSheetProps> =
                 <div className="completion-row">
                   <span className="q-badge">Q{cq.questionNumber}</span>
                   <div className="completion-line">
-                    {cq.prompt && <span className="completion-prompt">{cq.prompt}</span>}
+                    {showPrompt && (
+                      <span className="completion-prompt-label">
+                        {rawPrompt.endsWith(":") ? rawPrompt : `${rawPrompt}:`}
+                      </span>
+                    )}
                     {cq.prefix && <span className="completion-prefix">{cq.prefix}</span>}
                     <input
                       type="text"
@@ -549,7 +566,13 @@ export const InteractiveQuestionSheet: React.FC<InteractiveQuestionSheetProps> =
               currentAns?.trim().toUpperCase() === String(q.answer).trim().toUpperCase();
 
             const promptText =
-              (q as any).statement || (q as any).beginning || (q as any).question || "";
+              (q as any).statement ||
+              (q as any).beginning ||
+              (q as any).question ||
+              (q as any).labelLocation ||
+              (q as any).prompt ||
+              (q as any).prefix ||
+              "";
 
             return (
               <div

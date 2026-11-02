@@ -168,6 +168,15 @@ export function convertQuestionBankItemToExerciseData(
       instruction = "Complete the sentences below. Write NO MORE THAN TWO WORDS for each answer.";
     } else if (item.questionType === "matching_headings") {
       instruction = "Choose the correct heading for each paragraph from the list of headings.";
+    } else if (
+      item.questionType === "matching" ||
+      item.questionType === "matching_features" ||
+      item.questionType === "matching_information"
+    ) {
+      instruction =
+        item.skill === "listening"
+          ? "Listen to the recording and write what each speaker will present or be responsible for."
+          : "Match each item with the correct description or information from the material.";
     } else if (item.questionType === "plan_map_diagram_labelling") {
       instruction = "Label the map/plan below. Write the correct letter in the boxes.";
     }
