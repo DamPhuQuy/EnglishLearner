@@ -199,6 +199,17 @@ export function convertQuestionBankItemToExerciseData(
           audioUrl: item.material.audioUrl,
           audioTranscript: item.material.audioTranscript,
         }
+      : item.writingTask
+      ? {
+          type: "text",
+          title: `Writing Task Specification: ${item.title}`,
+          content: `[IELTS WRITING SPECIFICATION: ${item.title}]\n\nPrompt:\n${item.writingTask.prompt}\n\nKey Highlights / Requirements:\n${(item.writingTask.bulletPoints || item.writingTask.keyDataPoints || []).map((b: string) => `• ${b}`).join("\n")}\n\nTarget: At least ${item.writingTask.minWords || 150} words.`,
+        }
+      : item.speakingTask
+      ? {
+          type: "audio",
+          title: `Speaking Studio: ${item.title}`,
+        }
       : undefined,
     questionGroups,
     writingTask: item.writingTask,

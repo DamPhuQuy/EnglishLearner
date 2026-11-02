@@ -430,10 +430,10 @@ function generateProceduralReadingItem(
   difficulty: "easy" | "medium" | "advanced",
   band: string
 ): QuestionBankItem {
-  const pA = `[A] In the field of ${domain.category.toLowerCase()}, ${domain.name} represents a major scientific focus. Recent empirical studies demonstrate that ${domain.phenomenon}. Where earlier investigations relied on conventional laboratory models, contemporary research leverages ${domain.methodology}.`;
-  const pB = `[B] Initial trials were characterized by technical hurdles regarding ${domain.keyConcepts[0]} and ${domain.keyConcepts[1]}. However, systematic iterative refinements successfully mitigated these obstacles, demonstrating that ${domain.practicalApplication}.`;
-  const pC = `[C] Furthermore, environmental and computational parameters interact continuously. Field teams utilizing ${domain.keyConcepts[2]} observed consistent stability under rigorous stress conditions, refuting earlier hypotheses of system degradation.`;
-  const pD = `[D] In conclusion, contemporary paradigms synthesize holistic methodologies. Ongoing international trials promise to broaden the scope of ${domain.keyConcepts[3]}, balancing technological innovation with ecological resilience.`;
+  const pA = `[A] In the field of ${domain.category.toLowerCase()}, ${domain.name} represents a major scientific focus. Recent empirical studies demonstrate that ${domain.phenomenon} provides critical insight into modern systems. Where earlier investigations relied on conventional laboratory models, contemporary research leverages ${domain.methodology}.`;
+  const pB = `[B] Initial trials were characterized by technical hurdles regarding ${domain.keyConcepts[0]} and ${domain.keyConcepts[1]}. However, systematic iterative refinements successfully mitigated these obstacles, demonstrating that ${domain.practicalApplication} can be achieved reliably under field conditions.`;
+  const pC = `[C] Furthermore, environmental and computational parameters interact continuously across operational cycles. Field teams utilizing ${domain.keyConcepts[2]} observed consistent stability under rigorous stress conditions, refuting earlier hypotheses of system degradation.`;
+  const pD = `[D] In conclusion, contemporary paradigms synthesize holistic methodologies that balance technological innovation with ecological resilience. Ongoing international trials promise to broaden the scope of ${domain.keyConcepts[3]}, ensuring reproducible outcomes across diverse environments.`;
 
   const fullText = `${pA}\n\n${pB}\n\n${pC}\n\n${pD}`;
 
@@ -571,11 +571,11 @@ function generateProceduralReadingItem(
     difficulty,
     band,
     granularity: "drill",
-    title: `Procedural Reading #${idx}: ${domain.name}`,
+    title: `Mini-IELTS Reading: ${domain.name}`,
     topic: domain.category,
     material: {
       type: "text",
-      title: `Academic Monograph: ${domain.name}`,
+      title: `Academic Passage: ${domain.name}`,
       content: fullText,
     },
     questions,
@@ -654,7 +654,7 @@ function generateProceduralListeningItem(
     difficulty,
     band,
     granularity: "drill",
-    title: `Procedural Listening #${idx}: ${domain.name}`,
+    title: `Mini-IELTS Listening: ${domain.name}`,
     topic: domain.category,
     material: {
       type: "audio",
@@ -674,9 +674,34 @@ function generateProceduralWritingItem(
   band: string
 ): QuestionBankItem {
   const isTask1 = qType === "task1_academic";
+  const visualTypes: Array<"line_graph" | "bar_chart" | "pie_chart" | "table"> = [
+    "line_graph",
+    "bar_chart",
+    "pie_chart",
+    "table",
+  ];
+  const visualType = visualTypes[idx % visualTypes.length];
+  const visualName = visualType.replace(/_/g, " ");
+
   const prompt = isTask1
-    ? `The chart illustrates research data regarding ${domain.name} across four industrial sectors between 2010 and 2025. Summarize the information by selecting and reporting the main features, and make comparisons where relevant.`
+    ? `The ${visualName} illustrates research data regarding ${domain.name} across four industrial sectors between 2010 and 2025. Summarize the information by selecting and reporting the main features, and make comparisons where relevant.`
     : `In recent years, breakthroughs in ${domain.name} have sparked significant debate. Some scholars argue that governments should invest heavily in ${domain.practicalApplication}, while others believe private markets should lead development. Discuss both views and give your own opinion.`;
+
+  const bulletPoints = isTask1
+    ? [
+        `Baseline parameters in 2010 established steady initial metrics for ${domain.keyConcepts[0]}.`,
+        `A steep upward surge occurred after 2018 driven by advances in ${domain.keyConcepts[1]}.`,
+        `Overall, all surveyed sectors demonstrated marked expansion in ${domain.keyConcepts[2]}.`,
+      ]
+    : [
+        `Analyze the growing societal and economic debate concerning ${domain.name}.`,
+        `Examine arguments favoring state-directed investment into ${domain.keyConcepts[0]}.`,
+        `Contrast with the agility and capital efficiency of private innovation in ${domain.keyConcepts[1]}.`,
+        `Provide a balanced personal synthesis in the concluding evaluation.`,
+      ];
+
+  const minWords = isTask1 ? 150 : 250;
+  const sampleEssay = `Band 8.5 Model Answer:\n\nThe provided task concerns ${domain.name}, examining empirical trajectories across distinct domains. In contemporary discourse, how societies manage ${domain.keyConcepts[0]} alongside ${domain.keyConcepts[1]} represents a defining technical challenge...\n\nOverall, strategic integration of ${domain.practicalApplication} ensures both rigorous standards and sustainable progress.`;
 
   return {
     id: `proc-writ-${idx}`,
@@ -685,26 +710,22 @@ function generateProceduralWritingItem(
     difficulty,
     band,
     granularity: "drill",
-    title: `Procedural Writing #${idx}: ${domain.name}`,
+    title: `Mini-IELTS Writing: ${domain.name}`,
     topic: domain.category,
+    material: {
+      type: "text",
+      title: `Task Prompt & Specification: ${domain.name}`,
+      content: `[IELTS WRITING SPECIFICATION: ${domain.name}]\n\nTask: ${isTask1 ? "Task 1 Academic" : "Task 2 Academic Essay"}\nTarget: Minimum ${minWords} words.\n\nPrompt:\n${prompt}\n\nKey Highlights / Data Points:\n${bulletPoints.map((b) => `• ${b}`).join("\n")}`,
+    },
     writingTask: {
-      taskType: isTask1 ? "task1_academic" : "task2_discussion",
+      taskType: isTask1 ? "task1_academic" : "task2_opinion",
+      academicVisualType: isTask1 ? visualType : undefined,
+      essayCategory: !isTask1 ? (idx % 2 === 0 ? "discuss_both_views" : "agree_disagree") : undefined,
       prompt,
-      minWords: isTask1 ? 150 : 250,
-      bulletPoints: isTask1
-        ? [
-            `Analyze baseline data from 2010 highlighting ${domain.keyConcepts[0]}.`,
-            `Identify major upward trends associated with ${domain.keyConcepts[1]}.`,
-            `Formulate a comprehensive overview statement contrasting key sectors.`,
-          ]
-        : [
-            `Introduce the societal debate concerning ${domain.name}.`,
-            `Examine arguments for sovereign public investment in ${domain.keyConcepts[0]}.`,
-            `Contrast with benefits of free-market innovation in ${domain.keyConcepts[1]}.`,
-            `State clear personal synthesis in conclusion.`,
-          ],
-      sampleExaminerBand: band,
-      sampleEssay: `Examiner Sample (${band}): The discourse surrounding ${domain.name} touches upon fundamental policy and technical questions... In conclusion, a synergistic public-private model optimizes both fundamental safety and rapid innovation.`,
+      minWords,
+      bulletPoints,
+      sampleExaminerBand: "Band 8.5",
+      sampleEssay,
     },
   };
 }
@@ -724,8 +745,12 @@ function generateProceduralSpeakingItem(
     difficulty,
     band,
     granularity: "drill",
-    title: `Procedural Speaking #${idx} (Part ${partNum}): ${domain.name}`,
+    title: `Mini-IELTS Speaking: ${domain.name} (Part ${partNum})`,
     topic: domain.category,
+    material: {
+      type: "audio",
+      title: `Speaking Studio: ${domain.name}`,
+    },
     speakingTask: {
       part: partNum as 1 | 2 | 3,
       topic: domain.name,
@@ -739,6 +764,10 @@ function generateProceduralSpeakingItem(
               {
                 questionNumber: 2,
                 question: `Do you think ${domain.keyConcepts[0]} will become important in everyday life?`,
+              },
+              {
+                questionNumber: 3,
+                question: `How popular is ${domain.category.toLowerCase()} among students in your country?`,
               },
             ]
           : undefined,
