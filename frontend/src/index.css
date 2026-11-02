@@ -981,15 +981,154 @@ audio {
   100% { transform: scaleY(1); opacity: 1; }
 }
 
-.persona-badge {
-  font-size: 10px;
-  font-weight: 600;
+.active-speaker-spotlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.active-speaker-spotlight strong {
+  font-weight: 700;
+}
+
+.cast-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 26px;
+  padding: 0 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cast-toggle-btn:hover,
+.cast-toggle-btn.active {
+  border-color: #c084fc;
   color: #c084fc;
-  background: rgba(168, 85, 247, 0.16);
-  border: 1px solid rgba(168, 85, 247, 0.35);
-  padding: 1px 7px;
+}
+
+.speaker-cast-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+
+.cast-manager-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cast-manager-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cast-manager-hint {
+  font-size: 10px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.speaker-cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.speaker-cast-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  transition: all 0.18s ease;
+}
+
+.speaker-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.speaker-avatar-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border: 1px solid transparent;
   border-radius: 4px;
-  letter-spacing: 0.2px;
+}
+
+.speaker-test-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+  padding: 0 6px;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.speaker-test-btn:hover {
+  border-color: #c084fc;
+  color: var(--text);
+}
+
+.speaker-test-btn.testing {
+  border-color: #c084fc;
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.speaker-persona-select {
+  width: 100%;
+  height: 26px;
+  padding: 0 6px;
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.speaker-persona-select:focus {
+  border-color: #c084fc;
+  outline: none;
 }
 
 .narration-persona-picker,

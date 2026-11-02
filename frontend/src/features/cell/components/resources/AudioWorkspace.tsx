@@ -1,7 +1,6 @@
 import {
   AlertCircle,
   ArrowUp,
-  Check,
   ChevronDown,
   ChevronUp,
   FileText,
@@ -13,6 +12,7 @@ import {
   Sparkles,
   Sliders,
   Square,
+  Users,
   Volume2,
 } from "lucide-react";
 import React, { useEffect, useMemo, useRef, useState } from "react";
@@ -53,7 +53,7 @@ export const VOICE_PERSONAS: VoicePersona[] = [
   {
     id: "us-male-deep",
     label: "US English Male (Warm & Deep Baritone)",
-    shortBadge: "US Male · Deep & Clear",
+    shortBadge: "US Male · Deep",
     description: "Warm, resonant baritone with crisp American pronunciation",
     accent: "US",
     targetLang: "en-US",
@@ -64,7 +64,7 @@ export const VOICE_PERSONAS: VoicePersona[] = [
   {
     id: "uk-male-oxford",
     label: "UK English Male (Examiner Academic)",
-    shortBadge: "UK Male · Deep RP",
+    shortBadge: "UK Male · Oxford",
     description: "Refined British RP baritone with academic cadence",
     accent: "UK",
     targetLang: "en-GB",
@@ -97,7 +97,7 @@ export const VOICE_PERSONAS: VoicePersona[] = [
   {
     id: "system-default",
     label: "System Default Voice (Offline Engine)",
-    shortBadge: "Offline · Native",
+    shortBadge: "Offline Native",
     description: "Default voice provided directly by your operating system",
     accent: "System",
     targetLang: "en-US",
@@ -107,6 +107,53 @@ export const VOICE_PERSONAS: VoicePersona[] = [
   },
 ];
 
+export interface SpeakerColorPalette {
+  name: string;
+  badgeBg: string;
+  badgeText: string;
+  border: string;
+  glow: string;
+}
+
+export const SPEAKER_PALETTES: SpeakerColorPalette[] = [
+  {
+    name: "purple",
+    badgeBg: "rgba(168, 85, 247, 0.16)",
+    badgeText: "#d8b4fe",
+    border: "rgba(168, 85, 247, 0.45)",
+    glow: "rgba(168, 85, 247, 0.25)",
+  },
+  {
+    name: "blue",
+    badgeBg: "rgba(59, 130, 246, 0.16)",
+    badgeText: "#93c5fd",
+    border: "rgba(59, 130, 246, 0.45)",
+    glow: "rgba(59, 130, 246, 0.25)",
+  },
+  {
+    name: "emerald",
+    badgeBg: "rgba(16, 185, 129, 0.16)",
+    badgeText: "#6ee7b7",
+    border: "rgba(16, 185, 129, 0.45)",
+    glow: "rgba(16, 185, 129, 0.25)",
+  },
+  {
+    name: "amber",
+    badgeBg: "rgba(245, 158, 11, 0.16)",
+    badgeText: "#fcd34d",
+    border: "rgba(245, 158, 11, 0.45)",
+    glow: "rgba(245, 158, 11, 0.25)",
+  },
+];
+
+export interface SpeakerVoiceConfig {
+  name: string;
+  personaId: VoicePersonaId;
+  pitch: number;
+  rateMultiplier: number;
+  palette: SpeakerColorPalette;
+}
+
 export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const activeUtteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -115,18 +162,13 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
 
   const [speed, setSpeed] = useState("1");
   const [showTranscript, setShowTranscript] = useState(true);
+  const [showCastManager, setShowCastManager] = useState(true);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentTurnIdx, setCurrentTurnIdx] = useState<number | null>(null);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedPersonaId, setSelectedPersonaId] = useState<VoicePersonaId>("us-male-deep");
   const [speechError, setSpeechError] = useState<string>("");
-
-  const activePersona = useMemo(() => {
-    return (
-      VOICE_PERSONAS.find((p) => p.id === selectedPersonaId) || VOICE_PERSONAS[0]
-    );
-  }, [selectedPersonaId]);
+  const [previewingSpeaker, setPreviewingSpeaker] = useState<string | null>(null);
 
   // Parse transcript into distinct conversational turns
   const turns: DialogueTurn[] = useMemo(() => {
@@ -168,6 +210,77 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
 
     return parsed;
   }, [transcript]);
+
+  // Extract unique speaker list
+  const uniqueSpeakers = useMemo(() => {
+    return Array.from(new Set(turns.map((t) => t.speaker)));
+  }, [turns]);
+
+  // Speaker cast voice allocation state
+  const [speakerConfigs, setSpeakerConfigs] = useState<Record<string, SpeakerVoiceConfig>>({});
+
+  // Auto-allocate complementary voices when speakers change
+  useEffect(() => {
+    if (uniqueSpeakers.length === 0) return;
+
+    setSpeakerConfigs((prev) => {
+      const next: Record<string, SpeakerVoiceConfig> = {};
+
+      uniqueSpeakers.forEach((name, idx) => {
+        // If user already customized this speaker, preserve their choice
+        if (prev[name]) {
+          next[name] = prev[name];
+          return;
+        }
+
+        const lower = name.toLowerCase();
+        const isFemale = /female|receptionist|chloe|sarah|emma|woman|wife|mary|linda|advisor|clerk/i.test(
+          lower
+        );
+        const isAcademic = /dr\.|professor|tutor|lecturer|patel|teacher/i.test(lower);
+
+        let personaId: VoicePersonaId;
+        let pitch: number;
+        let rateMultiplier: number;
+
+        if (isFemale) {
+          personaId = idx % 2 === 0 ? "uk-female-bbc" : "us-female-clear";
+          pitch = 1.04;
+          rateMultiplier = 0.98;
+        } else if (isAcademic) {
+          personaId = "uk-male-oxford";
+          pitch = 0.88;
+          rateMultiplier = 0.95;
+        } else {
+          // Primary Male: US English Male warm & deep baritone
+          personaId = "us-male-deep";
+          pitch = 0.82;
+          rateMultiplier = 0.94;
+        }
+
+        // If 2 speakers and both are male/neutral, ensure Speaker 1 and 2 sound distinctly different
+        if (uniqueSpeakers.length >= 2 && idx === 1 && !isFemale && !isAcademic) {
+          if (next[uniqueSpeakers[0]]?.personaId === "us-male-deep") {
+            personaId = "uk-male-oxford";
+            pitch = 0.90;
+            rateMultiplier = 0.96;
+          }
+        }
+
+        const palette = SPEAKER_PALETTES[idx % SPEAKER_PALETTES.length];
+
+        next[name] = {
+          name,
+          personaId,
+          pitch,
+          rateMultiplier,
+          palette,
+        };
+      });
+
+      return next;
+    });
+  }, [uniqueSpeakers]);
 
   // Load and listen for available speech synthesis voices
   useEffect(() => {
@@ -225,7 +338,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
         try {
           ctx.close();
         } catch {
-          // ignore close error
+          // ignore
         }
       };
     } catch {
@@ -247,27 +360,18 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     }
   };
 
-  // Find best matching voice for a persona
-  const resolveVoiceForPersona = (persona: VoicePersona, isFemaleTurn: boolean) => {
-    if (persona.id === "system-default" || voices.length === 0) {
+  // Find best matching browser voice for a specific persona
+  const resolveVoiceForPersona = (personaId: VoicePersonaId) => {
+    if (personaId === "system-default" || voices.length === 0) {
       return null;
     }
 
-    if (persona.id === "us-male-deep") {
-      if (isFemaleTurn) {
-        // Complementary female speaker in dialogue
-        return (
-          voices.find((v) => v.lang.startsWith("en-US") && /female|natural/i.test(v.name)) ||
-          voices.find((v) => v.lang.startsWith("en-US")) ||
-          null
-        );
-      }
-      // Primary US English Male
+    if (personaId === "us-male-deep") {
       return (
         voices.find(
           (v) =>
             v.lang.startsWith("en-US") &&
-            /male|david|aaron|guy|george|christopher|james|john/i.test(v.name)
+            /male|david|aaron|guy|george|christopher|natural/i.test(v.name)
         ) ||
         voices.find((v) => v.name.includes("US English")) ||
         voices.find((v) => v.lang.startsWith("en-US")) ||
@@ -275,14 +379,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       );
     }
 
-    if (persona.id === "uk-male-oxford") {
-      if (isFemaleTurn) {
-        return (
-          voices.find((v) => v.lang.startsWith("en-GB") && /female/i.test(v.name)) ||
-          voices.find((v) => v.lang.startsWith("en-GB")) ||
-          null
-        );
-      }
+    if (personaId === "uk-male-oxford") {
       return (
         voices.find(
           (v) =>
@@ -295,7 +392,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       );
     }
 
-    if (persona.id === "uk-female-bbc") {
+    if (personaId === "uk-female-bbc") {
       return (
         voices.find((v) => v.lang.startsWith("en-GB") && /female/i.test(v.name)) ||
         voices.find((v) => v.name.includes("UK English Female")) ||
@@ -304,7 +401,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       );
     }
 
-    if (persona.id === "us-female-clear") {
+    if (personaId === "us-female-clear") {
       return (
         voices.find((v) => v.lang.startsWith("en-US") && /female/i.test(v.name)) ||
         voices.find((v) => v.lang.startsWith("en-US")) ||
@@ -315,7 +412,50 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     return null;
   };
 
-  // Speak a single turn safely with persona acoustic profile and automatic fallback
+  // Update a speaker's assigned persona
+  const handleUpdateSpeakerPersona = (speakerName: string, newPersonaId: VoicePersonaId) => {
+    const persona = VOICE_PERSONAS.find((p) => p.id === newPersonaId) || VOICE_PERSONAS[0];
+    setSpeakerConfigs((prev) => ({
+      ...prev,
+      [speakerName]: {
+        ...prev[speakerName],
+        personaId: newPersonaId,
+        pitch: persona.pitch,
+        rateMultiplier: persona.rateMultiplier,
+      },
+    }));
+    setSpeechError("");
+  };
+
+  // Preview a specific speaker's voice with a short greeting
+  const handleTestSpeakerVoice = (speakerName: string) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+
+    window.speechSynthesis.cancel();
+    setPreviewingSpeaker(speakerName);
+
+    const config = speakerConfigs[speakerName];
+    const persona = VOICE_PERSONAS.find((p) => p.id === config?.personaId) || VOICE_PERSONAS[0];
+    const utterance = new SpeechSynthesisUtterance(
+      `Hello! I am ${speakerName}, ready for the IELTS listening test.`
+    );
+
+    utterance.rate = Number(speed) * persona.rateMultiplier;
+    utterance.pitch = config?.pitch ?? persona.pitch;
+    utterance.lang = persona.targetLang || "en-US";
+
+    const voice = resolveVoiceForPersona(persona.id);
+    if (voice) {
+      utterance.voice = voice;
+    }
+
+    utterance.onend = () => setPreviewingSpeaker(null);
+    utterance.onerror = () => setPreviewingSpeaker(null);
+
+    window.speechSynthesis.speak(utterance);
+  };
+
+  // Speak a single turn safely using its dedicated speaker configuration
   const speakTurn = (turnIndex: number, retryCount = 0) => {
     if (
       isStoppedRef.current ||
@@ -338,35 +478,26 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       window.speechSynthesis.resume();
     }
 
+    const speakerConfig = speakerConfigs[currentTurn.speaker];
+    const persona =
+      VOICE_PERSONAS.find((p) => p.id === speakerConfig?.personaId) || VOICE_PERSONAS[0];
+
     const utterance = new SpeechSynthesisUtterance(currentTurn.text);
 
-    // Apply speed multiplier from speed control and persona's clarity multiplier
-    const effectiveRate = Number(speed) * activePersona.rateMultiplier;
+    // Apply combined speed and persona clarity rate
+    const effectiveRate = Number(speed) * (speakerConfig?.rateMultiplier ?? persona.rateMultiplier);
     utterance.rate = Math.min(2.0, Math.max(0.5, effectiveRate));
 
-    // Detect female speaker in dialogue
-    const speakerLower = currentTurn.speaker.toLowerCase();
-    const isFemaleTurn =
-      /female|receptionist|chloe|sarah|emma|woman|wife|mary|linda/i.test(speakerLower);
+    // Apply speaker's calibrated acoustic pitch (e.g. 0.82 for deep baritone, 1.04 for female)
+    utterance.pitch = speakerConfig?.pitch ?? persona.pitch;
+    utterance.lang = persona.targetLang || "en-US";
 
-    // If retryCount === 0 and persona is not offline system-default, try resolved voice
-    if (retryCount === 0 && selectedPersonaId !== "system-default") {
-      const voice = resolveVoiceForPersona(activePersona, isFemaleTurn);
+    // Bind browser voice if not retrying and not system-default
+    if (retryCount === 0 && persona.id !== "system-default") {
+      const voice = resolveVoiceForPersona(persona.id);
       if (voice) {
         utterance.voice = voice;
       }
-
-      if (isFemaleTurn && activePersona.gender === "male") {
-        utterance.pitch = 1.05; // Slightly higher pitch for female speaker turn
-      } else {
-        // Apply persona's acoustic pitch (e.g. 0.82 for warm & deep US Male)
-        utterance.pitch = activePersona.pitch;
-      }
-      utterance.lang = activePersona.targetLang;
-    } else {
-      // Default / offline engine fallback: still apply deep pitch and clear rate!
-      utterance.pitch = isFemaleTurn ? 1.05 : activePersona.pitch;
-      utterance.lang = activePersona.targetLang || "en-US";
     }
 
     utterance.onstart = () => {
@@ -377,10 +508,10 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     utterance.onend = () => {
       if (isStoppedRef.current) return;
       if (turnIndex + 1 < turns.length) {
-        // Natural dialogue turn pause (320ms)
+        // Natural conversational pause between turns (340ms)
         nextTurnTimerRef.current = window.setTimeout(() => {
           speakTurn(turnIndex + 1, 0);
-        }, 320);
+        }, 340);
       } else {
         setIsSpeaking(false);
         setIsPaused(false);
@@ -393,14 +524,10 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
         return;
       }
 
-      // If remote cloud voice failed with synthesis-failed, transparently fallback to native engine with the same warm deep pitch
-      if (
-        e.error === "synthesis-failed" &&
-        retryCount === 0 &&
-        selectedPersonaId !== "system-default"
-      ) {
+      // Transparent retry on native offline engine with speaker's distinct pitch preserved
+      if (e.error === "synthesis-failed" && retryCount === 0) {
         console.warn(
-          "Cloud voice synthesis-failed. Auto-retrying with native engine using baritone profile..."
+          `Voice failed for ${currentTurn.speaker}. Auto-retrying with native engine using baritone profile...`
         );
         speakTurn(turnIndex, 1);
         return;
@@ -492,6 +619,9 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     }, 60);
   };
 
+  const activeTurn = currentTurnIdx !== null ? turns[currentTurnIdx] : null;
+  const activeSpeakerConfig = activeTurn ? speakerConfigs[activeTurn.speaker] : null;
+
   return (
     <div className="audio-workspace">
       {/* Remote Audio Track Card */}
@@ -505,7 +635,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
             controls
             src={url}
             onError={() => {
-              // Gracefully handle remote audio failure without freezing
+              // Gracefully handle remote audio failure
             }}
           />
         ) : (
@@ -544,40 +674,139 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
           <div className="narration-header-row">
             <div className="narration-info">
               <Volume2 size={16} className="text-purple-400" />
-              <span>AI Voice Narration</span>
-              <span className="persona-badge" title={activePersona.description}>
-                {activePersona.shortBadge}
-              </span>
-              {isSpeaking && !isPaused && (
-                <div className="audio-live-waveform" title="Narration active">
-                  <span className="wave-bar bar-1" />
-                  <span className="wave-bar bar-2" />
-                  <span className="wave-bar bar-3" />
-                  <span className="wave-bar bar-4" />
+              <span>Multi-Speaker Narration Studio</span>
+
+              {/* Active speaker spotlight badge during narration */}
+              {isSpeaking && activeTurn && activeSpeakerConfig && (
+                <div
+                  className="active-speaker-spotlight"
+                  style={{
+                    backgroundColor: activeSpeakerConfig.palette.badgeBg,
+                    color: activeSpeakerConfig.palette.badgeText,
+                    borderColor: activeSpeakerConfig.palette.border,
+                  }}
+                >
+                  <Mic size={11} />
+                  <span>
+                    Speaking: <strong>{activeTurn.speaker}</strong>
+                  </span>
+                  <div className="audio-live-waveform" title="Speaking active">
+                    <span
+                      className="wave-bar bar-1"
+                      style={{ backgroundColor: activeSpeakerConfig.palette.badgeText }}
+                    />
+                    <span
+                      className="wave-bar bar-2"
+                      style={{ backgroundColor: activeSpeakerConfig.palette.badgeText }}
+                    />
+                    <span
+                      className="wave-bar bar-3"
+                      style={{ backgroundColor: activeSpeakerConfig.palette.badgeText }}
+                    />
+                    <span
+                      className="wave-bar bar-4"
+                      style={{ backgroundColor: activeSpeakerConfig.palette.badgeText }}
+                    />
+                  </div>
                 </div>
               )}
             </div>
 
-            {/* Voice Persona Selector */}
-            <div className="narration-persona-picker">
-              <select
-                value={selectedPersonaId}
-                onChange={(e) => {
-                  setSelectedPersonaId(e.target.value as VoicePersonaId);
-                  setSpeechError("");
-                }}
-                className="voice-select persona-select"
-                aria-label="Select speech persona"
-                title="Select IELTS speaker accent and vocal tone"
+            {/* Toggle Cast Voice Manager */}
+            {uniqueSpeakers.length > 0 && (
+              <button
+                type="button"
+                className={`cast-toggle-btn ${showCastManager ? "active" : ""}`}
+                onClick={() => setShowCastManager(!showCastManager)}
+                title="Configure voice persona for each character"
               >
-                {VOICE_PERSONAS.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+                <Users size={13} />
+                <span>Cast & Voices ({uniqueSpeakers.length})</span>
+                {showCastManager ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
+              </button>
+            )}
           </div>
+
+          {/* Interactive Multi-Speaker Voice Allocation Strip */}
+          {showCastManager && uniqueSpeakers.length > 0 && (
+            <div className="speaker-cast-manager">
+              <div className="cast-manager-header">
+                <span className="cast-manager-title">
+                  <Sliders size={12} />
+                  Character Voice Roles (Hội thoại đa nhân vật)
+                </span>
+                <span className="cast-manager-hint">
+                  Customize the voice actor and accent for each speaker
+                </span>
+              </div>
+
+              <div className="speaker-cast-grid">
+                {uniqueSpeakers.map((speakerName) => {
+                  const cfg = speakerConfigs[speakerName];
+                  const persona =
+                    VOICE_PERSONAS.find((p) => p.id === cfg?.personaId) || VOICE_PERSONAS[0];
+                  const isPreviewing = previewingSpeaker === speakerName;
+
+                  return (
+                    <div
+                      key={speakerName}
+                      className="speaker-cast-card"
+                      style={{
+                        borderColor: cfg?.palette.border || "var(--line)",
+                        boxShadow:
+                          activeTurn?.speaker === speakerName && isSpeaking
+                            ? `0 0 0 1px ${cfg?.palette.border}, 0 0 12px ${cfg?.palette.glow}`
+                            : undefined,
+                      }}
+                    >
+                      <div className="speaker-card-header">
+                        <span
+                          className="speaker-avatar-badge"
+                          style={{
+                            backgroundColor: cfg?.palette.badgeBg,
+                            color: cfg?.palette.badgeText,
+                            borderColor: cfg?.palette.border,
+                          }}
+                        >
+                          <Mic size={11} />
+                          {speakerName}
+                        </span>
+
+                        <button
+                          type="button"
+                          className={`speaker-test-btn ${isPreviewing ? "testing" : ""}`}
+                          onClick={() => handleTestSpeakerVoice(speakerName)}
+                          title={`Test voice for ${speakerName}`}
+                        >
+                          {isPreviewing ? <Volume2 size={11} /> : <Play size={11} />}
+                          <span>{isPreviewing ? "Testing…" : "Test"}</span>
+                        </button>
+                      </div>
+
+                      <select
+                        value={cfg?.personaId || "us-male-deep"}
+                        onChange={(e) =>
+                          handleUpdateSpeakerPersona(
+                            speakerName,
+                            e.target.value as VoicePersonaId
+                          )
+                        }
+                        className="speaker-persona-select"
+                        aria-label={`Select voice persona for ${speakerName}`}
+                        title={`Choose accent and tone for ${speakerName}`}
+                      >
+                        {VOICE_PERSONAS.map((p) => (
+                          <option key={p.id} value={p.id}>
+                            {p.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Action buttons and turn indicator */}
           <div className="narration-actions">
@@ -596,7 +825,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
                 </>
               ) : (
                 <>
-                  <Play size={14} /> Play Script Audio
+                  <Play size={14} /> Play Multi-Speaker Audio
                 </>
               )}
             </button>
@@ -648,20 +877,41 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
             <div className="audio-transcript-content">
               <div className="transcript-hint">
                 <Sparkles size={12} />
-                <span>Click any dialogue turn to narrate in US English Male (warm & deep)</span>
+                <span>
+                  Click any dialogue turn to narrate in that character's designated voice
+                </span>
               </div>
 
               {turns.map((turn) => {
                 const isActive = currentTurnIdx === turn.id && isSpeaking;
+                const spkConfig = speakerConfigs[turn.speaker];
+                const palette = spkConfig?.palette || SPEAKER_PALETTES[0];
+
                 return (
                   <div
                     key={turn.id}
                     className={`transcript-turn-card ${isActive ? "active-turn" : ""}`}
+                    style={
+                      isActive
+                        ? {
+                            borderColor: palette.border,
+                            backgroundColor: palette.badgeBg,
+                            boxShadow: `0 0 0 1px ${palette.border}, 0 0 10px ${palette.glow}`,
+                          }
+                        : undefined
+                    }
                     onClick={() => handlePlaySpecificTurn(turn.id)}
                     title={`Click to play from ${turn.speaker}`}
                   >
                     <div className="turn-meta-header">
-                      <span className="turn-speaker-badge">
+                      <span
+                        className="turn-speaker-badge"
+                        style={{
+                          backgroundColor: palette.badgeBg,
+                          color: palette.badgeText,
+                          borderColor: palette.border,
+                        }}
+                      >
                         <Mic size={11} /> {turn.speaker}
                       </span>
                       <button
