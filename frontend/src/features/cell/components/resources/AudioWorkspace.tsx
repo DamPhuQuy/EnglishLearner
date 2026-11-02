@@ -1,7 +1,6 @@
 import {
   AlertCircle,
   ArrowUp,
-  Check,
   ChevronDown,
   ChevronUp,
   FileText,
@@ -41,7 +40,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
   const [isPaused, setIsPaused] = useState(false);
   const [currentTurnIdx, setCurrentTurnIdx] = useState<number | null>(null);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>("");
+  const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>("system-default");
   const [speechError, setSpeechError] = useState<string>("");
 
   // Parse transcript into distinct conversational turns
@@ -91,6 +90,9 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       return;
     }
 
+    const isLinux =
+      typeof navigator !== "undefined" && /linux/i.test(navigator.userAgent);
+
     const loadVoices = () => {
       const allVoices = window.speechSynthesis.getVoices();
       if (!allVoices || allVoices.length === 0) return;
@@ -101,10 +103,14 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       const displayVoices = englishVoices.length > 0 ? englishVoices : allVoices;
       setVoices(displayVoices);
 
-      // Select default voice: prefer en-GB (Female/Male) or en-US
+      // On Linux, default to "system-default" to prevent remote Google TTS synthesis-failed errors
       setSelectedVoiceURI((prev) => {
+        if (prev === "system-default") return "system-default";
         if (prev && displayVoices.some((v) => v.voiceURI === prev)) {
           return prev;
+        }
+        if (isLinux) {
+          return "system-default";
         }
         const preferred =
           displayVoices.find(
@@ -113,7 +119,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
           displayVoices.find((v) => v.lang.startsWith("en-GB")) ||
           displayVoices.find((v) => v.lang.startsWith("en-US")) ||
           displayVoices[0];
-        return preferred?.voiceURI || "";
+        return preferred?.voiceURI || "system-default";
       });
     };
 
@@ -152,6 +158,14 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       gain.connect(ctx.destination);
       osc.start();
       osc.stop(ctx.currentTime + 0.5);
+
+      osc.onended = () => {
+        try {
+          ctx.close();
+        } catch {
+          // ignore close error
+        }
+      };
     } catch {
       // AudioContext non-critical fallback
     }
@@ -171,8 +185,8 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     }
   };
 
-  // Speak a single turn safely
-  const speakTurn = (turnIndex: number) => {
+  // Speak a single turn safely with automatic fallback
+  const speakTurn = (turnIndex: number, retryCount = 0) => {
     if (
       isStoppedRef.current ||
       turnIndex < 0 ||
@@ -198,38 +212,39 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     const utterance = new SpeechSynthesisUtterance(currentTurn.text);
     utterance.rate = Number(speed);
 
-    // Pick appropriate voice
-    const availableVoices = window.speechSynthesis.getVoices();
-    let chosenVoice = availableVoices.find((v) => v.voiceURI === selectedVoiceURI);
-    if (!chosenVoice) {
-      chosenVoice =
-        availableVoices.find((v) => v.lang.startsWith("en-GB")) ||
-        availableVoices.find((v) => v.lang.startsWith("en-US")) ||
-        availableVoices.find((v) => v.lang.startsWith("en"));
-    }
+    // If retryCount === 0 and voice is not "system-default", use chosen voice
+    if (retryCount === 0 && selectedVoiceURI !== "system-default") {
+      const availableVoices = window.speechSynthesis.getVoices();
+      let chosenVoice = availableVoices.find((v) => v.voiceURI === selectedVoiceURI);
+      if (!chosenVoice) {
+        chosenVoice =
+          availableVoices.find((v) => v.lang.startsWith("en-GB")) ||
+          availableVoices.find((v) => v.lang.startsWith("en-US")) ||
+          availableVoices.find((v) => v.lang.startsWith("en"));
+      }
 
-    // Adapt pitch/voice for multi-speaker dialogue
-    const uniqueSpeakers = Array.from(new Set(turns.map((t) => t.speaker)));
-    const speakerRank = uniqueSpeakers.indexOf(currentTurn.speaker);
+      const uniqueSpeakers = Array.from(new Set(turns.map((t) => t.speaker)));
+      const speakerRank = uniqueSpeakers.indexOf(currentTurn.speaker);
 
-    if (chosenVoice) {
-      if (speakerRank % 2 === 1) {
-        // Speaker 2: choose alternative voice or pitch shift
-        const altVoice = availableVoices.find(
-          (v) => v.lang.startsWith("en") && v.voiceURI !== chosenVoice?.voiceURI
-        );
-        if (altVoice) {
-          utterance.voice = altVoice;
+      if (chosenVoice) {
+        if (speakerRank % 2 === 1) {
+          const altVoice = availableVoices.find(
+            (v) => v.lang.startsWith("en") && v.voiceURI !== chosenVoice?.voiceURI
+          );
+          if (altVoice) {
+            utterance.voice = altVoice;
+          } else {
+            utterance.voice = chosenVoice;
+            utterance.pitch = 0.9;
+          }
         } else {
           utterance.voice = chosenVoice;
-          utterance.pitch = 0.9;
+          utterance.pitch = 1.05;
         }
-      } else {
-        utterance.voice = chosenVoice;
-        utterance.pitch = 1.05;
       }
     } else {
-      utterance.lang = "en-GB";
+      // Use browser default offline engine without forcing a remote voice object
+      utterance.lang = "en-US";
     }
 
     utterance.onstart = () => {
@@ -240,9 +255,8 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     utterance.onend = () => {
       if (isStoppedRef.current) return;
       if (turnIndex + 1 < turns.length) {
-        // Natural dialogue breath pause (300ms)
         nextTurnTimerRef.current = window.setTimeout(() => {
-          speakTurn(turnIndex + 1);
+          speakTurn(turnIndex + 1, 0);
         }, 300);
       } else {
         setIsSpeaking(false);
@@ -255,11 +269,26 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       if (e.error === "canceled" || e.error === "interrupted") {
         return;
       }
+
+      // Automatic Fallback: If remote voice failed with synthesis-failed, transparently fallback to system-default!
+      if (
+        e.error === "synthesis-failed" &&
+        retryCount === 0 &&
+        selectedVoiceURI !== "system-default"
+      ) {
+        console.warn(
+          "Remote voice failed (synthesis-failed). Auto-retrying with native system voice..."
+        );
+        setSelectedVoiceURI("system-default");
+        speakTurn(turnIndex, 1);
+        return;
+      }
+
       console.warn("Speech synthesis error event:", e);
       const msg =
         e.error === "not-allowed"
           ? "Browser blocked audio autoplay. Click 'Play Script Audio' again to grant audio permission."
-          : `Speech synthesis error (${e.error || "unavailable"}). Try selecting a different voice.`;
+          : `Speech synthesis error (${e.error || "unavailable"}). You can read along with the interactive transcript below.`;
       setSpeechError(msg);
       onError(msg);
       setIsSpeaking(false);
@@ -276,9 +305,13 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       window.speechSynthesis.speak(utterance);
     } catch (err) {
       console.error("speechSynthesis.speak call threw:", err);
-      setSpeechError("Could not invoke Web Speech engine. Please verify browser audio permissions.");
-      setIsSpeaking(false);
-      setIsPaused(false);
+      if (retryCount === 0) {
+        speakTurn(turnIndex, 1);
+      } else {
+        setSpeechError("Could not invoke Web Speech engine. Please verify browser audio permissions.");
+        setIsSpeaking(false);
+        setIsPaused(false);
+      }
     }
   };
 
@@ -316,7 +349,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     playExamChime();
 
     const startIdx = currentTurnIdx !== null && currentTurnIdx < turns.length ? currentTurnIdx : 0;
-    speakTurn(startIdx);
+    speakTurn(startIdx, 0);
   };
 
   const handleStopSpeech = () => {
@@ -337,7 +370,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     handleStopSpeech();
     isStoppedRef.current = false;
     setTimeout(() => {
-      speakTurn(index);
+      speakTurn(index, 0);
     }, 60);
   };
 
@@ -404,24 +437,28 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
               )}
             </div>
 
-            {/* Voice Selector */}
-            {voices.length > 0 && (
-              <div className="narration-voice-picker">
-                <select
-                  value={selectedVoiceURI}
-                  onChange={(e) => setSelectedVoiceURI(e.target.value)}
-                  className="voice-select"
-                  aria-label="Select speech voice"
-                  title="Choose IELTS narrator voice"
-                >
-                  {voices.map((v) => (
-                    <option key={v.voiceURI} value={v.voiceURI}>
-                      {v.name} ({v.lang})
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
+            {/* Voice Selector with System Default option */}
+            <div className="narration-voice-picker">
+              <select
+                value={selectedVoiceURI}
+                onChange={(e) => {
+                  setSelectedVoiceURI(e.target.value);
+                  setSpeechError("");
+                }}
+                className="voice-select"
+                aria-label="Select speech voice"
+                title="Choose IELTS narrator voice"
+              >
+                <option value="system-default">
+                  Default System Voice (Offline Engine)
+                </option>
+                {voices.map((v) => (
+                  <option key={v.voiceURI} value={v.voiceURI}>
+                    {v.name} ({v.lang})
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
 
           {/* Action buttons and turn indicator */}
