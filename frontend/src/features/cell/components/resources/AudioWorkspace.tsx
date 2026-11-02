@@ -1,6 +1,7 @@
 import {
   AlertCircle,
   ArrowUp,
+  Check,
   ChevronDown,
   ChevronUp,
   FileText,
@@ -10,6 +11,7 @@ import {
   Play,
   RotateCcw,
   Sparkles,
+  Sliders,
   Square,
   Volume2,
 } from "lucide-react";
@@ -28,6 +30,83 @@ interface DialogueTurn {
   raw: string;
 }
 
+export type VoicePersonaId =
+  | "us-male-deep"
+  | "uk-male-oxford"
+  | "uk-female-bbc"
+  | "us-female-clear"
+  | "system-default";
+
+export interface VoicePersona {
+  id: VoicePersonaId;
+  label: string;
+  shortBadge: string;
+  description: string;
+  accent: "US" | "UK" | "System";
+  targetLang: string;
+  gender: "male" | "female" | "neutral";
+  pitch: number;
+  rateMultiplier: number;
+}
+
+export const VOICE_PERSONAS: VoicePersona[] = [
+  {
+    id: "us-male-deep",
+    label: "US English Male (Warm & Deep Baritone)",
+    shortBadge: "US Male · Deep & Clear",
+    description: "Warm, resonant baritone with crisp American pronunciation",
+    accent: "US",
+    targetLang: "en-US",
+    gender: "male",
+    pitch: 0.82,
+    rateMultiplier: 0.94,
+  },
+  {
+    id: "uk-male-oxford",
+    label: "UK English Male (Examiner Academic)",
+    shortBadge: "UK Male · Deep RP",
+    description: "Refined British RP baritone with academic cadence",
+    accent: "UK",
+    targetLang: "en-GB",
+    gender: "male",
+    pitch: 0.86,
+    rateMultiplier: 0.95,
+  },
+  {
+    id: "uk-female-bbc",
+    label: "UK English Female (BBC Standard)",
+    shortBadge: "UK Female · BBC",
+    description: "Clear, warm standard British received pronunciation",
+    accent: "UK",
+    targetLang: "en-GB",
+    gender: "female",
+    pitch: 1.02,
+    rateMultiplier: 0.98,
+  },
+  {
+    id: "us-female-clear",
+    label: "US English Female (Natural Clear)",
+    shortBadge: "US Female · Clear",
+    description: "Professional, articulate American broadcast cadence",
+    accent: "US",
+    targetLang: "en-US",
+    gender: "female",
+    pitch: 1.0,
+    rateMultiplier: 1.0,
+  },
+  {
+    id: "system-default",
+    label: "System Default Voice (Offline Engine)",
+    shortBadge: "Offline · Native",
+    description: "Default voice provided directly by your operating system",
+    accent: "System",
+    targetLang: "en-US",
+    gender: "neutral",
+    pitch: 1.0,
+    rateMultiplier: 1.0,
+  },
+];
+
 export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
   const activeUtteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -40,8 +119,14 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
   const [isPaused, setIsPaused] = useState(false);
   const [currentTurnIdx, setCurrentTurnIdx] = useState<number | null>(null);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
-  const [selectedVoiceURI, setSelectedVoiceURI] = useState<string>("system-default");
+  const [selectedPersonaId, setSelectedPersonaId] = useState<VoicePersonaId>("us-male-deep");
   const [speechError, setSpeechError] = useState<string>("");
+
+  const activePersona = useMemo(() => {
+    return (
+      VOICE_PERSONAS.find((p) => p.id === selectedPersonaId) || VOICE_PERSONAS[0]
+    );
+  }, [selectedPersonaId]);
 
   // Parse transcript into distinct conversational turns
   const turns: DialogueTurn[] = useMemo(() => {
@@ -90,9 +175,6 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       return;
     }
 
-    const isLinux =
-      typeof navigator !== "undefined" && /linux/i.test(navigator.userAgent);
-
     const loadVoices = () => {
       const allVoices = window.speechSynthesis.getVoices();
       if (!allVoices || allVoices.length === 0) return;
@@ -100,27 +182,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       const englishVoices = allVoices.filter(
         (v) => v.lang.startsWith("en") || v.lang.startsWith("EN")
       );
-      const displayVoices = englishVoices.length > 0 ? englishVoices : allVoices;
-      setVoices(displayVoices);
-
-      // On Linux, default to "system-default" to prevent remote Google TTS synthesis-failed errors
-      setSelectedVoiceURI((prev) => {
-        if (prev === "system-default") return "system-default";
-        if (prev && displayVoices.some((v) => v.voiceURI === prev)) {
-          return prev;
-        }
-        if (isLinux) {
-          return "system-default";
-        }
-        const preferred =
-          displayVoices.find(
-            (v) => v.lang.startsWith("en-GB") && /female|natural/i.test(v.name)
-          ) ||
-          displayVoices.find((v) => v.lang.startsWith("en-GB")) ||
-          displayVoices.find((v) => v.lang.startsWith("en-US")) ||
-          displayVoices[0];
-        return preferred?.voiceURI || "system-default";
-      });
+      setVoices(englishVoices.length > 0 ? englishVoices : allVoices);
     };
 
     loadVoices();
@@ -185,7 +247,75 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     }
   };
 
-  // Speak a single turn safely with automatic fallback
+  // Find best matching voice for a persona
+  const resolveVoiceForPersona = (persona: VoicePersona, isFemaleTurn: boolean) => {
+    if (persona.id === "system-default" || voices.length === 0) {
+      return null;
+    }
+
+    if (persona.id === "us-male-deep") {
+      if (isFemaleTurn) {
+        // Complementary female speaker in dialogue
+        return (
+          voices.find((v) => v.lang.startsWith("en-US") && /female|natural/i.test(v.name)) ||
+          voices.find((v) => v.lang.startsWith("en-US")) ||
+          null
+        );
+      }
+      // Primary US English Male
+      return (
+        voices.find(
+          (v) =>
+            v.lang.startsWith("en-US") &&
+            /male|david|aaron|guy|george|christopher|james|john/i.test(v.name)
+        ) ||
+        voices.find((v) => v.name.includes("US English")) ||
+        voices.find((v) => v.lang.startsWith("en-US")) ||
+        null
+      );
+    }
+
+    if (persona.id === "uk-male-oxford") {
+      if (isFemaleTurn) {
+        return (
+          voices.find((v) => v.lang.startsWith("en-GB") && /female/i.test(v.name)) ||
+          voices.find((v) => v.lang.startsWith("en-GB")) ||
+          null
+        );
+      }
+      return (
+        voices.find(
+          (v) =>
+            v.lang.startsWith("en-GB") &&
+            /male|daniel|oliver|george|arthur/i.test(v.name)
+        ) ||
+        voices.find((v) => v.name.includes("UK English Male")) ||
+        voices.find((v) => v.lang.startsWith("en-GB")) ||
+        null
+      );
+    }
+
+    if (persona.id === "uk-female-bbc") {
+      return (
+        voices.find((v) => v.lang.startsWith("en-GB") && /female/i.test(v.name)) ||
+        voices.find((v) => v.name.includes("UK English Female")) ||
+        voices.find((v) => v.lang.startsWith("en-GB")) ||
+        null
+      );
+    }
+
+    if (persona.id === "us-female-clear") {
+      return (
+        voices.find((v) => v.lang.startsWith("en-US") && /female/i.test(v.name)) ||
+        voices.find((v) => v.lang.startsWith("en-US")) ||
+        null
+      );
+    }
+
+    return null;
+  };
+
+  // Speak a single turn safely with persona acoustic profile and automatic fallback
   const speakTurn = (turnIndex: number, retryCount = 0) => {
     if (
       isStoppedRef.current ||
@@ -204,47 +334,39 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     setCurrentTurnIdx(turnIndex);
     setSpeechError("");
 
-    // Ensure Chrome paused queue is resumed
     if (window.speechSynthesis.paused) {
       window.speechSynthesis.resume();
     }
 
     const utterance = new SpeechSynthesisUtterance(currentTurn.text);
-    utterance.rate = Number(speed);
 
-    // If retryCount === 0 and voice is not "system-default", use chosen voice
-    if (retryCount === 0 && selectedVoiceURI !== "system-default") {
-      const availableVoices = window.speechSynthesis.getVoices();
-      let chosenVoice = availableVoices.find((v) => v.voiceURI === selectedVoiceURI);
-      if (!chosenVoice) {
-        chosenVoice =
-          availableVoices.find((v) => v.lang.startsWith("en-GB")) ||
-          availableVoices.find((v) => v.lang.startsWith("en-US")) ||
-          availableVoices.find((v) => v.lang.startsWith("en"));
+    // Apply speed multiplier from speed control and persona's clarity multiplier
+    const effectiveRate = Number(speed) * activePersona.rateMultiplier;
+    utterance.rate = Math.min(2.0, Math.max(0.5, effectiveRate));
+
+    // Detect female speaker in dialogue
+    const speakerLower = currentTurn.speaker.toLowerCase();
+    const isFemaleTurn =
+      /female|receptionist|chloe|sarah|emma|woman|wife|mary|linda/i.test(speakerLower);
+
+    // If retryCount === 0 and persona is not offline system-default, try resolved voice
+    if (retryCount === 0 && selectedPersonaId !== "system-default") {
+      const voice = resolveVoiceForPersona(activePersona, isFemaleTurn);
+      if (voice) {
+        utterance.voice = voice;
       }
 
-      const uniqueSpeakers = Array.from(new Set(turns.map((t) => t.speaker)));
-      const speakerRank = uniqueSpeakers.indexOf(currentTurn.speaker);
-
-      if (chosenVoice) {
-        if (speakerRank % 2 === 1) {
-          const altVoice = availableVoices.find(
-            (v) => v.lang.startsWith("en") && v.voiceURI !== chosenVoice?.voiceURI
-          );
-          if (altVoice) {
-            utterance.voice = altVoice;
-          } else {
-            utterance.voice = chosenVoice;
-            utterance.pitch = 0.9;
-          }
-        } else {
-          utterance.voice = chosenVoice;
-          utterance.pitch = 1.05;
-        }
+      if (isFemaleTurn && activePersona.gender === "male") {
+        utterance.pitch = 1.05; // Slightly higher pitch for female speaker turn
+      } else {
+        // Apply persona's acoustic pitch (e.g. 0.82 for warm & deep US Male)
+        utterance.pitch = activePersona.pitch;
       }
+      utterance.lang = activePersona.targetLang;
     } else {
-      // Use browser default offline engine without forcing a remote voice object
-      utterance.lang = "en-US";
+      // Default / offline engine fallback: still apply deep pitch and clear rate!
+      utterance.pitch = isFemaleTurn ? 1.05 : activePersona.pitch;
+      utterance.lang = activePersona.targetLang || "en-US";
     }
 
     utterance.onstart = () => {
@@ -255,9 +377,10 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
     utterance.onend = () => {
       if (isStoppedRef.current) return;
       if (turnIndex + 1 < turns.length) {
+        // Natural dialogue turn pause (320ms)
         nextTurnTimerRef.current = window.setTimeout(() => {
           speakTurn(turnIndex + 1, 0);
-        }, 300);
+        }, 320);
       } else {
         setIsSpeaking(false);
         setIsPaused(false);
@@ -270,16 +393,15 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
         return;
       }
 
-      // Automatic Fallback: If remote voice failed with synthesis-failed, transparently fallback to system-default!
+      // If remote cloud voice failed with synthesis-failed, transparently fallback to native engine with the same warm deep pitch
       if (
         e.error === "synthesis-failed" &&
         retryCount === 0 &&
-        selectedVoiceURI !== "system-default"
+        selectedPersonaId !== "system-default"
       ) {
         console.warn(
-          "Remote voice failed (synthesis-failed). Auto-retrying with native system voice..."
+          "Cloud voice synthesis-failed. Auto-retrying with native engine using baritone profile..."
         );
-        setSelectedVoiceURI("system-default");
         speakTurn(turnIndex, 1);
         return;
       }
@@ -296,7 +418,6 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       setCurrentTurnIdx(null);
     };
 
-    // Keep active utterance on ref and window to prevent Chromium GC freeze bug
     activeUtteranceRef.current = utterance;
     (window as unknown as { __activeUtterance: SpeechSynthesisUtterance }).__activeUtterance =
       utterance;
@@ -323,21 +444,18 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
       return;
     }
 
-    // 1. If currently speaking and active: Pause
     if (isSpeaking && !isPaused) {
       window.speechSynthesis.pause();
       setIsPaused(true);
       return;
     }
 
-    // 2. If paused: Resume
     if (isSpeaking && isPaused) {
       window.speechSynthesis.resume();
       setIsPaused(false);
       return;
     }
 
-    // 3. Otherwise: Start from beginning or current turn
     if (turns.length === 0) {
       const msg = "No audio transcript or dialogue turns available to narrate.";
       setSpeechError(msg);
@@ -426,7 +544,10 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
           <div className="narration-header-row">
             <div className="narration-info">
               <Volume2 size={16} className="text-purple-400" />
-              <span>AI Voice Narration (Web Speech Engine)</span>
+              <span>AI Voice Narration</span>
+              <span className="persona-badge" title={activePersona.description}>
+                {activePersona.shortBadge}
+              </span>
               {isSpeaking && !isPaused && (
                 <div className="audio-live-waveform" title="Narration active">
                   <span className="wave-bar bar-1" />
@@ -437,24 +558,21 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
               )}
             </div>
 
-            {/* Voice Selector with System Default option */}
-            <div className="narration-voice-picker">
+            {/* Voice Persona Selector */}
+            <div className="narration-persona-picker">
               <select
-                value={selectedVoiceURI}
+                value={selectedPersonaId}
                 onChange={(e) => {
-                  setSelectedVoiceURI(e.target.value);
+                  setSelectedPersonaId(e.target.value as VoicePersonaId);
                   setSpeechError("");
                 }}
-                className="voice-select"
-                aria-label="Select speech voice"
-                title="Choose IELTS narrator voice"
+                className="voice-select persona-select"
+                aria-label="Select speech persona"
+                title="Select IELTS speaker accent and vocal tone"
               >
-                <option value="system-default">
-                  Default System Voice (Offline Engine)
-                </option>
-                {voices.map((v) => (
-                  <option key={v.voiceURI} value={v.voiceURI}>
-                    {v.name} ({v.lang})
+                {VOICE_PERSONAS.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.label}
                   </option>
                 ))}
               </select>
@@ -530,7 +648,7 @@ export const AudioWorkspace: React.FC<Props> = ({ url, transcript, onError }) =>
             <div className="audio-transcript-content">
               <div className="transcript-hint">
                 <Sparkles size={12} />
-                <span>Click any dialogue turn to narrate from that line</span>
+                <span>Click any dialogue turn to narrate in US English Male (warm & deep)</span>
               </div>
 
               {turns.map((turn) => {

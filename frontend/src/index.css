@@ -981,26 +981,47 @@ audio {
   100% { transform: scaleY(1); opacity: 1; }
 }
 
+.persona-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.16);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  padding: 1px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.2px;
+}
+
+.narration-persona-picker,
 .narration-voice-picker {
   display: flex;
   align-items: center;
 }
 
 .voice-select {
-  height: 26px;
-  padding: 0 8px;
+  height: 28px;
+  padding: 0 10px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 11px;
   color: var(--text);
-  max-width: 200px;
+  max-width: 220px;
   cursor: pointer;
+  transition: border-color 0.15s ease;
 }
 
-.voice-select:focus {
+.persona-select {
+  max-width: 280px;
+  font-weight: 500;
+  border-color: rgba(168, 85, 247, 0.45);
+}
+
+.voice-select:focus,
+.persona-select:focus {
   border-color: #c084fc;
   outline: none;
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.4);
 }
 
 .narration-actions {
