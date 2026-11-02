@@ -309,27 +309,7 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
                 <option value="micro">Micro-drill (1–3 Qs)</option>
                 <option value="drill">Type drill (4–8 Qs)</option>
               </select>
-            </div>
 
-            <div className="qb-actions-right">
-              <button
-                type="button"
-                className="button quiet qb-sm-btn"
-                onClick={handleRandomDrill}
-                title="Pick a random drill from matching exercises"
-              >
-                <Dices size={14} />
-                Random drill
-              </button>
-              <button
-                type="button"
-                className="button quiet qb-sm-btn qb-generate-btn"
-                onClick={handleGenerateDrill}
-                title="Generate fresh practice questions matching current filters"
-              >
-                <Wand2 size={13} />
-                Generate drill
-              </button>
               {hasActiveFilters && (
                 <button
                   type="button"
@@ -347,24 +327,48 @@ export const QuestionBankModal: React.FC<QuestionBankModalProps> = ({
 
         {/* Results Info Bar */}
         <div className="qb-results-bar">
-          <span className="qb-results-text">
-            Showing <strong>{displayItems.length}</strong> modules (
-            <strong>{displayQuestionsCount}</strong> questions)
-            {matchingGeneratedItems.length > 0 && (
-              <span className="qb-generated-summary">
-                {" "}· includes {matchingGeneratedItems.length} newly generated
-              </span>
+          <div className="qb-results-info">
+            <span className="qb-results-text">
+              Showing <strong>{displayItems.length}</strong> modules (
+              <strong>{displayQuestionsCount}</strong> questions)
+              {matchingGeneratedItems.length > 0 && (
+                <span className="qb-generated-summary">
+                  {" "}· includes {matchingGeneratedItems.length} newly generated
+                </span>
+              )}
+            </span>
+            {hasActiveFilters && (
+              <button
+                type="button"
+                className="qb-clear-all-link"
+                onClick={handleResetFilters}
+              >
+                Clear filters
+              </button>
             )}
-          </span>
-          {hasActiveFilters && (
+          </div>
+
+          <div className="qb-results-actions">
             <button
               type="button"
-              className="qb-clear-all-link"
-              onClick={handleResetFilters}
+              className="button quiet qb-sm-btn"
+              onClick={handleRandomDrill}
+              disabled={displayItems.length === 0}
+              title="Pick a random drill from matching exercises"
             >
-              Clear filters
+              <Dices size={13} />
+              Random drill
             </button>
-          )}
+            <button
+              type="button"
+              className="button quiet qb-sm-btn qb-generate-btn"
+              onClick={handleGenerateDrill}
+              title="Generate fresh practice questions matching current filters"
+            >
+              <Wand2 size={13} />
+              Generate drill
+            </button>
+          </div>
         </div>
 
         {/* Cards Grid */}

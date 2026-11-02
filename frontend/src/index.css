@@ -2724,6 +2724,7 @@ audio {
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+  flex: 1 1 auto;
 }
 
 .qb-select {
@@ -2745,13 +2746,6 @@ audio {
 .qb-select:focus {
   border-color: var(--accent);
   outline: none;
-}
-
-.qb-actions-right {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: auto;
 }
 
 .qb-sm-btn {
@@ -2793,14 +2787,33 @@ audio {
 
 /* Results Strip */
 .qb-results-bar {
-  height: 32px;
-  min-height: 32px;
-  padding: 0 18px;
+  min-height: 40px;
+  padding: 4px 18px;
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   background: var(--surface);
+}
+
+.qb-results-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qb-results-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.qb-results-actions .qb-sm-btn {
+  height: 28px;
+  padding: 0 10px;
+  font-size: 12px;
 }
 
 .qb-results-text {
@@ -3112,6 +3125,32 @@ audio {
   }
   .qb-filters-section {
     padding: 10px 14px;
+    gap: 8px;
+  }
+  .qb-controls-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .qb-search-wrap {
+    max-width: none;
+    width: 100%;
+  }
+  .qb-dropdown-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 6px;
+    width: 100%;
+  }
+  .qb-results-bar {
+    padding: 6px 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .qb-results-actions {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-end;
   }
   .qb-cards-scrollable {
     padding: 12px 14px;
