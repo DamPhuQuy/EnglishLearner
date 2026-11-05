@@ -659,7 +659,7 @@ function generateProceduralListeningItem(
     material: {
       type: "audio",
       title: `Audio Section: ${domain.name}`,
-      audioUrl: "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
+      audioUrl: "/audio/listening/section1_homestay_booking.mp3",
       audioTranscript: transcript,
     },
     questions,

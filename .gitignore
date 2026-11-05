@@ -4,3 +4,6 @@ backend-rails/
 dist/
 .env
 .dev.vars
+
+__pycache__/
+*.tsbuildinfo

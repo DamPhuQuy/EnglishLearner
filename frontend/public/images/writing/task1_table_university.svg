@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%" style="background:#0f172a; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="380" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700">International Tertiary Student Enrolment Across Five Academic Disciplines</text>
+  <text x="380" y="52" text-anchor="middle" fill="#94a3b8" font-size="12">Admissions Volume, 8-Year Growth, and Student Retention Metrics (Australian University)</text>
+
+  <!-- Table Container -->
+  <g transform="translate(30, 75)">
+    <!-- Header Row -->
+    <rect x="0" y="0" width="700" height="42" rx="6" fill="#1e293b" />
+    <text x="20" y="26" fill="#f1f5f9" font-size="12" font-weight="700">Academic Department</text>
+    <text x="215" y="26" fill="#f1f5f9" font-size="12" font-weight="700" text-anchor="middle">2015 Enrolment</text>
+    <text x="345" y="26" fill="#f1f5f9" font-size="12" font-weight="700" text-anchor="middle">2023 Enrolment</text>
+    <text x="465" y="26" fill="#f1f5f9" font-size="12" font-weight="700" text-anchor="middle">Growth Rate (%)</text>
+    <text x="575" y="26" fill="#f1f5f9" font-size="12" font-weight="700" text-anchor="middle">Retention</text>
+    <text x="655" y="26" fill="#f1f5f9" font-size="12" font-weight="700" text-anchor="middle">Completion</text>
+
+    <!-- Row 1: Computer Science -->
+    <rect x="0" y="46" width="700" height="46" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8" />
+    <text x="20" y="74" fill="#38bdf8" font-size="13" font-weight="600">Computer Science</text>
+    <text x="215" y="74" fill="#cbd5e1" font-size="13" text-anchor="middle">1,240</text>
+    <text x="345" y="74" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle">3,850</text>
+    <text x="465" y="74" fill="#34d399" font-size="13" font-weight="700" text-anchor="middle">+210.5%</text>
+    <text x="575" y="74" fill="#e2e8f0" font-size="13" text-anchor="middle">93%</text>
+    <text x="655" y="74" fill="#e2e8f0" font-size="13" text-anchor="middle">91%</text>
+
+    <!-- Row 2: Business & Finance -->
+    <rect x="0" y="96" width="700" height="46" rx="4" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="0.8" />
+    <text x="20" y="124" fill="#f8fafc" font-size="13" font-weight="600">Business &amp; Finance</text>
+    <text x="215" y="124" fill="#cbd5e1" font-size="13" text-anchor="middle">4,200</text>
+    <text x="345" y="124" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle">5,600</text>
+    <text x="465" y="124" fill="#34d399" font-size="13" font-weight="600" text-anchor="middle">+33.3%</text>
+    <text x="575" y="124" fill="#e2e8f0" font-size="13" text-anchor="middle">88%</text>
+    <text x="655" y="124" fill="#e2e8f0" font-size="13" text-anchor="middle">86%</text>
+
+    <!-- Row 3: Engineering -->
+    <rect x="0" y="146" width="700" height="46" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8" />
+    <text x="20" y="174" fill="#f8fafc" font-size="13" font-weight="600">Engineering &amp; Technology</text>
+    <text x="215" y="174" fill="#cbd5e1" font-size="13" text-anchor="middle">2,100</text>
+    <text x="345" y="174" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle">3,150</text>
+    <text x="465" y="174" fill="#34d399" font-size="13" font-weight="600" text-anchor="middle">+50.0%</text>
+    <text x="575" y="174" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">95%</text>
+    <text x="655" y="174" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">94%</text>
+
+    <!-- Row 4: Humanities & Social Sciences -->
+    <rect x="0" y="196" width="700" height="46" rx="4" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="0.8" />
+    <text x="20" y="224" fill="#f8fafc" font-size="13" font-weight="600">Humanities &amp; Social Sciences</text>
+    <text x="215" y="224" fill="#cbd5e1" font-size="13" text-anchor="middle">1,850</text>
+    <text x="345" y="224" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle">1,200</text>
+    <text x="465" y="224" fill="#f43f5e" font-size="13" font-weight="700" text-anchor="middle">-35.1%</text>
+    <text x="575" y="224" fill="#fca5a5" font-size="13" text-anchor="middle">74%</text>
+    <text x="655" y="224" fill="#fca5a5" font-size="13" text-anchor="middle">71%</text>
+
+    <!-- Row 5: Medicine & Health Sciences -->
+    <rect x="0" y="246" width="700" height="46" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.8" />
+    <text x="20" y="274" fill="#f8fafc" font-size="13" font-weight="600">Medicine &amp; Health Sciences</text>
+    <text x="215" y="274" fill="#cbd5e1" font-size="13" text-anchor="middle">950</text>
+    <text x="345" y="274" fill="#cbd5e1" font-size="13" font-weight="600" text-anchor="middle">1,120</text>
+    <text x="465" y="274" fill="#34d399" font-size="13" font-weight="600" text-anchor="middle">+17.9%</text>
+    <text x="575" y="274" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">96%</text>
+    <text x="655" y="274" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">93%</text>
+  </g>
+</svg>

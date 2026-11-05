@@ -7,18 +7,21 @@ import {
   Target,
 } from "lucide-react";
 import React, { useState } from "react";
-import type { IeltsWritingTaskData } from "../../types/ieltsSchema.ts";
+import type { IeltsExerciseMaterial, IeltsWritingTaskData } from "../../types/ieltsSchema.ts";
+import { AcademicVisualStimulus } from "./AcademicVisualStimulus.tsx";
 
 export interface WritingPromptWorkspaceProps {
   writingTask: IeltsWritingTaskData;
   title: string;
   difficulty?: string;
+  material?: IeltsExerciseMaterial;
 }
 
 export const WritingPromptWorkspace: React.FC<WritingPromptWorkspaceProps> = ({
   writingTask,
   title,
   difficulty,
+  material,
 }) => {
   const [showSampleEssay, setShowSampleEssay] = useState(false);
 
@@ -61,6 +64,15 @@ export const WritingPromptWorkspace: React.FC<WritingPromptWorkspaceProps> = ({
         </div>
         <p className="prompt-card-text">{writingTask.prompt}</p>
       </div>
+
+      {/* Academic Visual Stimulus (Charts / Maps / Diagrams) */}
+      {isTask1 && (writingTask.academicVisualType || material?.imageUrl) && (
+        <AcademicVisualStimulus
+          writingTask={writingTask}
+          imageUrl={material?.imageUrl}
+          imageDescription={material?.imageDescription}
+        />
+      )}
 
       {/* Key Data Highlights / Bullet Points */}
       {bullets.length > 0 && (

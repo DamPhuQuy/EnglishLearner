@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%" style="background:#0f172a; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="380" y="30" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700">Industrial Lithium-Ion Battery Recycling Procedure</text>
+  <text x="380" y="48" text-anchor="middle" fill="#94a3b8" font-size="12">Hydrometallurgical Closed-Loop Material Recovery Flowchart</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+
+  <!-- Stage 1 Box -->
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="200" height="26" rx="8" fill="#0284c7" />
+    <text x="100" y="18" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">STAGE 1: DISMANTLING</text>
+    <text x="15" y="48" fill="#e2e8f0" font-size="11" font-weight="600">• EV Battery Modules</text>
+    <text x="15" y="66" fill="#94a3b8" font-size="11">• Automated Discharge</text>
+    <text x="15" y="84" fill="#94a3b8" font-size="11">• Cryogenic Shredder</text>
+    <text x="15" y="100" fill="#f59e0b" font-size="10" font-weight="600">(Inert Argon Atmosphere)</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="230" y1="135" x2="275" y2="135" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Stage 2 Box -->
+  <g transform="translate(280, 80)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="200" height="26" rx="8" fill="#0284c7" />
+    <text x="100" y="18" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">STAGE 2: SEPARATION</text>
+    <text x="15" y="48" fill="#e2e8f0" font-size="11" font-weight="600">• Density &amp; Air Sieving</text>
+    <text x="15" y="66" fill="#94a3b8" font-size="11">• Copper / Aluminum Foils</text>
+    <text x="15" y="84" fill="#94a3b8" font-size="11">• Plastic Casings Removed</text>
+    <text x="15" y="100" fill="#a855f7" font-size="11" font-weight="700">Yield: Pure "Black Mass"</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="480" y1="135" x2="525" y2="135" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Stage 3 Box -->
+  <g transform="translate(530, 80)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="200" height="26" rx="8" fill="#0284c7" />
+    <text x="100" y="18" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">STAGE 3: ACID LEACHING</text>
+    <text x="15" y="48" fill="#e2e8f0" font-size="11" font-weight="600">• Hydrometallurgical Tank</text>
+    <text x="15" y="66" fill="#94a3b8" font-size="11">• Sulfuric Acid (H2SO4)</text>
+    <text x="15" y="84" fill="#94a3b8" font-size="11">• Hydrogen Peroxide (H2O2)</text>
+    <text x="15" y="100" fill="#f59e0b" font-size="10">Heated Dissolution 80°C</text>
+  </g>
+
+  <!-- Downward arrow from 3 to 4 -->
+  <path d="M 630 190 L 630 235 L 535 235" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Stage 4 Box -->
+  <g transform="translate(280, 220)">
+    <rect x="0" y="0" width="240" height="110" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <rect x="0" y="0" width="240" height="26" rx="8" fill="#059669" />
+    <text x="120" y="18" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">STAGE 4: PRECIPITATION &amp; CALCINATION</text>
+    <text x="15" y="48" fill="#e2e8f0" font-size="11" font-weight="600">• Multi-stage pH Neutralization</text>
+    <text x="15" y="68" fill="#94a3b8" font-size="11">• Selective Reagent Dosing</text>
+    <text x="15" y="88" fill="#94a3b8" font-size="11">• Thermal Calcination Furnaces</text>
+    <text x="15" y="102" fill="#34d399" font-size="10" font-weight="600">Precipitates Salt Crystals</text>
+  </g>
+
+  <!-- Arrow 4 -> 5 -->
+  <line x1="280" y1="275" x2="235" y2="275" stroke="#10b981" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Final Product Box -->
+  <g transform="translate(20, 220)">
+    <rect x="0" y="0" width="210" height="110" rx="8" fill="#1e293b" stroke="#e11d48" stroke-width="2" />
+    <rect x="0" y="0" width="210" height="26" rx="8" fill="#be123c" />
+    <text x="105" y="18" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">RECOVERED PRODUCTS (98.5%)</text>
+    <text x="15" y="48" fill="#fb7185" font-size="11" font-weight="700">• Lithium Carbonate (Li2CO3)</text>
+    <text x="15" y="68" fill="#38bdf8" font-size="11" font-weight="700">• Nickel Hydroxide (Ni(OH)2)</text>
+    <text x="15" y="88" fill="#f59e0b" font-size="11" font-weight="700">• Cobalt Sulfate (CoSO4)</text>
+    <text x="15" y="103" fill="#34d399" font-size="10">Direct Battery Re-entry</text>
+  </g>
+
+  <!-- Cycle back arrow indicator -->
+  <g transform="translate(180, 360)">
+    <text x="200" y="20" fill="#94a3b8" font-size="11" text-anchor="middle">Closed-loop cycle: 95% of active cathode minerals diverted from landfill back to cell manufacturing.</text>
+  </g>
+</svg>

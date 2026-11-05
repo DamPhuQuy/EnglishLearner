@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%" style="background:#0f172a; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="380" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700">Household Energy Consumption Breakdown in the UK</text>
+  <text x="380" y="52" text-anchor="middle" fill="#94a3b8" font-size="12">Comparison of Proportional End-Use Demands (1990 vs 2020)</text>
+
+  <!-- 1990 Chart -->
+  <text x="220" y="75" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="700">Year 1990</text>
+  <path d="M 220,200 L 220.00,95.00 A 105,105 0 1,1 206.84,304.17 Z" fill="#e11d48" stroke="#0f172a" stroke-width="2" /><text x="288.1" y="204.3" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">52%</text><path d="M 220,200 L 206.84,304.17 A 105,105 0 0,1 115.21,193.41 Z" fill="#2563eb" stroke="#0f172a" stroke-width="2" /><text x="167.4" y="243.5" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">24%</text><path d="M 220,200 L 115.21,193.41 A 105,105 0 0,1 153.07,119.10 Z" fill="#10b981" stroke="#0f172a" stroke-width="2" /><text x="159.2" y="169.0" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">13%</text><path d="M 220,200 L 153.07,119.10 A 105,105 0 0,1 193.89,98.30 Z" fill="#f59e0b" stroke="#0f172a" stroke-width="2" /><text x="189.0" y="139.2" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">7%</text><path d="M 220,200 L 193.89,98.30 A 105,105 0 0,1 220.00,95.00 Z" fill="#a855f7" stroke="#0f172a" stroke-width="2" /><text x="211.4" y="132.3" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">4%</text>
+
+  <!-- 2020 Chart -->
+  <text x="540" y="75" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="700">Year 2020</text>
+  <path d="M 540,200 L 540.00,95.00 A 105,105 0 0,1 566.11,301.70 Z" fill="#e11d48" stroke="#0f172a" stroke-width="2" /><text x="607.7" y="191.4" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">46%</text><path d="M 540,200 L 566.11,301.70 A 105,105 0 0,1 463.46,271.88 Z" fill="#2563eb" stroke="#0f172a" stroke-width="2" /><text x="521.0" y="265.5" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">17%</text><path d="M 540,200 L 463.46,271.88 A 105,105 0 0,1 473.07,119.10 Z" fill="#10b981" stroke="#0f172a" stroke-width="2" /><text x="471.9" y="195.7" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">26%</text><path d="M 540,200 L 473.07,119.10 A 105,105 0 0,1 507.55,100.14 Z" fill="#f59e0b" stroke="#0f172a" stroke-width="2" /><text x="507.1" y="140.2" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">6%</text><path d="M 540,200 L 507.55,100.14 A 105,105 0 0,1 540.00,95.00 Z" fill="#a855f7" stroke="#0f172a" stroke-width="2" /><text x="529.3" y="132.6" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">5%</text>
+
+  <!-- Legend -->
+  <g transform="translate(60, 360)">
+    <rect x="0" y="0" width="14" height="14" rx="2" fill="#e11d48" />
+    <text x="20" y="12" fill="#cbd5e1" font-size="12">Space Heating</text>
+
+    <rect x="130" y="0" width="14" height="14" rx="2" fill="#2563eb" />
+    <text x="150" y="12" fill="#cbd5e1" font-size="12">Water Heating</text>
+
+    <rect x="260" y="0" width="14" height="14" rx="2" fill="#10b981" />
+    <text x="280" y="12" fill="#cbd5e1" font-size="12">Electronic Appliances</text>
+
+    <rect x="430" y="0" width="14" height="14" rx="2" fill="#f59e0b" />
+    <text x="450" y="12" fill="#cbd5e1" font-size="12">Cooking</text>
+
+    <rect x="530" y="0" width="14" height="14" rx="2" fill="#a855f7" />
+    <text x="550" y="12" fill="#cbd5e1" font-size="12">Lighting</text>
+  </g>
+</svg>

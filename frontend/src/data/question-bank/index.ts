@@ -9,6 +9,8 @@ export interface QuestionBankMaterial {
   content?: string;
   audioUrl?: string;
   audioTranscript?: string;
+  imageUrl?: string;
+  imageDescription?: string;
 }
 
 export interface QuestionBankItem {
@@ -20,8 +22,15 @@ export interface QuestionBankItem {
   granularity: "micro" | "drill" | "section";
   title: string;
   topic: string;
+  instruction?: string;
+  wordLimitRule?: string;
+  headingsList?: Array<{ id: string; heading: string }>;
+  featuresList?: Array<{ key: string; name: string; description?: string }>;
+  endingsList?: Array<{ key: string; text: string }>;
+  boxOptions?: Array<{ key: string; word: string }>;
   material?: QuestionBankMaterial;
   questions?: any[];
+  questionGroups?: any[];
   writingTask?: any;
   speakingTask?: any;
 }

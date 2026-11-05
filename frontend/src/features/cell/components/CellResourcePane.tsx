@@ -218,6 +218,7 @@ export const CellResourcePane: React.FC<CellResourcePaneProps> = ({
           writingTask={structuredData.writingTask}
           title={structuredData.title}
           difficulty={structuredData.difficulty}
+          material={structuredData.material}
         />
       ) : structuredData?.speakingTask ? (
         <SpeakingStudioWorkspace

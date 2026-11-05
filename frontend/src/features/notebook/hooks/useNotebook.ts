@@ -501,7 +501,7 @@ export function useNotebook(options?: UseNotebookOptions) {
       initialResource = {
         type: "audio",
         name: exercise.material?.title || `${exercise.title}.mp3`,
-        url: exercise.material?.audioUrl || "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
+        url: exercise.material?.audioUrl || "/audio/listening/section1_homestay_booking.mp3",
         textContent: exercise.material?.audioTranscript || "",
       };
     } else if (skill === "writing" && exercise.writingTask) {

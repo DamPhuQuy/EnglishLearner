@@ -22,7 +22,7 @@ export const VALID_RESOURCE_TYPES = new Set<ResourceType>([
 ]);
 
 const SAFE_RESOURCE_URL_PATTERN =
-  /^(https?:\/\/|blob:|data:(audio\/|image\/|application\/pdf[;,]|text\/plain[;,]))/i;
+  /^(\/|https?:\/\/|blob:|data:(audio\/|image\/|application\/pdf[;,]|text\/plain[;,]))/i;
 
 export function isNotebook(value: unknown): value is JupyterNotebookDoc {
   if (!value || typeof value !== "object") return false;

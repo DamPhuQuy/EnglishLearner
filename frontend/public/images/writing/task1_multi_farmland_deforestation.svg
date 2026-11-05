@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="100%" height="100%" style="background:#0f172a; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="380" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700">Worldwide Agricultural Land Use and Deforestation Drivers</text>
+  <text x="380" y="46" text-anchor="middle" fill="#94a3b8" font-size="12">Farmland Area Expansion (1980–2020) &amp; Primary Catalysts of Tropical Forest Clearance</text>
+
+  <!-- Left Section: Bar Chart -->
+  <g transform="translate(10, 20)">
+    <text x="180" y="48" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">Total Farmland Area (Million km²)</text>
+
+    <!-- Gridlines & Y-axis labels -->
+    <line x1="50" y1="90" x2="330" y2="90" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="42" y="94" fill="#94a3b8" font-size="10" text-anchor="end">50M</text>
+
+    <line x1="50" y1="147" x2="330" y2="147" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="42" y="151" fill="#94a3b8" font-size="10" text-anchor="end">45M</text>
+
+    <line x1="50" y1="205" x2="330" y2="205" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="42" y="209" fill="#94a3b8" font-size="10" text-anchor="end">40M</text>
+
+    <line x1="50" y1="262" x2="330" y2="262" stroke="#334155" stroke-dasharray="3,3" />
+    <text x="42" y="266" fill="#94a3b8" font-size="10" text-anchor="end">35M</text>
+
+    <line x1="50" y1="320" x2="330" y2="320" stroke="#64748b" stroke-width="1.5" />
+    <text x="42" y="324" fill="#94a3b8" font-size="10" text-anchor="end">30M</text>
+
+    <!-- Bars -->
+    <rect x="65" y="182" width="36" height="138" rx="3" fill="#10b981" />
+    <text x="83" y="174" fill="#6ee7b7" font-size="10" font-weight="700" text-anchor="middle">42.0</text>
+    <text x="83" y="338" fill="#e2e8f0" font-size="11" text-anchor="middle">1980</text>
+
+    <rect x="120" y="168" width="36" height="152" rx="3" fill="#10b981" />
+    <text x="138" y="160" fill="#6ee7b7" font-size="10" font-weight="700" text-anchor="middle">43.2</text>
+    <text x="138" y="338" fill="#e2e8f0" font-size="11" text-anchor="middle">1990</text>
+
+    <rect x="175" y="153" width="36" height="167" rx="3" fill="#10b981" />
+    <text x="193" y="145" fill="#6ee7b7" font-size="10" font-weight="700" text-anchor="middle">44.5</text>
+    <text x="193" y="338" fill="#e2e8f0" font-size="11" text-anchor="middle">2000</text>
+
+    <rect x="230" y="135" width="36" height="185" rx="3" fill="#10b981" />
+    <text x="248" y="127" fill="#6ee7b7" font-size="10" font-weight="700" text-anchor="middle">46.1</text>
+    <text x="248" y="338" fill="#e2e8f0" font-size="11" text-anchor="middle">2010</text>
+
+    <rect x="285" y="113" width="36" height="207" rx="3" fill="#059669" stroke="#34d399" stroke-width="1.5" />
+    <text x="303" y="105" fill="#a7f3d0" font-size="10" font-weight="700" text-anchor="middle">48.0</text>
+    <text x="303" y="338" fill="#e2e8f0" font-size="11" font-weight="700" text-anchor="middle">2020</text>
+  </g>
+
+  <!-- Right Section: Pie Chart -->
+  <g transform="translate(390, 20)">
+    <text x="170" y="48" fill="#38bdf8" font-size="13" font-weight="700" text-anchor="middle">Drivers of Tropical Deforestation</text>
+    <path d="M 560,205 L 560.00,110.00 A 95,95 0 0,1 610.90,285.21 Z" fill="#e11d48" stroke="#0f172a" stroke-width="2" /><text x="619.3" y="187.8" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">41%</text><path d="M 560,205 L 610.90,285.21 A 95,95 0 0,1 465.75,216.91 Z" fill="#f59e0b" stroke="#0f172a" stroke-width="2" /><text x="533.7" y="260.9" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">32%</text><path d="M 560,205 L 465.75,216.91 A 95,95 0 0,1 509.10,124.79 Z" fill="#10b981" stroke="#0f172a" stroke-width="2" /><text x="504.1" y="178.7" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">18%</text><path d="M 560,205 L 509.10,124.79 A 95,95 0 0,1 560.00,110.00 Z" fill="#6366f1" stroke="#0f172a" stroke-width="2" /><text x="542.8" y="145.7" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="central">9%</text>
+
+    <!-- Pie Legend -->
+    <g transform="translate(20, 315)">
+      <rect x="0" y="0" width="12" height="12" rx="2" fill="#e11d48" />
+      <text x="18" y="10" fill="#cbd5e1" font-size="11">Cattle Ranching (41%)</text>
+
+      <rect x="170" y="0" width="12" height="12" rx="2" fill="#f59e0b" />
+      <text x="188" y="10" fill="#cbd5e1" font-size="11">Commercial Crops (32%)</text>
+
+      <rect x="0" y="24" width="12" height="12" rx="2" fill="#10b981" />
+      <text x="18" y="34" fill="#cbd5e1" font-size="11">Subsistence Farming (18%)</text>
+
+      <rect x="170" y="24" width="12" height="12" rx="2" fill="#6366f1" />
+      <text x="188" y="34" fill="#cbd5e1" font-size="11">Logging &amp; Infra (9%)</text>
+    </g>
+  </g>
+</svg>

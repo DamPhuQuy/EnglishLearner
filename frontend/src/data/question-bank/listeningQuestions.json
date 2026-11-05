@@ -1,2743 +1,666 @@
 [
   {
-    "id": "list-form-01",
+    "id": "list-sec1-home-01",
     "skill": "listening",
     "questionType": "form_completion",
     "difficulty": "easy",
-    "band": "Band 5.0–5.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Hotel Conference Hall Reservation (Section 1)",
-    "topic": "Social & Commercial",
+    "band": "Band 5.5–6.5",
+    "granularity": "section",
+    "title": "Listening Section 1: International Student Homestay & Accommodation Booking",
+    "topic": "Student Accommodation & Domestic Inquiries",
     "material": {
       "type": "audio",
-      "title": "Listening Section Audio: Hotel Conference Hall Reservation (Section 1)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 1: Hotel Conference Booking]\n[Receptionist]: Good morning, Grand View Hotel reservation desk. How may I direct your call?\n[Mr. Henderson]: Good morning. I'd like to book a conference suite for our annual corporate symposium next month.\n[Receptionist]: Certainly, sir. May I take your full surname first, please?\n[Mr. Henderson]: Yes, it's Henderson. That's H-E-N-D-E-R-S-O-N.\n[Receptionist]: Thank you, Mr. Henderson. And what date did you have in mind for the symposium?\n[Mr. Henderson]: Well, our committee initially considered the 15th, but our keynote speaker is traveling from abroad and will only arrive on the twenty-second of November. So definitely the 22nd of November.\n[Receptionist]: The 22nd of November... let me check our availability. Yes, the Grand Regency Suite is open. How many delegates are you expecting to attend?\n[Mr. Henderson]: We sent out 120 preliminary invitations, but our confirmed RSVP list stands at exactly 85 delegates.\n[Receptionist]: 85 delegates, noted. And regarding lunch catering during the noon recess?\n[Mr. Henderson]: We would like a warm seated buffet, and it's essential that you include comprehensive vegetarian options, as nearly a third of our attendees requested plant-based meals.\n[Receptionist]: Absolutely, we offer a dedicated warm buffet with vegetarian options. What audiovisual equipment will your speakers require on the main stage?\n[Mr. Henderson]: We will bring our own digital presentation remotes, but we will require two wireless microphones for the podium and audience questions.\n[Receptionist]: Dual wireless microphones, no problem at all. Now, the full daily hire is £1,200, and our policy requires an upfront deposit payment of £350 to secure the calendar slot.\n[Mr. Henderson]: Splendid, £350. I can settle the deposit right now over the phone using the company credit card."
+      "title": "Official Listening Audio Track: Listening Section 1: International Student Homestay & Accommodation Booking",
+      "audioUrl": "/audio/listening/section1_homestay_booking.mp3",
+      "audioTranscript": "[Mrs. Henderson]: Good morning. Overseas Student Accommodation Office, Mrs. Henderson speaking. How can I help you today?\n\n[Kenji Tanaka]: Good morning. My name is Kenji Tanaka. I'm arriving next month to begin my postgraduate engineering degree, and I'd like to arrange homestay accommodation with a local family.\n\n[Mrs. Henderson]: Welcome to the university, Kenji! Let me open up our homestay registration form. Could I take your student identification number first, please?\n\n[Kenji Tanaka]: Yes, of course. It is capital E-N-G, followed by 9-0-4-2-7.\n\n[Mrs. Henderson]: Got it: ENG-9-0-4-2-7. And what style of room are you looking for? We have single standard, shared twin, or single with a private balcony.\n\n[Kenji Tanaka]: I'd really prefer a single room with a balcony if one is available, so I have good natural ventilation for studying.\n\n[Mrs. Henderson]: A single room with a balcony. Yes, we have two host families near the campus that offer that option. Now, do you have any specific dietary requirements or food allergies we need to notify the host family about?\n\n[Kenji Tanaka]: I am strictly vegetarian, so no meat or seafood at all, please. Dairy and eggs are completely fine.\n\n[Mrs. Henderson]: Strictly vegetarian, noted. And what is your expected date of arrival in the country?\n\n[Kenji Tanaka]: My flight arrives at Heathrow on the 18th of September in the early evening.\n\n[Mrs. Henderson]: The 18th of September. Perfect, that gives the host family plenty of time to prepare your room. Lastly, to finalize and secure your placement, a refundable security deposit of 250 pounds is required today.\n\n[Kenji Tanaka]: Two hundred and fifty pounds. That's fine, I can transfer that by credit card right away. Thank you so much for your help, Mrs. Henderson!\n\n[Mrs. Henderson]: You're very welcome, Kenji. I'll email you the host family's profile and address shortly. Goodbye!"
     },
     "questions": [
       {
         "questionNumber": 1,
-        "prefix": "Client Surname:",
-        "answer": "Henderson",
+        "prefix": "Student ID Number: ",
+        "answer": "ENG 90427",
         "acceptedAnswers": [
-          "henderson",
-          "Henderson"
+          "ENG90427",
+          "ENG 90427",
+          "eng90427",
+          "ENG-90427"
         ],
-        "explanation": "Audio 00:45: 'That is spelled H-E-N-D-E-R-S-O-N'"
+        "explanation": "Audio 00:31: Kenji states his student ID is 'ENG 90427'.",
+        "paragraphRef": "Audio timestamp 00:31"
       },
       {
         "questionNumber": 2,
-        "prefix": "Event Date: 22nd of",
-        "answer": "November",
+        "prefix": "Requested Room Type: Single room with a ",
+        "answer": "balcony",
         "acceptedAnswers": [
-          "november",
-          "November"
+          "balcony",
+          "private balcony"
         ],
-        "explanation": "Audio 01:10: 'The conference is scheduled for the twenty-second of November'"
+        "explanation": "Audio 00:51: Kenji specifies: 'I'd really prefer a single room with a balcony'.",
+        "paragraphRef": "Audio timestamp 00:51"
       },
       {
         "questionNumber": 3,
-        "prefix": "Expected number of delegates:",
-        "answer": "85",
-        "acceptedAnswers": [
-          "85",
-          "85"
-        ],
-        "explanation": "Audio 01:35: 'We are anticipating exactly 85 attendees'"
-      },
-      {
-        "questionNumber": 4,
-        "prefix": "Catering preference: Buffet with",
+        "prefix": "Dietary Requirement: Strictly ",
         "answer": "vegetarian",
         "acceptedAnswers": [
           "vegetarian",
           "Vegetarian"
         ],
-        "explanation": "Audio 02:05: 'Please provide a warm buffet with vegetarian options'"
+        "explanation": "Audio 01:13: Kenji confirms: 'I am strictly vegetarian, so no meat or seafood at all'.",
+        "paragraphRef": "Audio timestamp 01:13"
+      },
+      {
+        "questionNumber": 4,
+        "prefix": "Arrival Date: ",
+        "answer": "18th September",
+        "acceptedAnswers": [
+          "18th September",
+          "18 September",
+          "September 18",
+          "September 18th",
+          "18th of September"
+        ],
+        "explanation": "Audio 01:28: Kenji states his flight arrives on 'the 18th of September'.",
+        "paragraphRef": "Audio timestamp 01:28"
       },
       {
         "questionNumber": 5,
-        "prefix": "Equipment required: Dual wireless",
-        "answer": "microphones",
+        "prefix": "Refundable Security Deposit: £",
+        "answer": "250",
         "acceptedAnswers": [
-          "microphones",
-          "Microphones"
+          "250",
+          "250 pounds",
+          "two hundred and fifty"
         ],
-        "explanation": "Audio 02:40: 'We will require two wireless microphones on the podium'"
-      },
+        "explanation": "Audio 01:48: Mrs. Henderson confirms: 'a refundable security deposit of 250 pounds is required today'.",
+        "paragraphRef": "Audio timestamp 01:48"
+      }
+    ],
+    "wordLimitRule": "NO MORE THAN TWO WORDS AND/OR A NUMBER"
+  },
+  {
+    "id": "list-sec1-sport-02",
+    "skill": "listening",
+    "questionType": "multiple_choice",
+    "difficulty": "easy",
+    "band": "Band 5.5–6.5",
+    "granularity": "section",
+    "title": "Listening Section 1: Riverdale Community Sports Club Membership Registration",
+    "topic": "Community Recreation & Sports Facility Registration",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 1: Riverdale Community Sports Club Membership Registration",
+      "audioUrl": "/audio/listening/section1_sports_club.mp3",
+      "audioTranscript": "[Karen]: Good afternoon, Riverdale Community Sports Club. Karen speaking. How may I assist you?\n\n[Mark Davis]: Hello Karen, my name is Mark Davis. I recently moved to the neighborhood and I'd like to inquire about joining your fitness center and swimming facilities.\n\n[Karen]: Welcome to Riverdale, Mark! We offer three annual membership tiers: Bronze, Silver, and Gold. Bronze provides gym access only. Silver includes full gymnasium equipment plus unlimited access to our 50-meter heated Olympic pool. Gold includes tennis courts and personal training.\n\n[Mark Davis]: Swimming is my main workout, so the Silver tier sounds absolutely ideal for my needs.\n\n[Karen]: Excellent choice. For the Silver package, standard peak membership is 65 pounds per month, but if you prefer our off-peak weekday option—valid Monday to Friday from 9:00 AM to 4:00 PM—the fee is reduced to just 42 pounds monthly.\n\n[Mark Davis]: I work freelance from home, so off-peak weekdays at 42 pounds suits my schedule perfectly.\n\n[Karen]: Wonderful. We also offer private locker rentals in the changing suites. A small personal locker is an optional extra at 15 pounds for the full year.\n\n[Mark Davis]: Yes, I'll definitely take a private locker for 15 pounds. That's very reasonable.\n\n[Karen]: Now, before using the Olympic pool, all new members must attend a compulsory 20-minute safety induction with our chief lifeguard. We run these sessions every Tuesday morning and Thursday evening.\n\n[Mark Davis]: Thursday evening at 6:30 PM would work best for me. Could you book me in for that?\n\n[Karen]: You're all booked for Thursday evening. Please bring photo ID and a towel to reception. We look forward to seeing you then, Mark!\n\n[Mark Davis]: Thanks so much, Karen. Have a great day!"
+    },
+    "questions": [
       {
         "questionNumber": 6,
-        "prefix": "Deposit payment: £",
-        "answer": "350",
-        "acceptedAnswers": [
-          "350",
-          "350"
-        ],
-        "explanation": "Audio 03:15: 'The initial booking deposit will be 350 pounds'"
-      }
-    ]
-  },
-  {
-    "id": "list-form-02",
-    "skill": "listening",
-    "questionType": "form_completion",
-    "difficulty": "easy",
-    "band": "Band 5.0–5.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: City Bike Share Registration (Section 1)",
-    "topic": "Urban Living",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: City Bike Share Registration (Section 1)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 1: Cycle Share Registration]\n[Customer Service]: Welcome to Metro Cycle Share membership support. How can I help you today?\n[Caller]: Hello! I've just relocated to the city center and I'd like to register for a daily bike share membership.\n[Customer Service]: Fantastic! We offer casual weekend passes, monthly student passes, or the annual commuter tier.\n[Caller]: Since I'll be cycling to the hospital campus every morning, sign me up for the annual commuter pass, please.\n[Customer Service]: Perfect, commuter tier selected. Can you give me your best contact telephone number?\n[Caller]: Yes, my mobile number is 07824 910352.\n[Customer Service]: 07824 910352... thank you. Which docking hub would you prefer as your default pickup location?\n[Caller]: I live right around the corner from Central Station, so Central Station hub would be most convenient.\n[Customer Service]: Central Station hub registered. To activate your smart fob, we need to place a temporary security deposit authorization of £50 on your bank card.\n[Caller]: That's fine. And just to confirm, how long can I ride on each individual journey without incurring overtime fees?\n[Customer Service]: Your commuter pass gives you unlimited rides throughout the year, with an included duration of 45 minutes for each individual trip before standard tariffs apply.\n[Caller]: 45 minutes is more than enough for my 20-minute morning commute. Thank you!"
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "prefix": "Membership tier selected: Annual",
-        "answer": "commuter",
-        "acceptedAnswers": [
-          "commuter",
-          "Commuter"
-        ],
-        "explanation": "Audio 00:50: 'Sign me up for the annual commuter pass'"
-      },
-      {
-        "questionNumber": 2,
-        "prefix": "Contact phone number: 07824",
-        "answer": "910352",
-        "acceptedAnswers": [
-          "910352",
-          "910352"
-        ],
-        "explanation": "Audio 01:20: 'My mobile is 07824 910352'"
-      },
-      {
-        "questionNumber": 3,
-        "prefix": "Default pickup hub: Central",
-        "answer": "Station",
-        "acceptedAnswers": [
-          "station",
-          "Station"
-        ],
-        "explanation": "Audio 01:45: 'Closest to me is Central Station'"
-      },
-      {
-        "questionNumber": 4,
-        "prefix": "Security deposit authorization: £",
-        "answer": "50",
-        "acceptedAnswers": [
-          "50",
-          "50"
-        ],
-        "explanation": "Audio 02:10: 'We place a temporary 50-pound hold on your card'"
-      },
-      {
-        "questionNumber": 5,
-        "prefix": "Included daily ride duration:",
-        "answer": "45 minutes",
-        "acceptedAnswers": [
-          "45 minutes",
-          "45 minutes"
-        ],
-        "explanation": "Audio 02:35: 'Each journey includes up to 45 minutes of free riding'"
-      }
-    ]
-  },
-  {
-    "id": "list-mult-03",
-    "skill": "listening",
-    "questionType": "multiple_choice",
-    "difficulty": "easy",
-    "band": "Band 5.5–6.0",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Community Heritage Festival Tour (Section 2)",
-    "topic": "Local Culture & Tourism",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Community Heritage Festival Tour (Section 2)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 2: Heritage Festival Orientation]\n[Guide]: Welcome, everyone, to the historic Derwent Mill Valley! My name is Arthur, and as festival coordinator, I'm delighted to welcome you to our annual Heritage Festival.\nBefore we begin our walking tour, let me give you a quick historical background. Many visitors assume this festival was established to celebrate the opening of our municipal railway line in 1880, or the Queen's royal jubilee. However, it was actually founded sixty years ago by local craftspeople specifically to celebrate the historic textile milling industry of the valley, which employed three generations of weavers.\nNow, as we enter the Old Foundry precinct on your right, I must emphasize an important safety guideline. While you are welcome to take photographs and film, entering without hard hats is strictly prohibited beyond the red safety barriers. Heavy machinery is being operated by our demonstration blacksmiths, so safety helmets must remain fastened at all times.\nNext, for those wishing to sample regional culinary treats and purchase handmade pottery, our artisan craft market has been relocated this year. In previous seasons it stood on the sports pavilion lawn, but this weekend all 45 vendor stalls will be situated along the pleasant riverside promenade, shaded by the willow trees.\nFinally, if anyone has an hour to spare tomorrow afternoon, we are still recruiting volunteer marshals to assist with post-event site cleanup. As a token of our heartfelt appreciation, all volunteers who assist will receive a complimentary commemorative t-shirt and lunch voucher valid at any festival food stall."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "question": "The heritage festival was originally founded to celebrate:",
+        "question": "Which membership tier did Mark decide to join?",
         "options": [
           {
             "key": "A",
-            "text": "The opening of the municipal railway"
+            "text": "Bronze tier (gymnasium only)"
           },
           {
             "key": "B",
-            "text": "The historic textile milling industry of the valley"
+            "text": "Silver tier (gymnasium and Olympic pool)"
           },
           {
             "key": "C",
-            "text": "A royal visit in the nineteenth century"
+            "text": "Gold tier (all facilities plus tennis)"
+          },
+          {
+            "key": "D",
+            "text": "Student weekend pass"
           }
         ],
         "answer": "B",
-        "explanation": "Audio: 'The festival originated sixty years ago to honor the historic woolen mills that gave life to our valley.'"
-      },
-      {
-        "questionNumber": 2,
-        "question": "What activity is strictly restricted for visitors inside the Old Foundry?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Taking flash photographs"
-          },
-          {
-            "key": "B",
-            "text": "Eating and drinking"
-          },
-          {
-            "key": "C",
-            "text": "Entering without hard hats"
-          }
-        ],
-        "answer": "C",
-        "explanation": "Audio: 'Due to safety regulations, nobody may step beyond the safety barrier without wearing a protective hard hat.'"
-      },
-      {
-        "questionNumber": 3,
-        "question": "Where will the artisan craft market be situated this weekend?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Inside the Town Hall basement"
-          },
-          {
-            "key": "B",
-            "text": "Along the riverside promenade"
-          },
-          {
-            "key": "C",
-            "text": "On the sports pavilion lawn"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Stalls will stretch all the way along the pleasant riverside promenade.'"
-      },
-      {
-        "questionNumber": 4,
-        "question": "Volunteers who assist with clean-up will receive:",
-        "options": [
-          {
-            "key": "A",
-            "text": "A complimentary commemorative t-shirt and lunch voucher"
-          },
-          {
-            "key": "B",
-            "text": "Free public transport passes for a month"
-          },
-          {
-            "key": "C",
-            "text": "Discounted tickets to next year's concert"
-          }
-        ],
-        "answer": "A",
-        "explanation": "Audio: 'As our gratitude, all volunteer marshals get a custom festival t-shirt and a warm lunch voucher.'"
-      }
-    ]
-  },
-  {
-    "id": "list-plan-04",
-    "skill": "listening",
-    "questionType": "plan_map_diagram_labelling",
-    "difficulty": "medium",
-    "band": "Band 6.0–6.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Botanical Garden Visitor Center Map (Section 2)",
-    "topic": "Spatial Navigation",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Botanical Garden Visitor Center Map (Section 2)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 2: Botanical Garden Navigation Map]\n[Visitor Center Director]: Good morning and welcome to the Westwood Botanical Conservatory! Please take a look at the orientation maps in your brochures. You are currently standing at the main visitor entrance courtyard at the bottom center of your map.\nLet me point out five key attractions you won't want to miss today.\nFirst, if you walk directly north along the central avenue past the ornamental lily pond, you will see a towering glass dome right in front of you. That is Point D, the Orchid Tropical Glasshouse, which houses over two thousand species of rare Amazonian orchids.\nNext, if you take the winding cobblestone path heading toward the southwest corner, situated just beside our timber tea pavilion, you will find Point A. This is our historic Medicinal Herb Garden, cultivated continuously since the seventeenth century.\nNow, for families with young children, head over to the eastern perimeter of the grounds. Running along the edge of the ancient beech woodland is Point F, the Children's Sensory Maze, crafted entirely from living dwarf willow hedges.\nIf you are interested in botanical conservation science, look over to the western wing of the main administration building. Situated at Point B is our state-of-the-art Seed Bank and Microscopic Laboratory, where cryogenic seed samples are preserved at minus twenty degrees.\nFinally, if you follow the timber boardwalk path leading south down into the reed beds and wetlands, you will arrive at Point E. This is our concealed Observation Bird Hide, where you can watch migratory kingfishers and herons without disturbing their nesting sites."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "labelLocation": "Orchid Tropical Glasshouse (Point 11)",
-        "answer": "D",
-        "explanation": "Audio: 'Directly north of the visitor entrance courtyard, past the lily pond, stands the dome of our Orchid Glasshouse.'"
-      },
-      {
-        "questionNumber": 2,
-        "labelLocation": "Medicinal Herb Garden (Point 12)",
-        "answer": "A",
-        "explanation": "Audio: 'Tucked quietly in the southwest corner adjacent to the tea pavilion is the historic herb garden.'"
-      },
-      {
-        "questionNumber": 3,
-        "labelLocation": "Children's Sensory Maze (Point 13)",
-        "answer": "F",
-        "explanation": "Audio: 'Over on the eastern perimeter, bordering the ancient beech woodland, you'll discover the living willow maze.'"
-      },
-      {
-        "questionNumber": 4,
-        "labelLocation": "Seed Bank & Microscopic Laboratory (Point 14)",
-        "answer": "B",
-        "explanation": "Audio: 'Inside the west wing of the main research facility is the cryogenic seed repository.'"
-      },
-      {
-        "questionNumber": 5,
-        "labelLocation": "Observation Bird Hide (Point 15)",
-        "answer": "E",
-        "explanation": "Audio: 'Following the boardwalk path southward down to the wetlands leads directly to the concealed bird observation hide.'"
-      }
-    ]
-  },
-  {
-    "id": "list-mult-05",
-    "skill": "listening",
-    "questionType": "multiple_choice",
-    "difficulty": "medium",
-    "band": "Band 6.5–7.0",
-    "granularity": "micro",
-    "title": "Mini-IELTS Listening: University Marine Biology Field Trip Debrief (Section 3)",
-    "topic": "Academic Discussion",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: University Marine Biology Field Trip Debrief (Section 3)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 3: Marine Biology Fieldwork Debrief]\n[Dr. Patel]: Come in, Chloe, Liam. Please take a seat. Let's debrief on your rocky shore intertidal survey from Tuesday. How did the data collection go?\n[Chloe]: Well, Dr. Patel, generally the quadrat sampling was successful, but I was quite concerned about our methodology on the lower littoral zone.\n[Dr. Patel]: What specifically worried you, Chloe?\n[Chloe]: Because the rocky substrate slope was so steep and irregular, the lower quadrats had uneven spatial exposure to crashing waves, which might skew our barnacle density counts compared to the flat upper plateau.\n[Liam]: I see what you mean, Chloe, but wasn't the tidal height variance consistent across all three transects?\n[Dr. Patel]: Chloe raises a valid point about topographical bias. How were you planning to analyze the species distribution statistically?\n[Liam]: We initially intended to perform a series of standard student t-tests comparing each pair of transects.\n[Dr. Patel]: With three distinct tidal elevation zones and continuous spatial variables, multiple t-tests increase your type-one error rate significantly. I strongly suggest you run an analysis of variance—an ANOVA test—instead of a simple t-test. That will give you far greater statistical robustness across the zones.\n[Liam]: That makes total sense. And regarding our workload split for Friday's tutorial presentation: leave the raw salinity numbers and digital charting to me. I'll input all the salinity probe measurements into Python and generate the scatter plots by Thursday evening.\n[Chloe]: Excellent. Then I will write up the draft notes on the sampling limitations and field methodology."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "question": "Why did Chloe express concern regarding their intertidal quadrat samples?",
-        "options": [
-          {
-            "key": "A",
-            "text": "The incoming high tide ruined their measuring tape"
-          },
-          {
-            "key": "B",
-            "text": "The rocky substrate slope introduced uneven spatial exposure"
-          },
-          {
-            "key": "C",
-            "text": "They forgot to photograph the starfish specimens"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Chloe: I was worried our steep vertical slope meant the lower quadrats were submerged far longer than the upper ones, biasing the lichen count.'"
-      },
-      {
-        "questionNumber": 2,
-        "question": "What did Dr. Patel suggest they alter in their subsequent statistical analysis?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Run an analysis of variance (ANOVA) instead of a simple t-test"
-          },
-          {
-            "key": "B",
-            "text": "Discard all samples gathered in rainy conditions"
-          },
-          {
-            "key": "C",
-            "text": "Focus solely on green macro-algal biomass"
-          }
-        ],
-        "answer": "A",
-        "explanation": "Audio: 'Dr. Patel: Because you're comparing three distinct tidal elevation zones, an ANOVA test is far more statistically robust here.'"
-      },
-      {
-        "questionNumber": 3,
-        "question": "Which task has Liam agreed to complete before Friday's tutorial?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Draft the complete results narrative"
-          },
-          {
-            "key": "B",
-            "text": "Digitize the raw salinity data and generate scatter plots"
-          },
-          {
-            "key": "C",
-            "text": "Proofread the literature review citations"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Liam: Leave the raw numbers to me—I'll input the salinity measurements into Python and generate the distribution plots by Thursday night.'"
-      }
-    ]
-  },
-  {
-    "id": "list-matc-06",
-    "skill": "listening",
-    "questionType": "matching",
-    "difficulty": "medium",
-    "band": "Band 6.5–7.0",
-    "granularity": "micro",
-    "title": "Mini-IELTS Listening: Research Project Presentation Division (Section 3)",
-    "topic": "Academic Collaboration",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Research Project Presentation Division (Section 3)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 3: Project Presentation Task Allocation]\n[Dr. Patel]: Now, let's finalize the slide sequence for your joint research seminar next week. We have three main sections: methodology, data analysis, and policy implications.\n[Chloe]: I'm very keen to handle the presentation of our sampling methodology and field limitations, as I kept the field logbook and noted the wave impact parameters.\n[Dr. Patel]: Splendid, Chloe. So Chloe will present the methodology and sampling limitations. What about the statistical findings?\n[Liam]: Since I'm already generating the scatter plots and running the ANOVA tests in Python, I will present the statistical findings and distribution charts.\n[Dr. Patel]: Perfect division of labor. Now, for the final concluding slides regarding the implications for coastal marine conservation policy: I don't want either of you doing that alone. I recommend that you both collaborate on synthesizing the policy recommendations together so your spoken commentary reflects shared ownership.\n[Chloe]: Agreed! Liam and I will meet in the library on Monday to draft the policy conclusions together."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "labelLocation": "Chloe will present:",
-        "answer": "Methodology & Sampling Limitations",
-        "explanation": "Audio: Chloe agrees to address the field methodology and constraints."
-      },
-      {
-        "questionNumber": 2,
-        "labelLocation": "Liam will present:",
-        "answer": "Statistical Findings & Scatter Plots",
-        "explanation": "Audio: Liam handles the data visualization and statistical distribution."
-      },
-      {
-        "questionNumber": 3,
-        "labelLocation": "Dr. Patel recommended both collaborate on:",
-        "answer": "Implications for Coastal Conservation Policy",
-        "explanation": "Audio: Tutor advises both students write the conclusion together."
-      }
-    ]
-  },
-  {
-    "id": "list-note-07",
-    "skill": "listening",
-    "questionType": "note_completion",
-    "difficulty": "advanced",
-    "band": "Band 7.5–8.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Academic Lecture: Biomimicry in Architecture (Section 4)",
-    "topic": "Architecture & Bio-Engineering",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Academic Lecture: Biomimicry in Architecture (Section 4)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 4: Academic Lecture on Biomimicry]\n[Lecturer]: Good afternoon, students. Today we are examining biomimicry in contemporary architectural engineering—specifically, how biological organisms inspire sustainable, passive climate control in modern high-density structures.\nA textbook case study is the Eastgate Centre in Harare, Zimbabwe, designed by architect Mick Pearce. In Southern Africa, outdoor ambient temperatures fluctuate dramatically between daytime heat and nighttime chill. Instead of installing energy-intensive conventional air conditioning, Pearce studied the extraordinary ventilation architecture of indigenous macrotermes termite mounds.\nTermite mounds maintain an internal temperature of precisely thirty degrees Celsius year-round despite fifty-degree swings outside. How? The Eastgate building emulates this by utilizing heavy concrete and hollow floor slabs as a thermal sponge. During the cool desert night, massive fans draw cold ambient air into the hollow floor slabs, cooling the structural concrete mass.\nDuring the daytime, as offices generate internal heat from computers and human bodies, the warming air rises naturally through convection. It exhausts passively through dozens of vertical rooftop chimneys without mechanical chillers.\nRigorous independent energy auditing revealed that the Eastgate complex consumes roughly 35 percent less electrical energy than conventional buildings of comparable square footage in Harare, saving millions in operational expenditure.\nLooking ahead to exterior facade innovations, materials scientists are studying the hydrophobic microstructure of sacred lotus leaves. At a microscopic scale, lotus leaves feature nanoscale wax papillae that prevent water droplets from adhering, creating self-cleaning exterior surfaces that wash away dirt with rainfall."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "prefix": "The Eastgate Centre in Zimbabwe mimics the passive ventilation of desert",
-        "answer": "termite mounds",
-        "acceptedAnswers": [
-          "termite mounds",
-          "Termite mounds"
-        ],
-        "explanation": "Audio: 'Architect Mick Pearce studied how macrotermes termites maintain constant temperatures inside their towering mounds.'"
-      },
-      {
-        "questionNumber": 2,
-        "prefix": "Thermal mass is provided by heavy structural concrete and hollow",
-        "answer": "floor slabs",
-        "acceptedAnswers": [
-          "floor slabs",
-          "Floor slabs"
-        ],
-        "explanation": "Audio: 'Cool nocturnal air is drawn through hollow floor slabs, chilling the concrete mass.'"
-      },
-      {
-        "questionNumber": 3,
-        "prefix": "During daytime, heat is expelled through rooftop exhaust",
-        "answer": "chimneys",
-        "acceptedAnswers": [
-          "chimneys",
-          "Chimneys"
-        ],
-        "explanation": "Audio: 'Warming air rises naturally via convection and exhausts through vertical rooftop chimneys.'"
-      },
-      {
-        "questionNumber": 4,
-        "prefix": "Compared to conventional buildings, the facility consumes 35% less",
-        "answer": "energy",
-        "acceptedAnswers": [
-          "energy",
-          "Energy"
-        ],
-        "explanation": "Audio: 'This passive cycle reduces annual electrical energy consumption by roughly thirty-five percent.'"
-      },
-      {
-        "questionNumber": 5,
-        "prefix": "Self-cleaning exterior coatings emulate the hydrophobic surface of",
-        "answer": "lotus leaves",
-        "acceptedAnswers": [
-          "lotus leaves",
-          "Lotus leaves"
-        ],
-        "explanation": "Audio: 'Nanoscale wax crystals mimic the self-cleaning, water-repellent microstructure of sacred lotus leaves.'"
-      }
-    ]
-  },
-  {
-    "id": "list-note-08",
-    "skill": "listening",
-    "questionType": "note_completion",
-    "difficulty": "advanced",
-    "band": "Band 7.5–8.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Volcanic Ash Cloud Monitoring & Aviation Safety (Section 4)",
-    "topic": "Atmospheric Science",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Volcanic Ash Cloud Monitoring & Aviation Safety (Section 4)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 4: Atmospheric Science & Aviation Safety]\n[Lecturer]: Welcome back. In today's earth sciences seminar, we examine the microscopic hazards that volcanic ash plumes pose to international commercial aviation.\nUnlike soft wood ash, volcanic ash consists of pulverized microscopic fragments of rock, minerals, and volcanic glass. When an aircraft encounters a volcanic plume at cruising altitudes of thirty thousand feet, the microscopic silicate glass particles enter modern turbofan combustion chambers. Inside these jet engines, operating temperatures exceed eleven hundred degrees Celsius. At this extreme heat, volcanic silicate ash melts instantly into molten glass.\nAs this liquid glass flows past the combustion chamber into the turbine section, it coats the spinning turbine blades. It then solidifies, occluding the laser-drilled cooling air passages. Deprived of internal cooling air, turbine blades experience catastrophic thermal fatigue and engine stall.\nTo mitigate this risk, global Volcanic Ash Advisory Centers employ geostationary satellites equipped with multi-spectral infrared sensors. These orbital sensors detect sulfur dioxide absorption bands to track ash cloud dispersal pathways across oceans.\nInternational civil aviation protocols dictate that air traffic controllers must immediately reroute flight paths around any airspace where airborne volcanic particle density exceeds established safety thresholds."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "prefix": "Silicate glass particles melt inside jet engines at temperatures above",
-        "answer": "1100°C",
-        "acceptedAnswers": [
-          "1100°c",
-          "1100°c"
-        ],
-        "explanation": "Audio: 'Volcanic silicate ash melts inside combustion chambers exceeding 1100 degrees Celsius.'"
-      },
-      {
-        "questionNumber": 2,
-        "prefix": "Molten ash solidifies on cooler turbine blades, blocking crucial cooling",
-        "answer": "passages",
-        "acceptedAnswers": [
-          "passages",
-          "Passages"
-        ],
-        "explanation": "Audio: 'Vitrified glass coats turbine blades, occluding laser-drilled cooling air passages.'"
-      },
-      {
-        "questionNumber": 3,
-        "prefix": "Modern satellites utilize multi-spectral infrared to track ash cloud",
-        "answer": "dispersal",
-        "acceptedAnswers": [
-          "dispersal",
-          "Dispersal"
-        ],
-        "explanation": "Audio: 'Geostationary satellites detect sulfur dioxide and ash cloud dispersal pathways.'"
-      },
-      {
-        "questionNumber": 4,
-        "prefix": "Flight paths are rerouted around airspace containing high particle",
-        "answer": "density",
-        "acceptedAnswers": [
-          "density",
-          "Density"
-        ],
-        "explanation": "Audio: 'Aviation authorities enforce buffer zones wherever ash particulate density exceeds safety thresholds.'"
-      }
-    ]
-  },
-  {
-    "id": "list-note-09",
-    "skill": "listening",
-    "questionType": "note_completion",
-    "difficulty": "easy",
-    "band": "Band 5.0–5.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Library New Member Orientation (Section 1)",
-    "topic": "Campus Services",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Library New Member Orientation (Section 1)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 1: University Library Orientation]\n[Librarian]: Hello there! Welcome to the University Central Library. Are you registering your student card today?\n[Student]: Yes, please. I'm a first-year postgraduate student and I want to know about borrowing privileges and study spaces.\n[Librarian]: Wonderful. As a registered student, your card allows you an active loan quota of up to 15 books at any given time.\n[Student]: 15 books, that's very generous. And how long can I keep standard shelf items?\n[Librarian]: The standard book loan duration is 3 weeks. You can renew them automatically online if nobody else has placed a recall reservation.\n[Student]: And what happens if I accidentally return a book after the due date?\n[Librarian]: We charge an overdue penalty fee of 50 pence—that's £0.50 per day for each late item.\n[Student]: Understood. One more question: do you have quiet private rooms for focused dissertation writing?\n[Librarian]: Yes, we have soundproofed individual study cubicles on the fourth floor. You can book them in advance through our online student library portal up to two weeks ahead."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "prefix": "Undergraduate loan quota: Maximum of",
-        "answer": "15 books",
-        "acceptedAnswers": [
-          "15 books",
-          "15 books"
-        ],
-        "explanation": "Audio: 'Undergraduates can borrow up to 15 physical books at any one time.'"
-      },
-      {
-        "questionNumber": 2,
-        "prefix": "Standard book loan duration:",
-        "answer": "3 weeks",
-        "acceptedAnswers": [
-          "3 weeks",
-          "3 weeks"
-        ],
-        "explanation": "Audio: 'The default lending period is three weeks.'"
-      },
-      {
-        "questionNumber": 3,
-        "prefix": "Late return penalty fee per day: £",
-        "answer": "0.50",
-        "acceptedAnswers": [
-          "0.50",
-          "0.50"
-        ],
-        "explanation": "Audio: 'Overdue items accrue a fifty-pence fine per day.'"
-      },
-      {
-        "questionNumber": 4,
-        "prefix": "Quiet study cubicles can be booked in advance",
-        "answer": "online",
-        "acceptedAnswers": [
-          "online",
-          "Online"
-        ],
-        "explanation": "Audio: 'You can reserve private study cubicles through our online student portal.'"
-      }
-    ]
-  },
-  {
-    "id": "list-mult-10",
-    "skill": "listening",
-    "questionType": "multiple_choice",
-    "difficulty": "easy",
-    "band": "Band 5.5–6.0",
-    "granularity": "micro",
-    "title": "Mini-IELTS Listening: Wildlife Sanctuary Volunteer Briefing (Section 2)",
-    "topic": "Conservation & Volunteering",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Wildlife Sanctuary Volunteer Briefing (Section 2)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 2: Wildlife Rehabilitation Briefing]\n[Coordinator]: Good evening, everyone, and thank you for volunteering at the Meadowbrook Wildlife Rehabilitation Sanctuary!\nBefore we assign you to animal enclosures tomorrow, let's cover a few essential scheduling and safety points. For those assigned to morning feeding rounds, your shift begins promptly with our daily safety briefing. All morning shift volunteers must arrive at the reception lodge by 8:15 AM so we can distribute radios and feed buckets before opening hours.\nRegarding animal care assignments: volunteers assisting with injured seabirds, garden birds, or orphaned hedgehogs do not require special medical clearance. However, anyone volunteering in our mammal isolation unit—which cares for injured fruit bats and wild foxes—must present documented proof of rabies vaccination before handling any animals.\nFinally, we have our signature annual summer fundraising gala coming up next month. In past years we hosted a charity auction and a marathon fun run, but this year our headline fundraiser will be a guided moonlight badger walk, where ticket holders are guided through our nocturnal woodland to observe wild badger families emerging from their setts."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "question": "Volunteers on morning shifts must arrive at the sanctuary by:",
-        "options": [
-          {
-            "key": "A",
-            "text": "07:30 AM"
-          },
-          {
-            "key": "B",
-            "text": "08:15 AM"
-          },
-          {
-            "key": "C",
-            "text": "09:00 AM"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Morning shift volunteers must check in at the reception lodge promptly at 8:15 AM for the safety briefing.'"
-      },
-      {
-        "questionNumber": 2,
-        "question": "Which wildlife group requires specialized rabies vaccination before handling?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Injured seabirds and herons"
-          },
-          {
-            "key": "B",
-            "text": "Fruit bats and wild foxes"
-          },
-          {
-            "key": "C",
-            "text": "Hedgehogs and field mice"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Volunteers assigned to mammal rehabilitation—particularly bats and foxes—must present proof of rabies vaccination.'"
-      },
-      {
-        "questionNumber": 3,
-        "question": "The sanctuary's primary fundraising event this summer is:",
-        "options": [
-          {
-            "key": "A",
-            "text": "An open-air charity auction"
-          },
-          {
-            "key": "B",
-            "text": "A guided moonlight badger walk"
-          },
-          {
-            "key": "C",
-            "text": "A marathon running race"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Our signature annual fundraiser will be the guided moonlight walk to observe resident badger clans.'"
-      }
-    ]
-  },
-  {
-    "id": "list-mult-11",
-    "skill": "listening",
-    "questionType": "multiple_choice",
-    "difficulty": "advanced",
-    "band": "Band 7.5–8.0",
-    "granularity": "micro",
-    "title": "Mini-IELTS Listening: Renewable Ocean Wave Energy Converters (Section 3)",
-    "topic": "Renewable Technology",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: Renewable Ocean Wave Energy Converters (Section 3)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 3: Ocean Engineering Research]\n[Dr. Vance]: Good morning, Elena. Let's review the ocean wave energy converter prototype data from our offshore test buoy.\n[Elena]: Good morning, Dr. Vance. The electrical generator performed well during calm seas, but the six-month submerged buoy showed severe marine biofouling.\n[Dr. Vance]: Indeed. Marine biofouling—specifically the encrustation of green macro-algae and heavy acorn barnacles—alters the buoy's hydrodynamic mass and damping coefficients, detuning its resonance frequency from the incoming wave period.\n[Elena]: Exactly. And that explains why our earlier hinged oscillating flap design failed in the North Sea tests. When we retrieved the prototype, physical inspection revealed that the subsea mechanical hinges suffered acute fatigue corrosion under the extreme cyclical wave stresses of winter storms.\n[Dr. Vance]: That confirms our decision to abandon mechanical subsea hinges in favor of direct-drive linear induction generators with zero moving joints below the waterline."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "question": "What operational challenge does marine biofouling present for wave buoys?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Attracting predatory sharks that bite electrical cables"
-          },
-          {
-            "key": "B",
-            "text": "Algal and barnacle encrustation alters hydrodynamic mass and damping"
-          },
-          {
-            "key": "C",
-            "text": "Salt crystals clog the hydraulic turbine pumps"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Dr. Vance: Algal colonization and barnacles add parasitic weight, throwing off our carefully calibrated resonance frequencies.'"
-      },
-      {
-        "questionNumber": 2,
-        "question": "Why did the engineering team reject the hinged oscillating flap design?",
-        "options": [
-          {
-            "key": "A",
-            "text": "The manufacturing cost exceeded their university grant"
-          },
-          {
-            "key": "B",
-            "text": "Subsea hinge joints suffered severe fatigue corrosion in turbulent winter swells"
-          },
-          {
-            "key": "C",
-            "text": "It posed an acoustic hazard to migrating humpback whales"
-          }
-        ],
-        "answer": "B",
-        "explanation": "Audio: 'Elena: Physical inspection of the prototype hinges revealed micro-fractures caused by continuous cyclical stress under 6-meter winter swells.'"
-      }
-    ]
-  },
-  {
-    "id": "list-note-12",
-    "skill": "listening",
-    "questionType": "note_completion",
-    "difficulty": "advanced",
-    "band": "Band 8.0–8.5",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: The History and Science of Sound Recording (Section 4)",
-    "topic": "Acoustic Engineering & History",
-    "material": {
-      "type": "audio",
-      "title": "Listening Section Audio: The History and Science of Sound Recording (Section 4)",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Section 4: History of Acoustic Technology]\n[Lecturer]: Good morning, class. Today we trace the technological evolution of acoustic sound reproduction from nineteenth-century mechanical styluses to modern high-resolution digital audio.\nThe story begins in 1877 when Thomas Alva Edison invented the phonograph. Edison discovered that acoustic soundwaves could be captured mechanically by attaching a vibrating diaphragm to an indenting needle. This needle engraved physical grooves onto a hand-cranked cylinder wrapped in pliable tinfoil. When rotated back under the stylus, the indentations vibrated the diaphragm, miraculously re-creating the human voice.\nHowever, tinfoil cylinders wore out after only a few playbacks and could not be duplicated easily. In 1887, German-American inventor Emile Berliner made a historic breakthrough: he abandoned cylindrical rolls and patented the gramophone, which inscribed sound spirals onto flat, stampable zinc discs. These master discs enabled the commercial mass-production of vinyl records using heated metal stampers.\nThe mid-twentieth century saw another revolution with magnetic tape recording. Developed in Germany, this method utilized flexible cellulose acetate plastic tape coated with microscopic particles of magnetized iron oxide, enabling multi-track studio recording and physical splicing.\nFinally, the late twentieth century ushered in digital audio, which quantizes smooth continuous analog acoustic waveforms into discrete binary bits of data, establishing the CD and modern streaming standards."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "prefix": "Thomas Edison's 1877 phonograph engraved vibrations onto revolving",
-        "answer": "tinfoil",
-        "acceptedAnswers": [
-          "tinfoil",
-          "Tinfoil"
-        ],
-        "explanation": "Audio: 'Edison recorded voice by indenting grooves onto a hand-cranked cylinder wrapped in tinfoil.'"
-      },
-      {
-        "questionNumber": 2,
-        "prefix": "Emile Berliner replaced cumbersome cylinders with flat, stampable zinc",
-        "answer": "discs",
-        "acceptedAnswers": [
-          "discs",
-          "Discs"
-        ],
-        "explanation": "Audio: 'Berliner patented the gramophone, utilizing flat discs that could be mass-produced via metal stampers.'"
-      },
-      {
-        "questionNumber": 3,
-        "prefix": "Magnetic tape recording pioneered in Germany utilized microscopic particles of iron",
-        "answer": "oxide",
-        "acceptedAnswers": [
-          "oxide",
-          "Oxide"
-        ],
-        "explanation": "Audio: 'Plastic tape coated with pulverized iron oxide allowed high-fidelity studio recording.'"
-      },
-      {
-        "questionNumber": 4,
-        "prefix": "The transition to digital audio quantizes acoustic wave amplitudes into binary",
-        "answer": "bits",
-        "acceptedAnswers": [
-          "bits",
-          "Bits"
-        ],
-        "explanation": "Audio: 'Pulse-code modulation converts analog pressure waves into numeric binary bits at 44.1 kHz.'"
-      }
-    ]
-  },
-  {
-    "id": "list-audio-sprint-boost",
-    "skill": "listening",
-    "questionType": "multiple_choice",
-    "difficulty": "medium",
-    "band": "Band 6.5–7.0",
-    "granularity": "drill",
-    "title": "Mini-IELTS Listening: Rapid Audio Distractor Drills",
-    "topic": "Academic Listening & Distractor Elimination",
-    "material": {
-      "type": "audio",
-      "title": "Connected Speech & Distractor Audio Track",
-      "audioUrl": "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
-      "audioTranscript": "[Audio Transcript - Distractor Elimination Drills]\n[Student A]: Did Dr. Harrison confirm the schedule for our coastal ecology field trip?\n[Student B]: Yes, he sent an email update this morning. We originally planned our field research for Friday morning at 9:00 AM, but severe storm alerts compelled us to reschedule to Saturday at noon. So everyone must gather at the marina dock at 12:00 PM sharp on Saturday.\n[Student A]: Glad they moved it away from Friday's torrential rain. And what about Sunday?\n[Student B]: Sunday afternoon is strictly reserved for lab data processing in room 402."
-    },
-    "questions": [
-      {
-        "questionNumber": 1,
-        "question": "Listening Item 1: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 2,
-        "question": "Listening Item 2: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 3,
-        "question": "Listening Item 3: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 4,
-        "question": "Listening Item 4: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 5,
-        "question": "Listening Item 5: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 6,
-        "question": "Listening Item 6: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:38: Mark confirms: 'Swimming is my main workout, so the Silver tier sounds absolutely ideal'.",
+        "paragraphRef": "Audio timestamp 00:38"
       },
       {
         "questionNumber": 7,
-        "question": "Listening Item 7: On what day and time will the research excursion take place?",
+        "question": "How much will Mark pay per month for his off-peak weekday membership?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "25 pounds"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "42 pounds"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "65 pounds"
+          },
+          {
+            "key": "D",
+            "text": "80 pounds"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:59: Karen states that the off-peak weekday option is 'reduced to just 42 pounds monthly'.",
+        "paragraphRef": "Audio timestamp 00:59"
       },
       {
         "questionNumber": 8,
-        "question": "Listening Item 8: On what day and time will the research excursion take place?",
+        "question": "What is the annual rental fee for a private changing room locker?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "10 pounds"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "15 pounds"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "25 pounds"
+          },
+          {
+            "key": "D",
+            "text": "50 pounds"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 01:17: Karen states: 'A small personal locker is an optional extra at 15 pounds for the full year'.",
+        "paragraphRef": "Audio timestamp 01:17"
       },
       {
         "questionNumber": 9,
-        "question": "Listening Item 9: On what day and time will the research excursion take place?",
+        "question": "When will Mark attend his compulsory swimming safety induction?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "Tuesday morning"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "Wednesday afternoon"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "Thursday evening"
+          },
+          {
+            "key": "D",
+            "text": "Saturday noon"
           }
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
+        "answer": "C",
+        "explanation": "Audio 01:37: Mark states: 'Thursday evening at 6:30 PM would work best for me'.",
+        "paragraphRef": "Audio timestamp 01:37"
+      }
+    ]
+  },
+  {
+    "id": "list-sec2-map-03",
+    "skill": "listening",
+    "questionType": "plan_map_diagram_labelling",
+    "difficulty": "medium",
+    "band": "Band 6.5–7.5",
+    "granularity": "section",
+    "title": "Listening Section 2: Orientation Tour of the National Botanical Conservatory & Seed Vault",
+    "topic": "Public Facilities & Botanical Conservation",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 2: Orientation Tour of the National Botanical Conservatory & Seed Vault",
+      "imageDescription": "Architectural layout map of the National Botanical Conservatory. Visitors enter through the South Main Gate. Facing north along the central pedestrian boulevard: To the immediate northwest (Point A) is the glass domed Orchid Pavilion. Directly to the north at the far end of the central walkway (Point B) is the soaring Tropical Rainforest Biome. To the northeast on high rocky ground (Point C) lies the Alpine Rockery. Underneath the northern complex down a flight of spiral stairs (Point D) is the subterranean Seed Vault Archive. To the southeast near the entrance gate (Point E) is the Visitors Cafe and Bookshop.",
+      "imageUrl": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400' width='100%' height='260'><rect width='600' height='400' fill='%23f1f5f9'/><rect x='20' y='20' width='560' height='360' rx='12' fill='%23ffffff' stroke='%23cbd5e1' stroke-width='2'/><text x='300' y='45' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='bold' fill='%230f172a'>National Botanical Conservatory Grounds</text><circle cx='120' cy='120' r='45' fill='%23dcfce7' stroke='%2316a34a' stroke-width='2'/><text x='120' y='125' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='bold' fill='%23166534'>A</text><rect x='220' y='80' width='160' height='80' rx='8' fill='%23dbeafe' stroke='%232563eb' stroke-width='2'/><text x='300' y='125' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='bold' fill='%231e40af'>B</text><circle cx='480' cy='120' r='45' fill='%23fef3c7' stroke='%23d97706' stroke-width='2'/><text x='480' y='125' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='bold' fill='%2392400e'>C</text><rect x='240' y='200' width='120' height='60' rx='8' fill='%23f3e8ff' stroke='%239333ea' stroke-width='2'/><text x='300' y='235' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='bold' fill='%236b21a8'>D</text><rect x='440' y='260' width='110' height='70' rx='8' fill='%23fee2e2' stroke='%23dc2626' stroke-width='2'/><text x='495' y='300' text-anchor='middle' font-family='sans-serif' font-size='18' font-weight='bold' fill='%23991b1b'>E</text><path d='M300 370 L300 270' stroke='%2364748b' stroke-width='6' stroke-dasharray='8 4'/><rect x='250' y='345' width='100' height='35' rx='6' fill='%23334155'/><text x='300' y='368' text-anchor='middle' font-family='sans-serif' font-size='12' font-weight='bold' fill='%23ffffff'>South Entrance</text></svg>",
+      "audioUrl": "/audio/listening/section2_botanical_conservatory.mp3",
+      "audioTranscript": "[Dr. Evelyn Vance]: Good morning and a very warm welcome to the National Botanical Conservatory and International Seed Bank. My name is Dr. Evelyn Vance, and as Director of Botanical Research, I am delighted to guide you through our historic conservation facility today.\n\n[Dr. Evelyn Vance]: Before we begin our walking tour, please refer to the visitor site plan in your tour brochures. We are currently standing at the South Entrance Gate, looking straight north up the main pedestrian avenue.\n\n[Dr. Evelyn Vance]: If you look across to your left toward the northwest, marked with the letter A on your map, you will see our famous Victorian glass dome. This is the Orchid Pavilion, housing over 2,500 species of rare tropical epiphytes.\n\n[Dr. Evelyn Vance]: Continuing straight ahead along the central boulevard to the very northern terminus of the path, marked B, stands our largest glasshouse structure: the Tropical Rainforest Biome, featuring an 80-foot high canopy skywalk and authentic indoor waterfall.\n\n[Dr. Evelyn Vance]: Now, if you turn toward the northeast on the elevated terrace marked C, you will find our outdoor Alpine Rockery. Here, specialized cold-climate flora from the Himalayas and Andes thrive on limestone crevices.\n\n[Dr. Evelyn Vance]: Beneath the central complex, accessed via a spiral staircase down to area D, lies our state-of-the-art Subterranean Seed Vault Archive, where over one million indigenous wild seeds are preserved in cryo-storage at minus 20 degrees Celsius.\n\n[Dr. Evelyn Vance]: Finally, returning toward the entrance on your right-hand side in the southeast corner, labeled E, you will find the Botanical Cafe and Heritage Bookshop, where organic herbal teas and botanical reference guides are available.\n\n[Dr. Evelyn Vance]: Our guided walking tour will depart from the Orchid Pavilion in five minutes. Please feel free to ask questions as we proceed!"
+    },
+    "questions": [
       {
         "questionNumber": 10,
-        "question": "Listening Item 10: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "labelLocation": "Orchid Pavilion",
+        "answer": "A",
+        "explanation": "Audio 00:28: Dr. Vance notes: 'to your left toward the northwest, marked with the letter A on your map... is the Orchid Pavilion'.",
+        "paragraphRef": "Audio timestamp 00:28"
       },
       {
         "questionNumber": 11,
-        "question": "Listening Item 11: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
+        "labelLocation": "Tropical Rainforest Biome",
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:42: Dr. Vance states: 'straight ahead along the central boulevard to the very northern terminus... marked B, stands our largest glasshouse structure: the Tropical Rainforest Biome'.",
+        "paragraphRef": "Audio timestamp 00:42"
       },
       {
         "questionNumber": 12,
-        "question": "Listening Item 12: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "labelLocation": "Alpine Rockery",
+        "answer": "C",
+        "explanation": "Audio 00:57: Dr. Vance explains: 'toward the northeast on the elevated terrace marked C, you will find our outdoor Alpine Rockery'.",
+        "paragraphRef": "Audio timestamp 00:57"
       },
       {
         "questionNumber": 13,
-        "question": "Listening Item 13: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "labelLocation": "Subterranean Seed Vault Archive",
+        "answer": "D",
+        "explanation": "Audio 01:12: Dr. Vance notes: 'accessed via a spiral staircase down to area D, lies our state-of-the-art Subterranean Seed Vault Archive'.",
+        "paragraphRef": "Audio timestamp 01:12"
       },
       {
         "questionNumber": 14,
-        "question": "Listening Item 14: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
+        "labelLocation": "Botanical Cafe and Bookshop",
+        "answer": "E",
+        "explanation": "Audio 01:26: Dr. Vance mentions: 'on your right-hand side in the southeast corner, labeled E, you will find the Botanical Cafe and Heritage Bookshop'.",
+        "paragraphRef": "Audio timestamp 01:26"
+      }
+    ]
+  },
+  {
+    "id": "list-sec2-river-04",
+    "skill": "listening",
+    "questionType": "note_completion",
+    "difficulty": "medium",
+    "band": "Band 6.0–7.0",
+    "granularity": "section",
+    "title": "Listening Section 2: Greenfield Heritage River Walk & Community Volunteering",
+    "topic": "Community Volunteer Projects & Ecological Trails",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 2: Greenfield Heritage River Walk & Community Volunteering",
+      "audioUrl": "/audio/listening/section2_river_walk.mp3",
+      "audioTranscript": "[Julian Barnes]: Good evening, everyone. My name is Julian Barnes, Coordinator for the Greenfield Heritage River Project. Thank you all for coming to tonight's informational session on our upcoming community volunteer campaign.\n\n[Julian Barnes]: The Greenfield River Trail stretches along 14 kilometers of historic riparian wetlands, originally established in 1892 as an industrial barge canal.\n\n[Julian Barnes]: Our primary objective this autumn is clearing invasive Japanese knotweed and replanting 800 native willow trees along the riverbank to stabilize soil erosion.\n\n[Julian Barnes]: Volunteers will work in organized teams on Saturday mornings from 9:00 AM until 1:00 PM. All heavy-duty gardening gloves, shovels, and high-visibility safety vests will be provided free of charge by the municipal parks trust.\n\n[Julian Barnes]: However, all volunteers are strictly required to wear waterproof rubber boots, as several stretches along the marshland trail can become exceptionally muddy.\n\n[Julian Barnes]: At the conclusion of each Saturday session, a complimentary hot lunch prepared with organic local vegetables will be served at the community boat house.\n\n[Julian Barnes]: If you would like to register your participation, please complete the volunteer waiver form at the back of the hall before leaving tonight."
+    },
+    "questions": [
       {
         "questionNumber": 15,
-        "question": "Listening Item 15: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Total length of the Greenfield River Trail: ",
+        "suffix": " kilometers",
+        "answer": "14",
+        "acceptedAnswers": [
+          "14",
+          "fourteen"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:14: Julian states the trail 'stretches along 14 kilometers of historic riparian wetlands'.",
+        "paragraphRef": "Audio timestamp 00:14"
       },
       {
         "questionNumber": 16,
-        "question": "Listening Item 16: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Tree species to be planted along riverbanks: ",
+        "answer": "willow",
+        "acceptedAnswers": [
+          "willow",
+          "native willow",
+          "willow trees"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:24: Julian specifies: 'replanting 800 native willow trees along the riverbank'.",
+        "paragraphRef": "Audio timestamp 00:24"
       },
       {
         "questionNumber": 17,
-        "question": "Listening Item 17: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Essential footwear required for all volunteers: waterproof ",
+        "answer": "boots",
+        "acceptedAnswers": [
+          "boots",
+          "rubber boots",
+          "waterproof boots"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:49: Julian emphasizes: 'all volunteers are strictly required to wear waterproof rubber boots'.",
+        "paragraphRef": "Audio timestamp 00:49"
       },
       {
         "questionNumber": 18,
-        "question": "Listening Item 18: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Location of complimentary post-work lunch: the community ",
+        "answer": "boat house",
+        "acceptedAnswers": [
+          "boat house",
+          "boathouse"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
+        "explanation": "Audio 00:58: Julian confirms lunch 'will be served at the community boat house'.",
+        "paragraphRef": "Audio timestamp 00:58"
+      }
+    ],
+    "wordLimitRule": "NO MORE THAN TWO WORDS AND/OR A NUMBER"
+  },
+  {
+    "id": "list-sec3-micro-05",
+    "skill": "listening",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 7.0–8.0",
+    "granularity": "section",
+    "title": "Listening Section 3: Environmental Science Research Project on Estuary Microplastics",
+    "topic": "Academic Research Methodology & Estuarine Ecology",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 3: Environmental Science Research Project on Estuary Microplastics",
+      "audioUrl": "/audio/listening/section3_microplastic_research.mp3",
+      "audioTranscript": "[Emma]: Dr. Jenkins, thanks so much for meeting with Liam and me today. We wanted to get your feedback on our joint field dissertation proposal.\n\n[Dr. Jenkins]: Of course, Emma. I've read your preliminary abstract on quantifying microplastic contamination in the Thames estuary sediment layers. It's a very timely research topic.\n\n[Liam]: Thanks, Dr. Jenkins. We're planning to collect core sediment samples from six designated tidal zones between Greenwich and Southend-on-Sea.\n\n[Dr. Jenkins]: Good. But what specific density separation methodology are you planning to employ to isolate microplastic synthetic polymers from heavy mineral sediment?\n\n[Emma]: We evaluated both sodium chloride and zinc chloride solutions. Although sodium chloride is much cheaper, its lower solution density of 1.2 grams per cubic centimeter fails to float dense plastics like PET and PVC. So we decided to use saturated zinc chloride with a density of 1.6 to ensure total particle recovery.\n\n[Dr. Jenkins]: That's an excellent technical decision, Emma. Zinc chloride will definitely prevent false negatives for heavy polymers. And what statistical software package will you use to execute the multi-factor analysis of variance on your sample clusters?\n\n[Liam]: We initially considered using standard Excel spreadsheets, but our departmental tutor advised us that R programming language or SPSS would provide far more robust ANOVA regression models. So Liam will be running the statistical modeling in R.\n\n[Dr. Jenkins]: Very sensible. Now, how have you split the presentation responsibilities for your final viva defense in November?\n\n[Emma]: I will deliver the literature review, sampling site rationale, and laboratory methodology. Liam will present the statistical data visualizations, ecological risk indices, and policy recommendations.\n\n[Dr. Jenkins]: That sounds like a fair, well-balanced division of labor. Make sure your risk assessment forms are signed before entering the mudflats next Monday!\n\n[Liam]: We definitely will. Thank you for your guidance, Dr. Jenkins!"
+    },
+    "questions": [
       {
         "questionNumber": 19,
-        "question": "Listening Item 19: On what day and time will the research excursion take place?",
+        "question": "Why did the students choose saturated zinc chloride over sodium chloride for density separation?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "Zinc chloride is significantly less expensive than common salt"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "Its higher density allows heavy plastics like PET and PVC to float"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "It eliminates the need for laboratory chemical fume hoods"
+          },
+          {
+            "key": "D",
+            "text": "It permanently dyes the microplastic fibers for microscopy"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:41: Emma explains that zinc chloride's higher density of 1.6 g/cm³ floats heavy polymers like PET and PVC that fail to float in salt solution.",
+        "paragraphRef": "Audio timestamp 00:41"
       },
       {
         "questionNumber": 20,
-        "question": "Listening Item 20: On what day and time will the research excursion take place?",
+        "question": "Which software will the students use to execute their multi-factor ANOVA statistical analysis?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "Microsoft Excel spreadsheets"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "R statistical programming language"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "Python Pandas library"
+          },
+          {
+            "key": "D",
+            "text": "Manual hand calculations"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 01:19: Liam confirms: 'Liam will be running the statistical modeling in R'.",
+        "paragraphRef": "Audio timestamp 01:19"
       },
       {
         "questionNumber": 21,
-        "question": "Listening Item 21: On what day and time will the research excursion take place?",
+        "question": "During the final presentation, what will Liam specifically be responsible for presenting?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "The literature review and laboratory sampling methodology"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "The historical background of the Thames estuary"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "The statistical visualizations, risk indices, and policy recommendations"
+          },
+          {
+            "key": "D",
+            "text": "The field safety risk assessment procedures"
           }
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
+        "answer": "C",
+        "explanation": "Audio 01:43: Emma states: 'Liam will present the statistical data visualizations, ecological risk indices, and policy recommendations'.",
+        "paragraphRef": "Audio timestamp 01:43"
+      }
+    ]
+  },
+  {
+    "id": "list-sec3-arch-06",
+    "skill": "listening",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 7.0–8.0",
+    "granularity": "section",
+    "title": "Listening Section 3: Architecture Seminar on Roman vs Byzantine Arch Construction",
+    "topic": "Architectural History & Structural Engineering",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 3: Architecture Seminar on Roman vs Byzantine Arch Construction",
+      "audioUrl": "/audio/listening/section3_byzantine_arch.mp3",
+      "audioTranscript": "[Chloe]: Marcus, have you finalized our presentation slides for tomorrow's comparative architectural seminar?\n\n[Marcus]: Almost, Chloe. I've drafted our analysis comparing classical Roman semicircular barrel vaults with sixth-century Byzantine pendentive dome architecture, as seen in Hagia Sophia.\n\n[Chloe]: That's great. Let's make sure we clearly explain the structural breakthrough of the pendentive. In Roman architecture, a circular dome could only sit directly atop a cylindrical circular wall, like the Pantheon in Rome.\n\n[Marcus]: Exactly. Whereas the Byzantine architects solved the geometric problem of placing a massive circular dome over a square room by inventing triangular curved masonry supports called pendentives.\n\n[Chloe]: Right. Pendentives transfer the massive downward and outward thrust of the dome down to four massive corner piers, which freed up the four side walls to be pierced with large arched windows.\n\n[Marcus]: And regarding building materials: Roman architects relied heavily on pozzolanic volcanic concrete, which was cast over wooden temporary centering frameworks. In contrast, Byzantine masons primarily used thin kiln-fired bricks laid in thick beds of lime mortar with crushed brick dust.\n\n[Chloe]: Good point! And for our concluding slide, we should emphasize how this architectural system influenced later Ottoman imperial mosques, such as the Blue Mosque designed by Sedefkar Mehmed Agha.\n\n[Marcus]: Agreed. I'll insert a high-resolution comparative cross-section diagram to illustrate the load paths right now."
+    },
+    "questions": [
       {
         "questionNumber": 22,
-        "question": "Listening Item 22: On what day and time will the research excursion take place?",
+        "question": "What structural dilemma was solved by the Byzantine invention of the pendentive?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "Erecting wooden roofs over wet marshes"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "Placing a circular dome over a square room"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "Waterproofing subterranean bathhouses"
+          },
+          {
+            "key": "D",
+            "text": "Carving granite columns without heavy cranes"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:33: Marcus explains Byzantine architects 'solved the geometric problem of placing a massive circular dome over a square room by inventing triangular curved masonry supports called pendentives'.",
+        "paragraphRef": "Audio timestamp 00:33"
       },
       {
         "questionNumber": 23,
-        "question": "Listening Item 23: On what day and time will the research excursion take place?",
+        "question": "How did the use of pendentives affect the four exterior side walls of Byzantine churches?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "They had to be made solid without any doors"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "They could be pierced with large arched windows to let in light"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "They were constructed from imported Egyptian marble"
+          },
+          {
+            "key": "D",
+            "text": "They were supported by external flying buttresses"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:46: Chloe explains: 'which freed up the four side walls to be pierced with large arched windows'.",
+        "paragraphRef": "Audio timestamp 00:46"
       },
       {
         "questionNumber": 24,
-        "question": "Listening Item 24: On what day and time will the research excursion take place?",
+        "question": "Unlike Roman concrete construction, Byzantine masons predominantly constructed arches using:",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "Cast bronze beams"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "Thin kiln-fired bricks set in thick lime mortar"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "Hand-chiseled granite blocks without mortar"
+          },
+          {
+            "key": "D",
+            "text": "Solid timber trusses filled with volcanic ash"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
+        "explanation": "Audio 00:57: Marcus specifies: 'Byzantine masons primarily used thin kiln-fired bricks laid in thick beds of lime mortar'.",
+        "paragraphRef": "Audio timestamp 00:57"
+      }
+    ]
+  },
+  {
+    "id": "list-sec4-biom-07",
+    "skill": "listening",
+    "questionType": "note_completion",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "section",
+    "title": "Listening Section 4: University Lecture on Biomimetic Aerodynamics",
+    "topic": "Aerospace Engineering & Biomimicry",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 4: University Lecture on Biomimetic Aerodynamics",
+      "audioUrl": "/audio/listening/section4_biomimetic_aerodynamics.mp3",
+      "audioTranscript": "[Prof. Finch]: Good morning, ladies and gentlemen. Today's lecture in our Advanced Fluid Dynamics series explores biomimetic aerodynamics—specifically, how evolutionary adaptations in predatory fauna are inspiring quieter, more energy-efficient aerospace and renewable energy systems.\n\n[Prof. Finch]: Our first biological case study focuses on the fast-swimming shortfin mako shark. For decades, naval architects assumed that hydrodynamic drag reduction required microscopically smooth hull surfaces. However, examination of shark skin under electron microscopy reveals that it is covered in millions of microscopic tooth-like scales called dermal denticles.\n\n[Prof. Finch]: These denticles feature longitudinal micro-grooves or 'riblets' aligned parallel to the flow of fluid. These riblets lift turbulent vortices away from the skin surface, preventing high-energy vortices from dissipating energy against the skin. Aeronautical engineers applying synthetic riblet films to commercial passenger aircraft wings have achieved up to an 8 percent reduction in aerodynamic parasitic drag.\n\n[Prof. Finch]: Our second case study examines the silent flight mechanisms of nocturnal barn owls (Tyto alba). While birds such as pigeons generate distinct acoustic flapping sounds, hunting owls can fly virtually undetected by small rodents. Acoustic analysis reveals three distinct plumage adaptations.\n\n[Prof. Finch]: First, the leading edge of the owl's primary flight feathers possesses a stiff, comb-like serration. This physical comb breaks up laminar airflow into micro-turbulence, preventing large acoustic sound waves from forming.\n\n[Prof. Finch]: Second, the trailing edge of the wing feathers terminates in a soft, flexible fringe, which smoothly mixes airflows and suppresses aerodynamic turbulence shedding.\n\n[Prof. Finch]: Wind turbine manufacturers are currently retrofitting massive offshore turbine blades with owl-inspired trailing edge serrations. Field trials indicate this biomimetic geometry reduces aerodynamic blade noise by approximately 3 decibels, allowing wind farms to operate closer to residential communities while generating up to 2 percent more electrical power.\n\n[Prof. Finch]: In next week's seminar, we will examine how humpback whale flipper tubercles enhance stall resistance on aerodynamic airfoils. Thank you for your attention."
+    },
+    "questions": [
       {
         "questionNumber": 25,
-        "question": "Listening Item 25: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Microscopic tooth-like scales on shark skin are called dermal ",
+        "answer": "denticles",
+        "acceptedAnswers": [
+          "denticles",
+          "Denticles"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:17: Prof. Finch states shark skin is covered in 'millions of microscopic tooth-like scales called dermal denticles'.",
+        "paragraphRef": "Audio timestamp 00:17"
       },
       {
         "questionNumber": 26,
-        "question": "Listening Item 26: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Applying synthetic riblet films to aircraft wings reduces aerodynamic drag by up to ",
+        "suffix": " percent",
+        "answer": "8",
+        "acceptedAnswers": [
+          "8",
+          "eight",
+          "8%"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:41: Prof. Finch notes engineers 'have achieved up to an 8 percent reduction in aerodynamic parasitic drag'.",
+        "paragraphRef": "Audio timestamp 00:41"
       },
       {
         "questionNumber": 27,
-        "question": "Listening Item 27: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "The leading edge of owl flight feathers features a stiff, comb-like ",
+        "answer": "serration",
+        "acceptedAnswers": [
+          "serration",
+          "comb-like serration"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 01:25: Prof. Finch states the feather leading edge possesses a 'stiff, comb-like serration'.",
+        "paragraphRef": "Audio timestamp 01:25"
       },
       {
         "questionNumber": 28,
-        "question": "Listening Item 28: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
+        "prefix": "Retrofitted owl serrations reduce wind turbine blade noise by approximately ",
+        "suffix": " decibels",
+        "answer": "3",
+        "acceptedAnswers": [
+          "3",
+          "three",
+          "3 dB"
         ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
+        "explanation": "Audio 01:49: Prof. Finch confirms: 'reduces aerodynamic blade noise by approximately 3 decibels'.",
+        "paragraphRef": "Audio timestamp 01:49"
+      }
+    ],
+    "wordLimitRule": "NO MORE THAN TWO WORDS AND/OR A NUMBER"
+  },
+  {
+    "id": "list-sec4-silk-08",
+    "skill": "listening",
+    "questionType": "multiple_choice",
+    "difficulty": "advanced",
+    "band": "Band 7.5–8.5",
+    "granularity": "section",
+    "title": "Listening Section 4: University Lecture on the Maritime Silk Road & Medieval Spice Currency",
+    "topic": "Economic History & Maritime Trade",
+    "material": {
+      "type": "audio",
+      "title": "Official Listening Audio Track: Listening Section 4: University Lecture on the Maritime Silk Road & Medieval Spice Currency",
+      "audioUrl": "/audio/listening/section4_silk_road_spices.mp3",
+      "audioTranscript": "[Dr. Davies]: Welcome back, students of Economic History. In today's session, we turn our attention from overland Eurasian caravan trails to the Maritime Silk Road—the vast nautical trading network that connected China, Southeast Asia, India, and the Mediterranean between the 7th and 15th centuries.\n\n[Dr. Davies]: While silk and porcelain were vital Chinese luxury exports, the true high-velocity currency of maritime commerce was spices: predominantly black pepper from the Malabar coast of India, and cloves, nutmeg, and mace from the remote Maluku islands of eastern Indonesia.\n\n[Dr. Davies]: In medieval Western Europe, spices were not merely culinary flavorings for elite banquets; they functioned as a store of value and international trade currency. Black pepper peppercorns were counted individually and accepted for land rents, court dowries, and customs duties. In medieval London, the Guild of Pepperers was granted statutory powers to inspect weights and settle commercial debts, giving rise to the legal phrase 'peppercorn rent'.\n\n[Dr. Davies]: The maritime voyage relied on seasonal climatic meteorological cycles known as the monsoon winds. Between May and September, the southwest monsoon propelled Arab and Persian dhows across the Indian Ocean toward the Strait of Malacca. Traders would winter in Southeast Asian ports for several months, trading textiles for cloves, before the northeast monsoon reversed direction between November and March, allowing them to sail safely home.\n\n[Dr. Davies]: The astronomical markup on spices was staggering. A sack of nutmeg purchased in the Banda Islands for a few copper coins could be sold in Venice or Antwerp for over a thousand times its original purchase price. This immense profit margin ultimately compelled European monarchs to finance the Age of Discovery, seeking direct oceanic routes to Asia and fundamentally shifting global geopolitical power."
+    },
+    "questions": [
       {
         "questionNumber": 29,
-        "question": "Listening Item 29: On what day and time will the research excursion take place?",
+        "question": "In medieval Western Europe, black pepper functioned primarily as:",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "A cheap everyday food for peasant laborers"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "A recognized currency and store of economic value"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "An industrial disinfectant for wool manufacturing"
+          },
+          {
+            "key": "D",
+            "text": "A royal medicine exclusively reserved for the Pope"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 00:34: Dr. Davies notes: 'they functioned as a store of value and international trade currency. Black pepper peppercorns were counted individually and accepted for land rents, court dowries, and customs duties'.",
+        "paragraphRef": "Audio timestamp 00:34"
       },
       {
         "questionNumber": 30,
-        "question": "Listening Item 30: On what day and time will the research excursion take place?",
+        "question": "How did merchant dhows utilize the monsoon wind patterns in the Indian Ocean?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "They sailed exclusively during winter when winds were completely calm"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "They used the southwest monsoon to sail east, and the reversed northeast monsoon to return west"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
+            "text": "They built steam engines to overcome adverse coastal wind currents"
+          },
+          {
+            "key": "D",
+            "text": "They relied on overland camels whenever monsoon storms approached"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 01:01: Dr. Davies explains the southwest monsoon propelled ships east, and the northeast monsoon between November and March allowed them to sail safely home.",
+        "paragraphRef": "Audio timestamp 01:01"
       },
       {
         "questionNumber": 31,
-        "question": "Listening Item 31: On what day and time will the research excursion take place?",
+        "question": "What was the ultimate geopolitical consequence of the enormous profit margins on spices?",
         "options": [
           {
             "key": "A",
-            "text": "Friday morning"
+            "text": "European nations abandoned maritime trading permanently"
           },
           {
             "key": "B",
-            "text": "Saturday noon"
+            "text": "European monarchs financed the Age of Discovery to find direct sea routes to Asia"
           },
           {
             "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 32,
-        "question": "Listening Item 32: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 33,
-        "question": "Listening Item 33: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 34,
-        "question": "Listening Item 34: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 35,
-        "question": "Listening Item 35: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 36,
-        "question": "Listening Item 36: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 37,
-        "question": "Listening Item 37: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 38,
-        "question": "Listening Item 38: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 39,
-        "question": "Listening Item 39: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 40,
-        "question": "Listening Item 40: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 41,
-        "question": "Listening Item 41: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 42,
-        "question": "Listening Item 42: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 43,
-        "question": "Listening Item 43: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 44,
-        "question": "Listening Item 44: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 45,
-        "question": "Listening Item 45: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 46,
-        "question": "Listening Item 46: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 47,
-        "question": "Listening Item 47: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 48,
-        "question": "Listening Item 48: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 49,
-        "question": "Listening Item 49: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 50,
-        "question": "Listening Item 50: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 51,
-        "question": "Listening Item 51: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 52,
-        "question": "Listening Item 52: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 53,
-        "question": "Listening Item 53: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 54,
-        "question": "Listening Item 54: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 55,
-        "question": "Listening Item 55: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 56,
-        "question": "Listening Item 56: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 57,
-        "question": "Listening Item 57: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 58,
-        "question": "Listening Item 58: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 59,
-        "question": "Listening Item 59: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 60,
-        "question": "Listening Item 60: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 61,
-        "question": "Listening Item 61: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 62,
-        "question": "Listening Item 62: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 63,
-        "question": "Listening Item 63: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 64,
-        "question": "Listening Item 64: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 65,
-        "question": "Listening Item 65: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 66,
-        "question": "Listening Item 66: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 67,
-        "question": "Listening Item 67: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 68,
-        "question": "Listening Item 68: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 69,
-        "question": "Listening Item 69: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 70,
-        "question": "Listening Item 70: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 71,
-        "question": "Listening Item 71: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 72,
-        "question": "Listening Item 72: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 73,
-        "question": "Listening Item 73: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 74,
-        "question": "Listening Item 74: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 75,
-        "question": "Listening Item 75: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 76,
-        "question": "Listening Item 76: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 77,
-        "question": "Listening Item 77: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 78,
-        "question": "Listening Item 78: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 79,
-        "question": "Listening Item 79: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 80,
-        "question": "Listening Item 80: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 81,
-        "question": "Listening Item 81: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 82,
-        "question": "Listening Item 82: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 83,
-        "question": "Listening Item 83: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 84,
-        "question": "Listening Item 84: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 85,
-        "question": "Listening Item 85: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 86,
-        "question": "Listening Item 86: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 87,
-        "question": "Listening Item 87: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 88,
-        "question": "Listening Item 88: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 89,
-        "question": "Listening Item 89: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 90,
-        "question": "Listening Item 90: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 91,
-        "question": "Listening Item 91: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 92,
-        "question": "Listening Item 92: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 93,
-        "question": "Listening Item 93: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 94,
-        "question": "Listening Item 94: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 95,
-        "question": "Listening Item 95: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 96,
-        "question": "Listening Item 96: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
-          },
-          {
-            "key": "C",
-            "text": "Sunday afternoon"
-          }
-        ],
-        "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
-      },
-      {
-        "questionNumber": 97,
-        "question": "Listening Item 97: On what day and time will the research excursion take place?",
-        "options": [
-          {
-            "key": "A",
-            "text": "Friday morning"
-          },
-          {
-            "key": "B",
-            "text": "Saturday noon"
+            "text": "Venice completely banned the import of foreign textiles and porcelain"
           },
           {
-            "key": "C",
-            "text": "Sunday afternoon"
+            "key": "D",
+            "text": "All spice trading was transferred to overland Arctic caravans"
           }
         ],
         "answer": "B",
-        "explanation": "The speaker initially mentions Friday morning (distractor) but corrects: 'compelled us to reschedule to Saturday at noon'."
+        "explanation": "Audio 01:27: Dr. Davies states: 'This immense profit margin ultimately compelled European monarchs to finance the Age of Discovery, seeking direct oceanic routes to Asia'.",
+        "paragraphRef": "Audio timestamp 01:27"
       }
     ]
   }

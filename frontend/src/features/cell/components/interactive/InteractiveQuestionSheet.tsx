@@ -29,6 +29,7 @@ import type {
   IeltsTfngQuestion,
 } from "../../types/ieltsSchema.ts";
 import { estimateIeltsBand } from "../../types/ieltsSchema.ts";
+import { AcademicVisualStimulus } from "../resources/AcademicVisualStimulus.tsx";
 
 export interface InteractiveQuestionSheetProps {
   data: IeltsExerciseData;
@@ -659,6 +660,14 @@ export const InteractiveQuestionSheet: React.FC<InteractiveQuestionSheetProps> =
         <div className="writing-task-prompt-box">
           <p>{wt.prompt}</p>
         </div>
+
+        {String(wt.taskType).includes("task1") && (wt.academicVisualType || data.material?.imageUrl) && (
+          <AcademicVisualStimulus
+            writingTask={wt}
+            imageUrl={data.material?.imageUrl}
+            imageDescription={data.material?.imageDescription}
+          />
+        )}
 
         {((wt.bulletPoints && wt.bulletPoints.length > 0) || (wt.keyDataPoints && wt.keyDataPoints.length > 0)) && (
           <div className="writing-datapoints-card">

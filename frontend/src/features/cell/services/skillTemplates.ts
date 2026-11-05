@@ -140,7 +140,7 @@ export const MINI_IELTS_PRESETS: MiniIeltsPreset[] = [
 - *Weak forms*: "for a" -> /fərə/`,
     resource: {
       type: "audio",
-      url: "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
+      url: "/audio/listening/section1_homestay_booking.mp3",
       name: "Listening_Section1_Registration_demo.mp3",
       textContent: `[Audio Transcript - Section 1: Hotel Room Booking]
 [Receptionist]: Good morning, Seaside Grand Hotel reservations. How can I help you today?
@@ -169,7 +169,7 @@ export const MINI_IELTS_PRESETS: MiniIeltsPreset[] = [
       material: {
         type: "audio",
         title: "Listening Audio Track: Hotel Booking",
-        audioUrl: "https://actions.google.com/sounds/v1/science/sonar_ping.ogg",
+        audioUrl: "/audio/listening/section1_homestay_booking.mp3",
         audioTranscript: `[Audio Transcript - Section 1: Hotel Room Booking]
 [Receptionist]: Good morning, Seaside Grand Hotel reservations. How can I help you today?
 [Guest]: Hello, I would like to make a room reservation for next month please.

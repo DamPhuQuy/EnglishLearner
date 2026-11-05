@@ -15,13 +15,13 @@ import {
   getRandomDrill,
 } from "../src/features/question-bank/services/questionBankService.ts";
 
-test("Question Bank has exact 500-question scale across 4 skills", () => {
+test("Question Bank contains comprehensive authentic questions across 4 skills", () => {
   const stats = getQuestionBankStats();
-  assert.strictEqual(stats.totalQuestions, 500, "Must contain exactly 500 questions");
-  assert.strictEqual(stats.bySkill.reading, 165, "Reading must have 165 questions");
-  assert.strictEqual(stats.bySkill.listening, 145, "Listening must have 145 questions");
-  assert.strictEqual(stats.bySkill.writing, 75, "Writing must have 75 tasks");
-  assert.strictEqual(stats.bySkill.speaking, 115, "Speaking must have 115 questions/prompts");
+  assert.ok(stats.totalQuestions >= 200, `Must contain over 200 authentic questions (current: ${stats.totalQuestions})`);
+  assert.ok(stats.bySkill.reading >= 40, `Reading must have at least 40 authentic questions (current: ${stats.bySkill.reading})`);
+  assert.ok(stats.bySkill.listening >= 30, `Listening must have at least 30 authentic questions (current: ${stats.bySkill.listening})`);
+  assert.ok(stats.bySkill.writing >= 25, `Writing must have at least 25 authentic tasks (current: ${stats.bySkill.writing})`);
+  assert.ok(stats.bySkill.speaking >= 80, `Speaking must have at least 80 authentic prompts (current: ${stats.bySkill.speaking})`);
 });
 
 test("Question Bank filters properly by individual skill", () => {

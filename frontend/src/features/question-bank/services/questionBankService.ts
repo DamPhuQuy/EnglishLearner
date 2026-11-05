@@ -24,7 +24,7 @@ export function getQuestionCount(item: QuestionBankItem): number {
       return item.speakingTask.part1Questions.length;
     }
     if (item.speakingTask.cueCard) {
-      return 4;
+      return 4 + (item.speakingTask.part3Questions ? item.speakingTask.part3Questions.length : 0);
     }
     if (item.speakingTask.part3Questions) {
       return item.speakingTask.part3Questions.length;
@@ -146,7 +146,9 @@ export function convertQuestionBankItemToExerciseData(
 ): IeltsExerciseData {
   let questionGroups: IeltsQuestionGroup[] | undefined;
 
-  if (item.questions && item.questions.length > 0) {
+  if (item.questionGroups && item.questionGroups.length > 0) {
+    questionGroups = item.questionGroups as IeltsQuestionGroup[];
+  } else if (item.questions && item.questions.length > 0) {
     const firstQ = item.questions[0];
     let instruction = "Answer the questions below based on the provided material.";
     let qType = item.questionType as IeltsQuestionType;
@@ -186,7 +188,12 @@ export function convertQuestionBankItemToExerciseData(
         id: `group-${item.id}`,
         type: qType,
         title: `Questions 1–${item.questions.length}`,
-        instruction,
+        instruction: item.instruction || instruction,
+        wordLimitRule: item.wordLimitRule,
+        headingsList: item.headingsList,
+        featuresList: item.featuresList,
+        endingsList: item.endingsList,
+        boxOptions: item.boxOptions,
         questions: item.questions,
       },
     ];
@@ -207,6 +214,8 @@ export function convertQuestionBankItemToExerciseData(
           content: item.material.content,
           audioUrl: item.material.audioUrl,
           audioTranscript: item.material.audioTranscript,
+          imageUrl: item.material.imageUrl,
+          imageDescription: item.material.imageDescription,
         }
       : item.writingTask
       ? {
